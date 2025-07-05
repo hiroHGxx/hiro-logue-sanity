@@ -13,7 +13,7 @@ export default async function Home() {
       <section className="py-20" style={{background: 'linear-gradient(to bottom right, var(--color-surface), #f0f0f0)'}}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-2" style={{color: 'var(--color-text-primary)'}}>
-            Hirolog
+            Hiro-Logue
           </h1>
           <p className="text-lg md:text-xl mb-8" style={{color: 'var(--color-accent)'}}>
             〜暮らしの解像度を上げるノート〜
@@ -104,7 +104,7 @@ export default async function Home() {
       <section className="py-16" style={{backgroundColor: 'var(--color-surface)'}}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6" style={{color: 'var(--color-text-primary)'}}>
-            Hirologについて
+            Hiro-Logueについて
           </h2>
           <p className="text-lg leading-relaxed" style={{color: 'var(--color-text-secondary)'}}>
             日常の何気ない出来事も、一度立ち止まって「これってどういうことだろう？」と考えてみると、

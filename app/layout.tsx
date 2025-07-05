@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hirolog - 暮らしの解像度を上げるノート",
+  title: "Hiro-Logue - 暮らしの解像度を上げるノート",
   description: "テクノロジーと日常の交差点で見つけた、物事をより深く、面白く捉えるためのヒントをお届けします。あなたの暮らしの「解像度を上げる」気づきを、深い考察とともにシェアしています。",
 };
 
