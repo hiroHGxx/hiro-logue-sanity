@@ -7,7 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "studio": "sanity dev"
+    "studio": "sanity dev",
+    "pre-deploy-check": "npm run build && npm run lint",
+    "deploy": "git add . && git commit -m 'Auto-deploy: $(date)' && git push origin main",
+    "quality-check": "echo 'Quality check API available at /api/quality-check'",
+    "full-deploy": "npm run pre-deploy-check && npm run deploy"
   },
   "dependencies": {
     "@portabletext/react": "^3.2.1",

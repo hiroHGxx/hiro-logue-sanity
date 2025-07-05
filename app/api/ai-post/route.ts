@@ -92,6 +92,26 @@ export async function POST(request: NextRequest) {
 皆さんの体験談も、ぜひお聞かせください。
     `.trim()
 
+    // 品質チェック実行
+    const qualityCheckResponse = await fetch(`${request.nextUrl.origin}/api/quality-check`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        title,
+        content,
+        excerpt
+      })
+    })
+
+    const qualityResult = await qualityCheckResponse.json()
+    
+    // 品質チェック失敗時は警告付きで続行
+    if (!qualityResult.qualityScore?.passed) {
+      console.warn('⚠️ 記事品質チェックで改善推奨項目あり:', qualityResult.qualityScore?.recommendations)
+    }
+
     // Create the post using our API
     const response = await fetch(`${request.nextUrl.origin}/api/posts`, {
       method: 'POST',
@@ -117,12 +137,15 @@ export async function POST(request: NextRequest) {
       success: true,
       post: result.post,
       message: `AI記事「${title}」が正常に作成されました`,
+      qualityScore: qualityResult.qualityScore,
       details: {
         title,
         excerpt,
         category,
         authorName,
-        topic
+        topic,
+        qualityPassed: qualityResult.qualityScore?.passed || false,
+        qualityScore: qualityResult.qualityScore?.overallScore || 0
       }
     })
 
