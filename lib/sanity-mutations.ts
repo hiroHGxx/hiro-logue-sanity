@@ -73,9 +73,31 @@ export async function createPost(postData: {
   try {
     const result = await client.create(post)
     console.log('✅ Post created successfully:', result._id)
+    
+    // 自動的に公開状態にする
+    await publishPost(result._id)
+    console.log('✅ Post published automatically:', result._id)
+    
     return result
   } catch (error) {
     console.error('❌ Error creating post:', error)
+    throw error
+  }
+}
+
+// Publish a post (move from draft to published)
+export async function publishPost(postId: string) {
+  try {
+    // Sanityの公開システムを使用してDraftを公開状態にする
+    const result = await client
+      .patch(postId)
+      .set({ _id: postId.replace('drafts.', '') })
+      .commit()
+    
+    console.log('✅ Post published successfully:', postId)
+    return result
+  } catch (error) {
+    console.error('❌ Error publishing post:', error)
     throw error
   }
 }
