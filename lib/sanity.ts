@@ -47,7 +47,7 @@ export interface BlogPost {
 }
 
 // GROQ queries
-export const postsQuery = `*[_type == "post"] | order(publishedAt desc) {
+export const postsQuery = `*[_type == "post" && !(_id in path("drafts.**"))] | order(publishedAt desc) {
   _id,
   _createdAt,
   title,
@@ -62,7 +62,7 @@ export const postsQuery = `*[_type == "post"] | order(publishedAt desc) {
   }
 }`
 
-export const postQuery = `*[_type == "post" && slug.current == $slug][0] {
+export const postQuery = `*[_type == "post" && slug.current == $slug && !(_id in path("drafts.**"))][0] {
   _id,
   _createdAt,
   title,
