@@ -4,6 +4,7 @@ import "./globals.css";
 import "./design-variables.css";
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { WebsiteStructuredData } from '@/components/StructuredData'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -74,6 +75,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         style={{backgroundColor: 'var(--color-background)'}}
       >
+        <WebsiteStructuredData 
+          url="https://hiro-logue-sanity.vercel.app"
+          name="Hiro-Logue - 暮らしの解像度を上げるノート"
+          description="テクノロジーと日常の交差点で見つけた、物事をより深く、面白く捉えるためのヒントをお届けします。"
+        />
         <Header />
         <main>
           {children}

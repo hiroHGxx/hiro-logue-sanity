@@ -4,11 +4,94 @@ import { PortableText } from '@portabletext/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import type { Metadata } from 'next'
+import { BlogPostStructuredData } from '@/components/StructuredData'
+import Breadcrumb, { BreadcrumbStructuredData } from '@/components/Breadcrumb'
+import { ReadingTime } from '@/lib/reading-time'
 
 interface PageProps {
   params: Promise<{
     slug: string
   }>
+}
+
+// 個別記事の動的メタデータ生成
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params
+  const post = await getPost(slug)
+
+  if (!post) {
+    return {
+      title: '記事が見つかりません - Hiro-Logue',
+      description: 'お探しの記事は見つかりませんでした。',
+    }
+  }
+
+  // 記事の内容から抜粋を生成（bodyから最初の段落を取得）
+  const excerpt = post.excerpt || 
+    (post.body?.[0]?.children?.[0]?.text?.substring(0, 160) + '...' || 
+     '暮らしの解像度を上げるヒントをお届けします。')
+
+  // 公開日を適切にフォーマット
+  const publishedTime = post.publishedAt ? new Date(post.publishedAt).toISOString() : new Date().toISOString()
+  
+  // 著者情報
+  const authorName = post.author?.name || 'ヒロ'
+  
+  // OG画像URL（メイン画像がある場合はそれを使用、なければデフォルト）
+  const ogImageUrl = post.mainImage 
+    ? urlFor(post.mainImage).width(1200).height(630).url()
+    : '/og-image.svg'
+
+  return {
+    title: `${post.title} - Hiro-Logue`,
+    description: excerpt,
+    keywords: [
+      'ブログ', 'テクノロジー', '日常', 'プログラマー', '家族', '気づき', 
+      ...(post.categories || [])
+    ],
+    authors: [{ name: authorName, url: 'https://hiro-logue-sanity.vercel.app/about' }],
+    creator: authorName,
+    publisher: 'Hiro-Logue',
+    openGraph: {
+      title: post.title,
+      description: excerpt,
+      url: `https://hiro-logue-sanity.vercel.app/blog/${slug}`,
+      siteName: 'Hiro-Logue',
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+      locale: 'ja_JP',
+      type: 'article',
+      publishedTime,
+      authors: [authorName],
+      section: '暮らし・テクノロジー',
+      tags: post.categories || [],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: excerpt,
+      images: [ogImageUrl],
+      creator: '@hsrk_g_hsrk',
+    },
+    robots: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+    alternates: {
+      canonical: `https://hiro-logue-sanity.vercel.app/blog/${slug}`,
+    },
+    category: '暮らし・テクノロジー',
+  }
 }
 
 // Portable Text components for rendering rich text
@@ -65,11 +148,20 @@ export default async function BlogPost({ params }: PageProps) {
     notFound()
   }
 
+  const breadcrumbItems = [
+    { label: 'ホーム', href: '/' },
+    { label: 'ブログ', href: '/blog' },
+    { label: post.title }
+  ]
+
   return (
     <div className="min-h-screen" style={{backgroundColor: 'var(--color-background)'}}>
+      <BlogPostStructuredData post={post} />
+      <BreadcrumbStructuredData items={breadcrumbItems} />
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Header */}
         <header className="mb-8">
+          <Breadcrumb items={breadcrumbItems} />
           <div className="mb-4">
             <Link 
               href="/blog" 
@@ -98,6 +190,8 @@ export default async function BlogPost({ params }: PageProps) {
                 <span className="text-sm">{post.author.name}</span>
               </>
             )}
+            <span className="mx-2">•</span>
+            <ReadingTime content={post.body || []} />
           </div>
 
           {post.excerpt && (
