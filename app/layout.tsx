@@ -16,6 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://hiro-logue-sanity.vercel.app'),
   title: "Hiro-Logue - 暮らしの解像度を上げるノート",
   description: "テクノロジーと日常の交差点で見つけた、物事をより深く、面白く捉えるためのヒントをお届けします。あなたの暮らしの「解像度を上げる」気づきを、深い考察とともにシェアしています。",
   keywords: ["ブログ", "テクノロジー", "日常", "プログラマー", "家族", "気づき", "洞察"],
