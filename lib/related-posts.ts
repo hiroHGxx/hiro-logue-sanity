@@ -66,7 +66,7 @@ export async function getRelatedPosts(
       
       const recentPosts = await client.fetch(recentQuery, {
         currentId: currentPostId,
-        excludeIds: relatedByCategory.map(post => post._id),
+        excludeIds: relatedByCategory.map((post: BlogPost) => post._id),
         remainingLimit
       })
       
