@@ -54,11 +54,6 @@ const nextConfig: NextConfig = {
             key: 'Referrer-Policy',
             value: 'origin-when-cross-origin',
           },
-          // パフォーマンスヘッダー
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
         ],
       },
       {
@@ -71,7 +66,7 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        source: '/(.*\\.(ico|png|jpg|jpeg|gif|webp|svg))',
+        source: '/:path*\\.(ico|png|jpg|jpeg|gif|webp|svg)',
         headers: [
           {
             key: 'Cache-Control',
