@@ -7,7 +7,7 @@ import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { BlogPostStructuredData } from '@/components/StructuredData'
 import Breadcrumb, { BreadcrumbStructuredData } from '@/components/Breadcrumb'
-import { ReadingTime } from '@/lib/reading-time'
+import ReadingTime from '@/components/ReadingTime'
 
 interface PageProps {
   params: Promise<{
