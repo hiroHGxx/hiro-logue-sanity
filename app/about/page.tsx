@@ -18,9 +18,14 @@ export default function AboutPage() {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="relative w-32 h-32 mx-auto mb-8">
-            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-amber-800 to-amber-600 flex items-center justify-center text-white text-4xl font-bold shadow-lg">
-              ヒロ
-            </div>
+            <Image
+              src="/images/profile/avatar.jpg"
+              alt="ヒロのプロフィール画像"
+              width={128}
+              height={128}
+              className="w-32 h-32 rounded-full object-cover shadow-lg"
+              priority
+            />
           </div>
           <h1 className="text-4xl font-bold mb-4" style={{color: 'var(--color-text-primary)'}}>
             ヒロのプロフィール
@@ -142,16 +147,16 @@ export default function AboutPage() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <a
-                href="https://twitter.com"
+                href="https://x.com/hsrk_g_hsrk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center px-4 py-3 rounded-lg text-white transition-all hover:opacity-90"
                 style={{backgroundColor: '#1DA1F2'}}
               >
-                Twitter
+                X (Twitter)
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/hiroHGxx"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center px-4 py-3 rounded-lg text-white transition-all hover:opacity-90"
@@ -160,7 +165,7 @@ export default function AboutPage() {
                 GitHub
               </a>
               <a
-                href="https://stand.fm"
+                href="https://stand.fm/channels/6399d332df23c21009b42475"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center px-4 py-3 rounded-lg text-white transition-all hover:opacity-90"
