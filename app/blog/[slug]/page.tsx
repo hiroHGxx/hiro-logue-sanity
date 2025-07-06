@@ -8,6 +8,7 @@ import type { Metadata } from 'next'
 import { BlogPostStructuredData } from '@/components/StructuredData'
 import Breadcrumb, { BreadcrumbStructuredData } from '@/components/Breadcrumb'
 import ReadingTime from '@/components/ReadingTime'
+import RelatedPosts from '@/components/RelatedPosts'
 
 interface PageProps {
   params: Promise<{
@@ -101,10 +102,12 @@ const components = {
       <div className="my-8">
         <Image
           src={urlFor(value).width(800).height(400).url()}
-          alt={value.alt || 'Blog image'}
+          alt={value.alt || '記事内の画像 - Hiro-Logue'}
           width={800}
           height={400}
           className="rounded-lg"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
+          loading="lazy"
         />
       </div>
     ),
@@ -206,11 +209,12 @@ export default async function BlogPost({ params }: PageProps) {
           <div className="mb-8">
             <Image
               src={urlFor(post.mainImage).width(1200).height(600).url()}
-              alt={post.mainImage.alt || post.title}
+              alt={post.mainImage.alt || `${post.title}のメイン画像 - Hiro-Logue`}
               width={1200}
               height={600}
               className="w-full rounded-lg shadow-lg"
               priority
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
             />
           </div>
         )}
@@ -250,6 +254,13 @@ export default async function BlogPost({ params }: PageProps) {
             )}
           </div>
         </footer>
+
+        {/* 関連記事 */}
+        <RelatedPosts 
+          currentPostId={post._id}
+          categories={post.categories}
+          limit={3}
+        />
       </article>
     </div>
   )
