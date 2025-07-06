@@ -36,6 +36,7 @@ export interface BlogPost {
   body: any[]
   excerpt?: string
   publishedAt: string
+  categories?: string[]
   author?: {
     name: string
     image?: {
@@ -56,6 +57,7 @@ export const postsQuery = `*[_type == "post" && !(_id in path("drafts.**"))] | o
   body,
   excerpt,
   publishedAt,
+  categories,
   author->{
     name,
     image
@@ -71,6 +73,7 @@ export const postQuery = `*[_type == "post" && slug.current == $slug && !(_id in
   body,
   excerpt,
   publishedAt,
+  categories,
   author->{
     name,
     image
