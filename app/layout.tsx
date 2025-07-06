@@ -18,6 +18,48 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Hiro-Logue - 暮らしの解像度を上げるノート",
   description: "テクノロジーと日常の交差点で見つけた、物事をより深く、面白く捉えるためのヒントをお届けします。あなたの暮らしの「解像度を上げる」気づきを、深い考察とともにシェアしています。",
+  keywords: ["ブログ", "テクノロジー", "日常", "プログラマー", "家族", "気づき", "洞察"],
+  authors: [{ name: "ヒロ", url: "https://hiro-logue-sanity.vercel.app" }],
+  creator: "ヒロ",
+  publisher: "Hiro-Logue",
+  openGraph: {
+    title: "Hiro-Logue - 暮らしの解像度を上げるノート",
+    description: "テクノロジーと日常の交差点で見つけた、物事をより深く、面白く捉えるためのヒントをお届けします。",
+    url: "https://hiro-logue-sanity.vercel.app",
+    siteName: "Hiro-Logue",
+    images: [
+      {
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "Hiro-Logue - 暮らしの解像度を上げるノート",
+      },
+    ],
+    locale: "ja_JP",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hiro-Logue - 暮らしの解像度を上げるノート",
+    description: "テクノロジーと日常の交差点で見つけた、物事をより深く、面白く捉えるためのヒントをお届けします。",
+    images: ["/og-image.svg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({

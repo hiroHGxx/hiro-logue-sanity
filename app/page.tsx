@@ -10,8 +10,19 @@ export default async function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20" style={{background: 'linear-gradient(to bottom right, var(--color-surface), #f0f0f0)'}}>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-20 relative overflow-hidden" style={{background: 'linear-gradient(to bottom right, var(--color-surface), #f0f0f0)'}}>
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-20">
+          <Image
+            src="/hero-bg.svg"
+            alt=""
+            fill
+            className="object-cover object-center"
+            priority
+          />
+        </div>
+        
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-2" style={{color: 'var(--color-text-primary)'}}>
             Hiro-Logue
           </h1>
@@ -25,7 +36,7 @@ export default async function Home() {
           </p>
           <Link 
             href="/blog" 
-            className="inline-block text-white px-8 py-3 rounded-lg hover:opacity-90 transition-all font-medium"
+            className="inline-block text-white px-8 py-3 rounded-lg hover:opacity-90 transition-all font-medium shadow-lg"
             style={{backgroundColor: 'var(--color-accent)'}}
           >
             ブログを読む

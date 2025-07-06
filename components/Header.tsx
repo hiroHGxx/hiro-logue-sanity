@@ -1,13 +1,34 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Header() {
   return (
-    <header style={{backgroundColor: 'var(--color-primary)'}} className="shadow-sm border-b">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header style={{backgroundColor: 'var(--color-primary)'}} className="shadow-sm border-b relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-30">
+        <Image
+          src="/hero-bg.svg"
+          alt=""
+          fill
+          className="object-cover object-center"
+          priority
+        />
+      </div>
+      
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold text-white">
-              Hiro-Logue
+            <Link href="/" className="flex items-center space-x-3 group">
+              <div className="flex-shrink-0">
+                <Image
+                  src="/logo.svg"
+                  alt="Hiro-Logue"
+                  width={160}
+                  height={48}
+                  className="transition-transform group-hover:scale-105"
+                  priority
+                />
+              </div>
             </Link>
           </div>
           <nav className="hidden md:flex space-x-8">
