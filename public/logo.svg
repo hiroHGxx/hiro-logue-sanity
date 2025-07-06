@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+  <!-- Background -->
+  <rect width="200" height="60" fill="transparent"/>
+  
+  <!-- Logo Icon - Book/Blog Symbol -->
+  <rect x="10" y="15" width="30" height="30" rx="3" fill="white" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+  <line x1="16" y1="22" x2="34" y2="22" stroke="#8B4513" stroke-width="2" stroke-linecap="round"/>
+  <line x1="16" y1="28" x2="34" y2="28" stroke="#8B4513" stroke-width="2" stroke-linecap="round"/>
+  <line x1="16" y1="34" x2="28" y2="34" stroke="#8B4513" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Text Logo -->
+  <text x="50" y="35" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="white">
+    Hiro-Logue
+  </text>
+  <text x="50" y="48" font-family="system-ui, sans-serif" font-size="9" font-weight="400" fill="rgba(255,255,255,0.7)">
+    暮らしの解像度を上げるノート
+  </text>
+</svg>

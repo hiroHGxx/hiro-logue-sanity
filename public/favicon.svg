@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Background -->
+  <rect width="32" height="32" rx="6" fill="#8B4513"/>
+  
+  <!-- Book/Blog Symbol -->
+  <rect x="8" y="8" width="16" height="16" rx="2" fill="white" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
+  <line x1="10" y1="12" x2="22" y2="12" stroke="#8B4513" stroke-width="1" stroke-linecap="round"/>
+  <line x1="10" y1="16" x2="22" y2="16" stroke="#8B4513" stroke-width="1" stroke-linecap="round"/>
+  <line x1="10" y1="20" x2="18" y2="20" stroke="#8B4513" stroke-width="1" stroke-linecap="round"/>
+</svg>
