@@ -38,7 +38,7 @@ async function checkArticleQuality(title: string, content: string, excerpt?: str
   const checks = {
     titleQuality: checkTitleQuality(title),
     contentStructure: checkContentStructure(content),
-    hirologStyle: checkHirologStyle(content),
+    hiroLogueStyle: checkHiroLogueStyle(content),
     readerEngagement: checkReaderEngagement(content),
     audioBroadcastRemoval: checkAudioBroadcastRemoval(content),
     lengthOptimization: checkLengthOptimization(content)
@@ -137,9 +137,9 @@ function checkContentStructure(content: string) {
   return { score, details, passed: score >= 80 }
 }
 
-// 3. Hirologスタイルチェック
-function checkHirologStyle(content: string) {
-  const hirologPatterns = [
+// 3. Hiro-Logueスタイルチェック
+function checkHiroLogueStyle(content: string) {
+  const hiroLoguePatterns = [
     /実は先日/, /ということで/, /そんな中ですね/,
     /考えてみると/, /でも、なんというか/, /例えばですね/,
     /さすがだなと思いました/, /改めて〜を感じました/,
@@ -150,17 +150,17 @@ function checkHirologStyle(content: string) {
     /妻/, /子ども/, /息子/, /娘/, /家族/, /ペット/
   ]
   
-  const hirologCount = hirologPatterns.filter(pattern => pattern.test(content)).length
+  const hiroLogueCount = hiroLoguePatterns.filter(pattern => pattern.test(content)).length
   const familyCount = familyReferences.filter(pattern => pattern.test(content)).length
   
   let score = 0
   const details = []
   
-  if (hirologCount >= 3) {
+  if (hiroLogueCount >= 3) {
     score += 50
-    details.push(`✅ Hirologスタイル表現 ${hirologCount}個使用`)
+    details.push(`✅ Hiro-Logueスタイル表現 ${hiroLogueCount}個使用`)
   } else {
-    details.push(`❌ Hirologスタイル表現が不足 (${hirologCount}個)`)
+    details.push(`❌ Hiro-Logueスタイル表現が不足 (${hiroLogueCount}個)`)
   }
   
   if (familyCount >= 1) {
@@ -266,8 +266,8 @@ function generateRecommendations(checks: any) {
     recommendations.push('「はじめに」「本文」「おわりに」の3セクション構成を実装')
   }
   
-  if (!checks.hirologStyle.passed) {
-    recommendations.push('「実は先日」「考えてみると」等のHirologスタイル表現を増加')
+  if (!checks.hiroLogueStyle.passed) {
+    recommendations.push('「実は先日」「考えてみると」等のHiro-Logueスタイル表現を増加')
   }
   
   if (!checks.readerEngagement.passed) {

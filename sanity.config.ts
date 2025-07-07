@@ -5,7 +5,7 @@ import { schemaTypes } from './schemas'
 
 export default defineConfig({
   name: 'default',
-  title: 'Monolb-Logue',
+  title: 'Hiro-Logue',
 
   projectId: '9dzq8f77',
   dataset: 'production',
