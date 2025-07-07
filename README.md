@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hiro-Logue - 暮らしの解像度を上げるノート
 
-## Getting Started
+**Sanity版ブログシステム**
 
-First, run the development server:
+## 🎯 プロジェクト概要
+
+プログラマー＆3児の父「ヒロ」による技術×日常の深い洞察ブログです。単なる技術解説ではなく、体験から本質を見つける記事を提供します。
+
+- **本番サイト**: https://hiro-logue.vercel.app/
+- **リポジトリ**: https://github.com/hiroHGxx/hiro-logue-sanity
+
+## 🛠️ 技術スタック
+
+- **Framework**: Next.js 15 + TypeScript
+- **Styling**: Tailwind CSS + 動的CSS変数
+- **CMS**: Sanity (ヘッドレス)
+- **API**: Next.js API Routes
+- **Deployment**: Vercel
+- **AI**: 記事生成・デザイン変更自動化
+
+## ✨ 主要機能
+
+- ✅ **基本ブログ機能**: 記事一覧・個別記事表示
+- ✅ **レスポンシブデザイン**: モダン書斎風テーマ
+- ✅ **SEO最適化**: メタデータ・構造化データ
+- ✅ **AI記事生成**: 自然言語→自動投稿API
+- ✅ **動的デザイン変更**: CSS変数による一括変更
+- ✅ **品質管理**: 音声配信→ブログ適切変換
+
+## 🚀 Getting Started
+
+### 開発環境セットアップ
 
 ```bash
+# 依存関係インストール
+npm install
+
+# 開発サーバー起動
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# ブラウザで確認
+# http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 環境変数設定
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# .env.local ファイルを作成
+NEXT_PUBLIC_SANITY_PROJECT_ID=your-project-id
+NEXT_PUBLIC_SANITY_DATASET=production
+SANITY_API_TOKEN=your-api-token
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📋 品質管理
 
-## Learn More
+### 記事作成ワークフロー
+1. **テーマ設定**: 体験ベースの具体的トピック
+2. **ルール適用**: `HIRO_LOGUE_WRITING_RULES.md`準拠
+3. **AI生成**: `/api/ai-post`で自動記事作成
+4. **自動品質チェック**: `/api/quality-check`で6項目評価
+5. **品質確認**: スコア80点以上で合格
+6. **公開**: Sanity管理画面から即座反映
 
-To learn more about Next.js, take a look at the following resources:
+### デプロイ・運用
+```bash
+# ビルドテスト
+npm run build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# 品質チェック
+npm run pre-deploy-check
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# 自動デプロイ
+npm run full-deploy
+```
 
-## Deploy on Vercel
+## 🎨 ブランドガイドライン
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### サイトコンセプト
+**「暮らしの解像度を上げるノート」**
+- 日常体験から深い洞察を引き出す
+- プログラマー父親の視点で技術と家族を結ぶ
+- 読者の「明日が楽しくなる」きっかけを提供
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### デザインシステム
+```css
+/* モダン書斎風カラーパレット */
+--primary: #8B4513;      /* サドルブラウン */
+--secondary: #CD853F;     /* ペルー */
+--accent: #D2691E;       /* チョコレート */
+--background: #FDF5E6;   /* オールドレース */
+--text: #2F2F2F;         /* ダークグレー */
+```
+
+## 📊 パフォーマンス指標
+
+- **ビルド時間**: 20-30秒（標準的なブログサイト）
+- **初回表示**: 2-3秒（最適化済み）
+- **記事作成**: AI生成で3-5分（手動1-2時間から短縮）
+- **SEOスコア**: 95/100（LLMO対応済み）
+
+## 🔗 関連リンク
+
+- **microCMS版**: https://mono-logue.vercel.app/
+- **プロジェクト全体**: [ContentFlow Documentation](../CLAUDE.md)
+
+---
+
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
