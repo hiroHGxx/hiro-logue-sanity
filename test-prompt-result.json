@@ -1,0 +1,39 @@
+{
+  "success": true,
+  "prompts": [
+    {
+      "name": "hero",
+      "prompt": "modern technology workspace with AI elements, warm lighting, cozy atmosphere, family-friendly, japanese minimalist style, soft colors, peaceful mood, innovative atmosphere, cinematic lighting, high quality, professional photography, 16:9 aspect ratio",
+      "negative_prompt": "blurry, lowres, bad anatomy, saturated colors, extra fingers, bad hands, malformed limbs, chaotic background, watermark, signature, text overlay",
+      "filename_prefix": "technology-hero",
+      "description": "記事のメイン画像（ヒーロー画像）"
+    },
+    {
+      "name": "section1",
+      "prompt": "person using advanced technology thoughtfully, warm lighting, cozy atmosphere, family-friendly, japanese minimalist style, soft colors, peaceful mood, subtle concern or challenge, soft lighting, innovative mood, clean composition",
+      "negative_prompt": "blurry, lowres, bad anatomy, saturated colors, extra fingers, bad hands, malformed limbs, chaotic background, watermark, signature, text overlay",
+      "filename_prefix": "technology-section1",
+      "description": "問題提起・課題を表現する画像"
+    },
+    {
+      "name": "section2",
+      "prompt": "digital innovation meeting human creativity, warm lighting, cozy atmosphere, family-friendly, japanese minimalist style, soft colors, peaceful mood, positive insight, warm lighting, hopeful innovative atmosphere, inspiring composition",
+      "negative_prompt": "blurry, lowres, bad anatomy, saturated colors, extra fingers, bad hands, malformed limbs, chaotic background, watermark, signature, text overlay",
+      "filename_prefix": "technology-section2",
+      "description": "解決策・洞察を表現する画像"
+    },
+    {
+      "name": "section3",
+      "prompt": "balanced tech-life integration, warm lighting, cozy atmosphere, family-friendly, japanese minimalist style, soft colors, peaceful mood, harmonious conclusion, golden hour lighting, innovative satisfaction, balanced composition",
+      "negative_prompt": "blurry, lowres, bad anatomy, saturated colors, extra fingers, bad hands, malformed limbs, chaotic background, watermark, signature, text overlay",
+      "filename_prefix": "technology-section3",
+      "description": "まとめ・未来への展望を表現する画像"
+    }
+  ],
+  "article_info": {
+    "title": "AI活用と余白の作り方〜忙しい日常に「間」を取り戻すコツ〜",
+    "estimated_scenes": 4,
+    "style": "hirolog",
+    "theme": "technology"
+  }
+}

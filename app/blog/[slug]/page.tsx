@@ -143,6 +143,64 @@ const components = {
   },
 }
 
+// Enhanced PortableText with embedded section images
+function EnhancedPortableText({ body, sectionImages }: { body: any[], sectionImages?: any[] }) {
+  if (!sectionImages || sectionImages.length === 0) {
+    return <PortableText value={body} components={components} />
+  }
+
+  // Split body content into sections and embed images
+  const enhancedBody = []
+  const h2Blocks = body.filter(block => block.style === 'h2')
+  
+  let imageIndex = 0
+  let currentIndex = 0
+  
+  for (const block of body) {
+    enhancedBody.push(block)
+    currentIndex++
+    
+    // Insert image after h2 blocks (except the first one "はじめに")
+    if (block.style === 'h2' && imageIndex < sectionImages.length) {
+      const h2Text = block.children?.[0]?.text || ''
+      
+      // Skip inserting image after "はじめに" section
+      if (!h2Text.includes('はじめに')) {
+        enhancedBody.push({
+          _type: 'sectionImage',
+          _key: `embedded-image-${imageIndex}`,
+          image: sectionImages[imageIndex],
+          imageIndex: imageIndex
+        })
+        imageIndex++
+      }
+    }
+  }
+  
+  // Enhanced components with section image support
+  const enhancedComponents = {
+    ...components,
+    types: {
+      ...components.types,
+      sectionImage: ({ value }: any) => (
+        <div className="my-8">
+          <Image
+            src={urlFor(value.image).width(800).height(450).url()}
+            alt={value.image.alt || `セクション ${value.imageIndex + 1} の画像`}
+            width={800}
+            height={450}
+            className="w-full rounded-lg shadow-md hover:shadow-lg transition-shadow"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
+          />
+        </div>
+      )
+    }
+  }
+  
+  return <PortableText value={enhancedBody} components={enhancedComponents} />
+}
+
 export default async function BlogPost({ params }: PageProps) {
   const { slug } = await params
   const post = await getPost(slug)
@@ -204,8 +262,23 @@ export default async function BlogPost({ params }: PageProps) {
           )}
         </header>
 
-        {/* Featured Image */}
-        {post.mainImage && (
+        {/* Hero Image (Auto-generated) */}
+        {post.heroImage && (
+          <div className="mb-8">
+            <Image
+              src={urlFor(post.heroImage).width(1200).height(600).url()}
+              alt={post.heroImage.alt || `${post.title}のヒーロー画像`}
+              width={1200}
+              height={600}
+              className="w-full rounded-lg shadow-lg"
+              priority
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
+            />
+          </div>
+        )}
+
+        {/* Featured Image (Manual) */}
+        {!post.heroImage && post.mainImage && (
           <div className="mb-8">
             <Image
               src={urlFor(post.mainImage).width(1200).height(600).url()}
@@ -219,9 +292,9 @@ export default async function BlogPost({ params }: PageProps) {
           </div>
         )}
 
-        {/* Content */}
+        {/* Content with Embedded Section Images */}
         <div className="prose prose-lg max-w-none">
-          {post.body && <PortableText value={post.body} components={components} />}
+          {post.body && <EnhancedPortableText body={post.body} sectionImages={post.sectionImages} />}
         </div>
 
         {/* Footer */}

@@ -1,0 +1,17 @@
+{
+  "prompts": [
+    {
+      "name": "hero",
+      "prompt": "modern technology workspace with AI elements, warm lighting, cozy atmosphere, family-friendly, japanese minimalist style, soft colors, peaceful mood, innovative atmosphere, cinematic lighting, high quality, professional photography, 16:9 aspect ratio",
+      "negative_prompt": "blurry, lowres, bad anatomy, saturated colors, extra fingers, bad hands, malformed limbs, chaotic background, watermark, signature, text overlay",
+      "filename_prefix": "technology-hero",
+      "description": "記事のメイン画像（ヒーロー画像）"
+    }
+  ],
+  "article_info": {
+    "title": "AI活用と余白の作り方〜テストモード〜",
+    "estimated_scenes": 1,
+    "style": "hirolog",
+    "theme": "technology"
+  }
+}

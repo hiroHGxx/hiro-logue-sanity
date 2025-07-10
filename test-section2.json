@@ -1,0 +1,17 @@
+{
+  "prompts": [
+    {
+      "name": "section2",
+      "prompt": "digital innovation meeting human creativity, warm lighting, cozy atmosphere, family-friendly, japanese minimalist style, soft colors, peaceful mood, positive insight, warm lighting, hopeful innovative atmosphere, inspiring composition",
+      "negative_prompt": "blurry, lowres, bad anatomy, saturated colors, extra fingers, bad hands, malformed limbs, chaotic background, watermark, signature, text overlay",
+      "filename_prefix": "technology-section2",
+      "description": "解決策・洞察を表現する画像"
+    }
+  ],
+  "article_info": {
+    "title": "AI活用と余白の作り方〜section2のみ〜",
+    "estimated_scenes": 1,
+    "style": "hirolog",
+    "theme": "technology"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "prompts": [
+    {
+      "name": "hero",
+      "prompt": "modern workspace with computer and coding setup, warm lighting, cozy atmosphere, family-friendly, japanese minimalist style, soft colors, peaceful mood, cinematic lighting, high quality, professional photography, 16:9 aspect ratio",
+      "negative_prompt": "blurry, lowres, bad anatomy, saturated colors, extra fingers, bad hands, malformed limbs, chaotic background, watermark, signature, text overlay, person, people, human figures, man, woman, faces",
+      "filename_prefix": "technology-hero",
+      "description": "記事のメイン画像（ヒーロー画像）"
+    },
+    {
+      "name": "section1",
+      "prompt": "person thoughtfully using technology tools, warm lighting, cozy atmosphere, family-friendly, japanese minimalist style, soft colors, peaceful mood, subtle concern or challenge, soft lighting, clean composition",
+      "negative_prompt": "blurry, lowres, bad anatomy, saturated colors, extra fingers, bad hands, malformed limbs, chaotic background, watermark, signature, text overlay, person, people, human figures, man, woman, faces",
+      "filename_prefix": "technology-section1",
+      "description": "問題提起・課題を表現する画像"
+    },
+    {
+      "name": "section2",
+      "prompt": "digital innovation and creativity workspace, warm lighting, cozy atmosphere, family-friendly, japanese minimalist style, soft colors, peaceful mood, positive insight, warm lighting, inspiring composition",
+      "negative_prompt": "blurry, lowres, bad anatomy, saturated colors, extra fingers, bad hands, malformed limbs, chaotic background, watermark, signature, text overlay, person, people, human figures, man, woman, faces",
+      "filename_prefix": "technology-section2",
+      "description": "解決策・洞察を表現する画像"
+    },
+    {
+      "name": "section3",
+      "prompt": "balanced tech-life integration environment, warm lighting, cozy atmosphere, family-friendly, japanese minimalist style, soft colors, peaceful mood, harmonious conclusion, golden hour lighting, balanced composition",
+      "negative_prompt": "blurry, lowres, bad anatomy, saturated colors, extra fingers, bad hands, malformed limbs, chaotic background, watermark, signature, text overlay, person, people, human figures, man, woman, faces",
+      "filename_prefix": "technology-section3",
+      "description": "まとめ・未来への展望を表現する画像"
+    }
+  ],
+  "article_info": {
+    "title": "スマホ疲れから抜け出すヒント〜意外と知らない「情報消化力」の鍛え方",
+    "estimated_scenes": 4,
+    "style": "hirolog",
+    "theme": "auto-generated"
+  }
+}

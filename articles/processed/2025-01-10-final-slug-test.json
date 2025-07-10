@@ -1,0 +1,6 @@
+{
+  "title": "最終スラッグテスト〜AI技術と家族の日常",
+  "body": "## はじめに\n\nこれは最終的なスラッグ生成機能のテスト記事です。\n\nJSONで指定したスラッグが正しく使用されるかを確認します。",
+  "slug": "ai-technology-family-daily-life",
+  "categories": ["AI", "家族", "技術"]
+}

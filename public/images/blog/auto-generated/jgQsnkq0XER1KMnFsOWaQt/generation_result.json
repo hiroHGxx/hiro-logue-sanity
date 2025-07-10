@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "generated_files": {
+    "hero": [
+      "public/images/blog/auto-generated/jgQsnkq0XER1KMnFsOWaQt/technology-hero-001-20250709_151111.png"
+    ],
+    "section1": [
+      "public/images/blog/auto-generated/jgQsnkq0XER1KMnFsOWaQt/technology-section1-001-20250709_152102.png"
+    ],
+    "section2": [
+      "public/images/blog/auto-generated/jgQsnkq0XER1KMnFsOWaQt/technology-section2-001-20250709_153208.png"
+    ],
+    "section3": [
+      "public/images/blog/auto-generated/jgQsnkq0XER1KMnFsOWaQt/technology-section3-001-20250709_153553.png"
+    ]
+  },
+  "stats": {
+    "total_images": 4,
+    "successful_generations": 4,
+    "failed_generations": 0,
+    "total_time": 1649.898857
+  },
+  "article_info": {
+    "title": "プログラミング学習で大切なことを通して考える、これからの生き方",
+    "estimated_scenes": 4,
+    "style": "hirolog",
+    "theme": "auto-generated"
+  }
+}
