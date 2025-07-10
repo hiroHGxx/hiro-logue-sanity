@@ -1,0 +1,17 @@
+{
+  "prompts": [
+    {
+      "name": "section3",
+      "prompt": "balanced tech-life integration, warm lighting, cozy atmosphere, family-friendly, japanese minimalist style, soft colors, peaceful mood, harmonious conclusion, golden hour lighting, innovative satisfaction, balanced composition",
+      "negative_prompt": "blurry, lowres, bad anatomy, saturated colors, extra fingers, bad hands, malformed limbs, chaotic background, watermark, signature, text overlay",
+      "filename_prefix": "technology-section3",
+      "description": "まとめ・未来への展望を表現する画像"
+    }
+  ],
+  "article_info": {
+    "title": "AI活用と余白の作り方〜section3のみ〜",
+    "estimated_scenes": 1,
+    "style": "hirolog",
+    "theme": "technology"
+  }
+}

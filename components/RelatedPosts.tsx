@@ -34,13 +34,13 @@ export default async function RelatedPosts({
             key={post._id} 
             className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
           >
-            {/* 記事画像 */}
-            {post.mainImage && (
+            {/* 記事画像 - heroImage優先、なければmainImage */}
+            {(post.heroImage || post.mainImage) && (
               <Link href={`/blog/${post.slug.current}`}>
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src={urlFor(post.mainImage).width(400).height(200).url()}
-                    alt={post.mainImage.alt || `${post.title}のサムネイル画像`}
+                    src={urlFor(post.heroImage || post.mainImage).width(400).height(200).url()}
+                    alt={(post.heroImage || post.mainImage)?.alt || `${post.title}のサムネイル画像`}
                     width={400}
                     height={200}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"

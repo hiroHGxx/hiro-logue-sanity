@@ -1,0 +1,38 @@
+{
+  "prompts": [
+    {
+      "name": "hero",
+      "prompt": "paper airplane flying through cloudy sky representing journey, soft pastel illustration, warm lighting, peaceful mood, soft colors, japanese aesthetic, cinematic composition, high quality, ethereal atmosphere",
+      "negative_prompt": "blurry, lowres, bad anatomy, saturated colors, extra fingers, bad hands, malformed limbs, chaotic background, watermark, signature, text overlay, person, people, human figures, man, woman, faces, hands, arms, legs, body parts, realistic people",
+      "filename_prefix": "technology-hero",
+      "description": "記事のメイン画像（ヒーロー画像）"
+    },
+    {
+      "name": "section1",
+      "prompt": "circuit board patterns with organic flowing lines, soft pastel illustration, warm lighting, peaceful mood, soft colors, japanese aesthetic, thoughtful mood, gentle lighting, artistic composition",
+      "negative_prompt": "blurry, lowres, bad anatomy, saturated colors, extra fingers, bad hands, malformed limbs, chaotic background, watermark, signature, text overlay, person, people, human figures, man, woman, faces, hands, arms, legs, body parts, realistic people",
+      "filename_prefix": "technology-section1",
+      "description": "問題提起・課題を表現する画像"
+    },
+    {
+      "name": "section2",
+      "prompt": "garden tools and small potted plants on rustic table, soft pastel illustration, warm lighting, peaceful mood, soft colors, japanese aesthetic, inspiring atmosphere, creative energy, harmonious composition",
+      "negative_prompt": "blurry, lowres, bad anatomy, saturated colors, extra fingers, bad hands, malformed limbs, chaotic background, watermark, signature, text overlay, person, people, human figures, man, woman, faces, hands, arms, legs, body parts, realistic people",
+      "filename_prefix": "technology-section2",
+      "description": "解決策・洞察を表現する画像"
+    },
+    {
+      "name": "section3",
+      "prompt": "bamboo grove with filtered light creating patterns, soft pastel illustration, warm lighting, peaceful mood, soft colors, japanese aesthetic, serene conclusion, golden hour lighting, balanced composition",
+      "negative_prompt": "blurry, lowres, bad anatomy, saturated colors, extra fingers, bad hands, malformed limbs, chaotic background, watermark, signature, text overlay, person, people, human figures, man, woman, faces, hands, arms, legs, body parts, realistic people",
+      "filename_prefix": "technology-section3",
+      "description": "まとめ・未来への展望を表現する画像"
+    }
+  ],
+  "article_info": {
+    "title": "プログラミング学習で大切なことを通して考える、これからの生き方",
+    "estimated_scenes": 4,
+    "style": "hirolog",
+    "theme": "auto-generated"
+  }
+}

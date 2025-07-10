@@ -1,0 +1,1027 @@
+🚀 Starting Phase C Hybrid Image Worker...
+🎯 Phase A方式（直接Python実行）+ バックグラウンド処理
+🚀 Phase C Hybrid Image Worker started
+🎯 Monitoring flag directory: ./data/jobs/flags
+📊 Stats: 0 pending, 1 completed
+📊 Stats: 0 pending, 1 completed
+📊 Stats: 0 pending, 1 completed
+📊 Stats: 0 pending, 1 completed
+📊 Stats: 0 pending, 1 completed
+📊 Stats: 0 pending, 1 completed
+📊 Stats: 0 pending, 1 completed
+📊 Stats: 0 pending, 1 completed
+📊 Stats: 0 pending, 1 completed
+📊 Stats: 0 pending, 1 completed
+📊 Stats: 0 pending, 1 completed
+📊 Stats: 0 pending, 1 completed
+📊 Stats: 0 pending, 1 completed
+📊 Stats: 0 pending, 1 completed
+📊 Stats: 0 pending, 1 completed
+📊 Stats: 0 pending, 1 completed
+📋 Found 1 pending jobs
+🎨 Processing job: 82lit7DefJsRxG4Tv4MGAX
+📝 Config: data/jobs/configs/82lit7DefJsRxG4Tv4MGAX.json
+🐍 Phase A Style Execution:
+   Config: data/jobs/configs/82lit7DefJsRxG4Tv4MGAX.json
+   Output: public/images/blog/auto-generated/82lit7DefJsRxG4Tv4MGAX
+[Python]: 🚀 ContentFlow自動画像生成システム開始
+============================================================
+📄 設定ファイル読み込み: data/jobs/configs/82lit7DefJsRxG4Tv4MGAX.json
+📁 出力ディレクトリ: public/images/blog/auto-generated/82lit7DefJsRxG4Tv4MGAX
+📦 Stable Diffusion パイプライン初期化中...
+🎯 モデル: /Users/gotohiro/Documents/user/Products/AI/models/diffusers/juggernaut-xl
+[Python Error]: Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]
+[Python Error]: Loading pipeline components...:  43%|████▎     | 3/7 [00:01<00:01,  2.15it/s]
+[Python Error]: 
+[Python Error]: Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+[Python Error]: 
+[Python Error]: Loading checkpoint shards:  50%|█████     | 1/2 [00:16<00:16, 16.27s/it][A
+[Python Error]: 
+[Python Error]: Loading checkpoint shards: 100%|██████████| 2/2 [00:16<00:00,  7.00s/it][ALoading checkpoint shards: 100%|██████████| 2/2 [00:16<00:00,  8.39s/it]
+[Python Error]: Loading pipeline components...:  57%|█████▋    | 4/7 [00:18<00:17,  5.75s/it]
+[Python Error]: Loading pipeline components...:  71%|███████▏  | 5/7 [00:18<00:08,  4.13s/it]
+[Python Error]: Loading pipeline components...: 100%|██████████| 7/7 [00:19<00:00,  2.23s/it]
+[Python Error]: Loading pipeline components...: 100%|██████████| 7/7 [00:19<00:00,  2.73s/it]
+📊 Stats: 1 pending, 1 completed
+[Python]: ✅ パイプライン初期化完了
+🎯 記事: AIに代替されない価値の作り方〜ビジネスマンが磨くべき本質的スキル
+🎨 スタイル: hirolog
+📊 生成予定: 4シーン × 1バリエーション
+🎨 hero 画像生成開始...
+📝 プロンプト: modern workspace with computer and coding setup, warm lighting, cozy atmosphere, family-friendly, ja...
+[Python Error]: 0%|          | 0/25 [00:00<?, ?it/s]
+[Python Error]: 4%|▍         | 1/25 [00:16<06:25, 16.08s/it]
+[Python Error]: 8%|▊         | 2/25 [00:22<04:00, 10.43s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 12%|█▏        | 3/25 [00:30<03:22,  9.20s/it]
+[Python Error]: 16%|█▌        | 4/25 [00:37<02:59,  8.55s/it]
+[Python Error]: 20%|██        | 5/25 [00:44<02:39,  7.97s/it]
+[Python Error]: 24%|██▍       | 6/25 [00:52<02:26,  7.71s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 28%|██▊       | 7/25 [00:59<02:17,  7.64s/it]
+[Python Error]: 32%|███▏      | 8/25 [01:06<02:07,  7.49s/it]
+[Python Error]: 36%|███▌      | 9/25 [01:14<02:00,  7.50s/it]
+[Python Error]: 40%|████      | 10/25 [01:21<01:52,  7.52s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 44%|████▍     | 11/25 [01:28<01:40,  7.18s/it]
+[Python Error]: 48%|████▊     | 12/25 [01:34<01:30,  6.94s/it]
+[Python Error]: 52%|█████▏    | 13/25 [01:41<01:21,  6.81s/it]
+[Python Error]: 56%|█████▌    | 14/25 [01:49<01:19,  7.22s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 60%|██████    | 15/25 [01:55<01:10,  7.01s/it]
+[Python Error]: 64%|██████▍   | 16/25 [02:02<01:01,  6.88s/it]
+[Python Error]: 68%|██████▊   | 17/25 [02:09<00:55,  6.98s/it]
+[Python Error]: 72%|███████▏  | 18/25 [02:17<00:50,  7.20s/it]
+[Python Error]: 76%|███████▌  | 19/25 [02:23<00:41,  6.91s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 80%|████████  | 20/25 [02:30<00:34,  6.99s/it]
+[Python Error]: 84%|████████▍ | 21/25 [02:37<00:27,  6.99s/it]
+[Python Error]: 88%|████████▊ | 22/25 [02:44<00:20,  6.96s/it]
+[Python Error]: 92%|█████████▏| 23/25 [02:51<00:14,  7.04s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 96%|█████████▌| 24/25 [02:57<00:06,  6.74s/it]
+[Python Error]: 100%|██████████| 25/25 [03:03<00:00,  6.54s/it]
+[Python Error]: 100%|██████████| 25/25 [03:03<00:00,  7.36s/it]
+[Python]: ✅ technology-hero-001-20250709_072259.png 生成完了 (191.5秒)
+📈 進行状況: 1/4
+🎨 section1 画像生成開始...
+📝 プロンプト: technology tools and devices thoughtfully arranged, warm lighting, cozy atmosphere, family-friendly,...
+[Python Error]: 0%|          | 0/25 [00:00<?, ?it/s]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 4%|▍         | 1/25 [00:26<10:27, 26.14s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 8%|▊         | 2/25 [00:53<10:14, 26.71s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 12%|█▏        | 3/25 [01:15<08:58, 24.46s/it]
+[Python Error]: 16%|█▌        | 4/25 [01:32<07:36, 21.72s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 20%|██        | 5/25 [01:59<07:54, 23.74s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 24%|██▍       | 6/25 [02:23<07:29, 23.64s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 28%|██▊       | 7/25 [02:41<06:32, 21.78s/it]
+[Python Error]: 32%|███▏      | 8/25 [03:01<06:03, 21.37s/it]
+📊 Stats: 1 pending, 1 completed
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 36%|███▌      | 9/25 [03:44<07:28, 28.06s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 40%|████      | 10/25 [04:17<07:23, 29.56s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 44%|████▍     | 11/25 [04:52<07:18, 31.29s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 48%|████▊     | 12/25 [05:27<06:59, 32.27s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 52%|█████▏    | 13/25 [05:58<06:23, 31.98s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 56%|█████▌    | 14/25 [06:31<05:56, 32.38s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 60%|██████    | 15/25 [06:59<05:10, 31.01s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 64%|██████▍   | 16/25 [07:32<04:43, 31.53s/it]
+📊 Stats: 1 pending, 1 completed
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 68%|██████▊   | 17/25 [08:23<04:59, 37.42s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 72%|███████▏  | 18/25 [09:02<04:25, 37.89s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 76%|███████▌  | 19/25 [09:32<03:33, 35.50s/it]
+📊 Stats: 1 pending, 1 completed
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 80%|████████  | 20/25 [10:09<02:59, 35.86s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 84%|████████▍ | 21/25 [10:45<02:24, 36.09s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 88%|████████▊ | 22/25 [11:11<01:38, 32.95s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 92%|█████████▏| 23/25 [11:42<01:04, 32.39s/it]
+[Python Error]: 96%|█████████▌| 24/25 [12:06<00:30, 30.02s/it]
+📊 Stats: 1 pending, 1 completed
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 100%|██████████| 25/25 [12:39<00:00, 30.78s/it]
+[Python Error]: 100%|██████████| 25/25 [12:39<00:00, 30.38s/it]
+[Python Error]: 
+[Python]: ✅ technology-section1-001-20250709_073558.png 生成完了 (779.1秒)
+📈 進行状況: 2/4
+🎨 section2 画像生成開始...
+📝 プロンプト: digital innovation and creativity workspace, warm lighting, cozy atmosphere, family-friendly, japane...
+[Python Error]: 0%|          | 0/25 [00:00<?, ?it/s]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 4%|▍         | 1/25 [00:35<14:14, 35.60s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 8%|▊         | 2/25 [00:49<08:41, 22.68s/it]
+[Python Error]: 12%|█▏        | 3/25 [00:56<05:44, 15.64s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 16%|█▌        | 4/25 [01:07<04:50, 13.85s/it]
+[Python Error]: 20%|██        | 5/25 [01:17<04:09, 12.46s/it]
+[Python Error]: 24%|██▍       | 6/25 [01:25<03:25, 10.84s/it]
+[Python Error]: 28%|██▊       | 7/25 [01:33<03:00, 10.02s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 32%|███▏      | 8/25 [01:40<02:35,  9.14s/it]
+[Python Error]: 36%|███▌      | 9/25 [01:48<02:17,  8.61s/it]
+[Python Error]: 40%|████      | 10/25 [01:55<02:04,  8.28s/it]
+[Python Error]: 44%|████▍     | 11/25 [02:05<02:02,  8.72s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 48%|████▊     | 12/25 [02:13<01:48,  8.35s/it]
+[Python Error]: 52%|█████▏    | 13/25 [02:19<01:32,  7.74s/it]
+[Python Error]: 56%|█████▌    | 14/25 [02:25<01:21,  7.38s/it]
+[Python Error]: 60%|██████    | 15/25 [02:33<01:13,  7.38s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 64%|██████▍   | 16/25 [02:40<01:05,  7.24s/it]
+[Python Error]: 68%|██████▊   | 17/25 [02:46<00:56,  7.02s/it]
+[Python Error]: 72%|███████▏  | 18/25 [02:54<00:50,  7.24s/it]
+[Python Error]: 76%|███████▌  | 19/25 [03:02<00:44,  7.50s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 80%|████████  | 20/25 [03:09<00:36,  7.39s/it]
+[Python Error]: 84%|████████▍ | 21/25 [03:16<00:28,  7.09s/it]
+[Python Error]: 88%|████████▊ | 22/25 [03:22<00:20,  6.83s/it]
+[Python Error]: 92%|█████████▏| 23/25 [03:28<00:13,  6.70s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 96%|█████████▌| 24/25 [03:41<00:08,  8.37s/it]
+[Python Error]: 100%|██████████| 25/25 [04:01<00:00, 12.09s/it]100%|██████████| 25/25 [04:01<00:00,  9.67s/it]
+📊 Stats: 1 pending, 1 completed
+[Python]: ✅ technology-section2-001-20250709_074023.png 生成完了 (264.6秒)
+📈 進行状況: 3/4
+🎨 section3 画像生成開始...
+📝 プロンプト: balanced tech-life integration environment, warm lighting, cozy atmosphere, family-friendly, japanes...
+[Python Error]: 0%|          | 0/25 [00:00<?, ?it/s]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 4%|▍         | 1/25 [00:32<12:58, 32.43s/it]
+📊 Stats: 1 pending, 1 completed
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 8%|▊         | 2/25 [01:37<19:48, 51.66s/it]
+📊 Stats: 1 pending, 1 completed
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 12%|█▏        | 3/25 [02:25<18:17, 49.87s/it]
+📊 Stats: 1 pending, 1 completed
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 16%|█▌        | 4/25 [03:22<18:31, 52.91s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 20%|██        | 5/25 [04:05<16:20, 49.05s/it]
+📊 Stats: 1 pending, 1 completed
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 24%|██▍       | 6/25 [04:46<14:43, 46.50s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 28%|██▊       | 7/25 [05:23<13:01, 43.44s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 32%|███▏      | 8/25 [06:05<12:08, 42.83s/it]
+📊 Stats: 1 pending, 1 completed
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 36%|███▌      | 9/25 [06:53<11:53, 44.59s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 40%|████      | 10/25 [07:37<11:04, 44.31s/it]
+📊 Stats: 1 pending, 1 completed
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 44%|████▍     | 11/25 [08:19<10:08, 43.48s/it]
+📊 Stats: 1 pending, 1 completed
+❌ Job failed: Error: Python script execution timed out (30 minutes)
+    at Timeout._onTimeout (/Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/scripts/hybrid-worker.js:202:16)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+📋 Found 1 pending jobs
+🎨 Processing job: 82lit7DefJsRxG4Tv4MGAX
+📝 Config: data/jobs/configs/82lit7DefJsRxG4Tv4MGAX.json
+🐍 Phase A Style Execution:
+   Config: data/jobs/configs/82lit7DefJsRxG4Tv4MGAX.json
+   Output: public/images/blog/auto-generated/82lit7DefJsRxG4Tv4MGAX
+[Python]: 🚀 ContentFlow自動画像生成システム開始
+============================================================
+📄 設定ファイル読み込み: data/jobs/configs/82lit7DefJsRxG4Tv4MGAX.json
+📁 出力ディレクトリ: public/images/blog/auto-generated/82lit7DefJsRxG4Tv4MGAX
+📦 Stable Diffusion パイプライン初期化中...
+🎯 モデル: /Users/gotohiro/Documents/user/Products/AI/models/diffusers/juggernaut-xl
+[Python Error]: Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]
+[Python Error]: /opt/homebrew/Cellar/python@3.10/3.10.18/Frameworks/Python.framework/Versions/3.10/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+[Python Error]: Loading pipeline components...:  29%|██▊       | 2/7 [00:04<00:11,  2.38s/it]
+[Python Error]: Loading pipeline components...:  57%|█████▋    | 4/7 [00:05<00:03,  1.15s/it]
+[Python Error]: Loading pipeline components...:  86%|████████▌ | 6/7 [00:05<00:00,  1.49it/s]
+[Python Error]: 
+[Python Error]: Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 
+[Python Error]: Loading checkpoint shards:  50%|█████     | 1/2 [00:14<00:14, 14.06s/it][A
+[Python Error]: 
+[Python Error]: Loading checkpoint shards: 100%|██████████| 2/2 [00:14<00:00,  6.10s/it][ALoading checkpoint shards: 100%|██████████| 2/2 [00:14<00:00,  7.30s/it]
+[Python Error]: Loading pipeline components...: 100%|██████████| 7/7 [00:20<00:00,  4.11s/it]
+[Python Error]: Loading pipeline components...: 100%|██████████| 7/7 [00:20<00:00,  2.89s/it]
+[Python]: ✅ パイプライン初期化完了
+🎯 記事: AIに代替されない価値の作り方〜ビジネスマンが磨くべき本質的スキル
+🎨 スタイル: hirolog
+📊 生成予定: 4シーン × 1バリエーション
+🎨 hero 画像生成開始...
+📝 プロンプト: modern workspace with computer and coding setup, warm lighting, cozy atmosphere, family-friendly, ja...
+[Python Error]: 0%|          | 0/25 [00:00<?, ?it/s]
+[Python Error]: 4%|▍         | 1/25 [00:15<06:06, 15.28s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 8%|▊         | 2/25 [00:24<04:26, 11.61s/it]
+[Python Error]: 12%|█▏        | 3/25 [00:31<03:31,  9.62s/it]
+[Python Error]: 16%|█▌        | 4/25 [00:39<03:04,  8.76s/it]
+[Python Error]: 20%|██        | 5/25 [00:46<02:45,  8.28s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 24%|██▍       | 6/25 [00:53<02:26,  7.72s/it]
+[Python Error]: 28%|██▊       | 7/25 [01:00<02:17,  7.64s/it]
+[Python Error]: 32%|███▏      | 8/25 [01:07<02:05,  7.40s/it]
+[Python Error]: 36%|███▌      | 9/25 [01:15<02:03,  7.72s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 40%|████      | 10/25 [01:23<01:53,  7.55s/it]
+[Python Error]: 44%|████▍     | 11/25 [01:30<01:45,  7.52s/it]
+[Python Error]: 48%|████▊     | 12/25 [01:37<01:35,  7.34s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 52%|█████▏    | 13/25 [01:58<02:19, 11.59s/it]
+[Python Error]: 56%|█████▌    | 14/25 [02:09<02:04, 11.31s/it]
+[Python Error]: 60%|██████    | 15/25 [02:17<01:42, 10.29s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 64%|██████▍   | 16/25 [02:23<01:22,  9.17s/it]
+[Python Error]: 68%|██████▊   | 17/25 [02:31<01:08,  8.58s/it]
+[Python Error]: 72%|███████▏  | 18/25 [02:38<00:57,  8.25s/it]
+[Python Error]: 76%|███████▌  | 19/25 [02:46<00:48,  8.06s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 80%|████████  | 20/25 [02:54<00:41,  8.20s/it]
+[Python Error]: 84%|████████▍ | 21/25 [03:02<00:32,  8.08s/it]
+[Python Error]: 88%|████████▊ | 22/25 [03:11<00:24,  8.20s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 92%|█████████▏| 23/25 [03:18<00:16,  8.01s/it]
+[Python Error]: 96%|█████████▌| 24/25 [03:24<00:07,  7.52s/it]
+[Python Error]: 100%|██████████| 25/25 [03:32<00:00,  7.46s/it]
+[Python Error]: 100%|██████████| 25/25 [03:32<00:00,  8.49s/it]
+[Python Error]: 
+📊 Stats: 1 pending, 1 completed
+[Python]: ✅ technology-hero-001-20250709_075337.png 生成完了 (222.3秒)
+📈 進行状況: 1/4
+🎨 section1 画像生成開始...
+📝 プロンプト: technology tools and devices thoughtfully arranged, warm lighting, cozy atmosphere, family-friendly,...
+[Python Error]: 0%|          | 0/25 [00:00<?, ?it/s]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 4%|▍         | 1/25 [00:53<21:19, 53.32s/it]
+📊 Stats: 1 pending, 1 completed
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 8%|▊         | 2/25 [01:36<18:05, 47.18s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 12%|█▏        | 3/25 [01:59<13:14, 36.11s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 16%|█▌        | 4/25 [02:29<11:47, 33.70s/it]
+[Python Error]: 20%|██        | 5/25 [02:48<09:29, 28.46s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 24%|██▍       | 6/25 [03:15<08:49, 27.86s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 28%|██▊       | 7/25 [03:39<07:59, 26.62s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 32%|███▏      | 8/25 [04:02<07:13, 25.47s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 36%|███▌      | 9/25 [04:29<06:56, 26.01s/it]
+[Python Error]: 40%|████      | 10/25 [04:50<06:06, 24.45s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 44%|████▍     | 11/25 [05:12<05:34, 23.86s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 48%|████▊     | 12/25 [05:31<04:51, 22.41s/it]
+[Python Error]: 52%|█████▏    | 13/25 [05:47<04:05, 20.43s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 56%|█████▌    | 14/25 [06:08<03:47, 20.64s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 60%|██████    | 15/25 [06:27<03:20, 20.00s/it]
+[Python Error]: 64%|██████▍   | 16/25 [06:50<03:09, 21.04s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 68%|██████▊   | 17/25 [07:14<02:54, 21.84s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 72%|███████▏  | 18/25 [07:29<02:17, 19.63s/it]
+[Python Error]: 76%|███████▌  | 19/25 [07:37<01:37, 16.22s/it]
+[Python Error]: 80%|████████  | 20/25 [07:43<01:06, 13.27s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 84%|████████▍ | 21/25 [08:06<01:04, 16.03s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 88%|████████▊ | 22/25 [08:30<00:55, 18.56s/it]
+[Python Error]: 92%|█████████▏| 23/25 [08:54<00:40, 20.12s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 96%|█████████▌| 24/25 [09:18<00:21, 21.25s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 100%|██████████| 25/25 [09:42<00:00, 22.12s/it]
+[Python Error]: 100%|██████████| 25/25 [09:42<00:00, 23.30s/it]
+[Python Error]: 
+📊 Stats: 1 pending, 1 completed
+[Python]: ✅ technology-section1-001-20250709_080343.png 生成完了 (606.6秒)
+📈 進行状況: 2/4
+🎨 section2 画像生成開始...
+📝 プロンプト: digital innovation and creativity workspace, warm lighting, cozy atmosphere, family-friendly, japane...
+[Python Error]: 0%|          | 0/25 [00:00<?, ?it/s]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 4%|▍         | 1/25 [00:25<10:12, 25.53s/it]
+[Python Error]: 8%|▊         | 2/25 [00:31<05:27, 14.25s/it]
+[Python Error]: 12%|█▏        | 3/25 [00:38<03:52, 10.57s/it]
+[Python Error]: 16%|█▌        | 4/25 [00:45<03:13,  9.21s/it]
+[Python Error]: 20%|██        | 5/25 [00:51<02:42,  8.12s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 24%|██▍       | 6/25 [00:57<02:20,  7.42s/it]
+[Python Error]: 28%|██▊       | 7/25 [01:04<02:10,  7.26s/it]
+[Python Error]: 32%|███▏      | 8/25 [01:10<01:58,  7.00s/it]
+[Python Error]: 36%|███▌      | 9/25 [01:18<01:55,  7.20s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 40%|████      | 10/25 [01:24<01:43,  6.88s/it]
+[Python Error]: 44%|████▍     | 11/25 [01:30<01:33,  6.69s/it]
+[Python Error]: 48%|████▊     | 12/25 [01:37<01:24,  6.53s/it]
+[Python Error]: 52%|█████▏    | 13/25 [01:44<01:20,  6.68s/it]
+[Python Error]: 56%|█████▌    | 14/25 [01:51<01:15,  6.87s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 60%|██████    | 15/25 [01:57<01:06,  6.66s/it]
+[Python Error]: 64%|██████▍   | 16/25 [02:04<01:00,  6.73s/it]
+[Python Error]: 68%|██████▊   | 17/25 [02:10<00:52,  6.62s/it]
+[Python Error]: 72%|███████▏  | 18/25 [02:18<00:47,  6.81s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 76%|███████▌  | 19/25 [02:24<00:39,  6.62s/it]
+[Python Error]: 80%|████████  | 20/25 [02:30<00:32,  6.49s/it]
+[Python Error]: 84%|████████▍ | 21/25 [02:37<00:26,  6.56s/it]
+[Python Error]: 88%|████████▊ | 22/25 [02:43<00:19,  6.46s/it]
+[Python Error]: 92%|█████████▏| 23/25 [02:50<00:13,  6.52s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 96%|█████████▌| 24/25 [02:56<00:06,  6.38s/it]
+[Python Error]: 100%|██████████| 25/25 [03:02<00:00,  6.46s/it]
+[Python Error]: 100%|██████████| 25/25 [03:02<00:00,  7.31s/it]
+[Python Error]: 
+📊 Stats: 1 pending, 1 completed
+[Python]: ✅ technology-section2-001-20250709_080710.png 生成完了 (206.8秒)
+📈 進行状況: 3/4
+🎨 section3 画像生成開始...
+📝 プロンプト: balanced tech-life integration environment, warm lighting, cozy atmosphere, family-friendly, japanes...
+[Python Error]: 0%|          | 0/25 [00:00<?, ?it/s]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 4%|▍         | 1/25 [00:26<10:27, 26.15s/it]
+[Python Error]: 8%|▊         | 2/25 [00:47<08:52, 23.17s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 12%|█▏        | 3/25 [00:58<06:30, 17.74s/it]
+[Python Error]: 16%|█▌        | 4/25 [01:05<04:45, 13.60s/it]
+[Python Error]: 20%|██        | 5/25 [01:12<03:40, 11.04s/it]
+[Python Error]: 24%|██▍       | 6/25 [01:20<03:12, 10.12s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 28%|██▊       | 7/25 [01:28<02:48,  9.36s/it]
+[Python Error]: 32%|███▏      | 8/25 [01:35<02:25,  8.57s/it]
+[Python Error]: 36%|███▌      | 9/25 [01:41<02:06,  7.92s/it]
+[Python Error]: 40%|████      | 10/25 [01:55<02:26,  9.75s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 44%|████▍     | 11/25 [02:03<02:08,  9.16s/it]
+[Python Error]: 48%|████▊     | 12/25 [02:10<01:49,  8.40s/it]
+[Python Error]: 52%|█████▏    | 13/25 [02:17<01:37,  8.14s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 56%|█████▌    | 14/25 [02:26<01:31,  8.28s/it]
+[Python Error]: 60%|██████    | 15/25 [02:37<01:31,  9.15s/it]
+[Python Error]: 64%|██████▍   | 16/25 [02:52<01:37, 10.83s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 68%|██████▊   | 17/25 [03:00<01:19,  9.96s/it]
+[Python Error]: 72%|███████▏  | 18/25 [03:07<01:03,  9.08s/it]
+[Python Error]: 76%|███████▌  | 19/25 [03:13<00:50,  8.38s/it]
+[Python Error]: 80%|████████  | 20/25 [03:21<00:41,  8.26s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 84%|████████▍ | 21/25 [03:37<00:42, 10.57s/it]
+[Python Error]: 88%|████████▊ | 22/25 [03:51<00:34, 11.57s/it]
+📊 Stats: 1 pending, 1 completed
+[Python Error]: 92%|█████████▏| 23/25 [04:04<00:23, 11.95s/it]
+[Python Error]: 96%|█████████▌| 24/25 [04:13<00:10, 10.92s/it]
+[Python Error]: 100%|██████████| 25/25 [04:24<00:00, 11.00s/it]
+[Python Error]: 100%|██████████| 25/25 [04:24<00:00, 10.57s/it]
+[Python Error]: 
+📊 Stats: 1 pending, 1 completed
+[Python]: ✅ technology-section3-001-20250709_081153.png 生成完了 (282.4秒)
+📈 進行状況: 4/4
+
+🎉 バッチ画像生成完了!
+📊 統計:
+  - 総画像数: 4
+  - 成功: 4
+  - 失敗: 0
+  - 総時間: 1318.1秒
+  - 平均時間/枚: 329.5秒
+
+✅ 全処理完了
+📄 結果保存: public/images/blog/auto-generated/82lit7DefJsRxG4Tv4MGAX/generation_result.json
+✅ Phase A execution completed. Generated 7 images.
+🔄 Starting Sanity integration for article: 82lit7DefJsRxG4Tv4MGAX
+🔄 Starting Sanity integration for article: 82lit7DefJsRxG4Tv4MGAX
+📂 Output directory: public/images/blog/auto-generated/82lit7DefJsRxG4Tv4MGAX
+📊 Stats: 1 pending, 1 completed
+✅ Sanity integration completed successfully:
+   - Article ID: 82lit7DefJsRxG4Tv4MGAX
+   - Hero Image: Updated
+   - Section Images: 5 images
+   - Total Uploaded: 7 images
+✅ Sanity integration completed for article: 82lit7DefJsRxG4Tv4MGAX
+📄 Completion record saved: data/jobs/completed/82lit7DefJsRxG4Tv4MGAX.json
+✅ Job completed successfully: 82lit7DefJsRxG4Tv4MGAX
+📂 Generated 7 images in: public/images/blog/auto-generated/82lit7DefJsRxG4Tv4MGAX
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📊 Stats: 0 pending, 2 completed
+📋 Found 1 pending jobs
+🎨 Processing job: jgQsnkq0XER1KMnFsOUW0x
+📝 Config: data/jobs/configs/jgQsnkq0XER1KMnFsOUW0x.json
+🐍 Phase A Style Execution:
+   Config: data/jobs/configs/jgQsnkq0XER1KMnFsOUW0x.json
+   Output: public/images/blog/auto-generated/jgQsnkq0XER1KMnFsOUW0x
+📊 Stats: 1 pending, 2 completed
+[Python]: 🚀 ContentFlow自動画像生成システム開始
+============================================================
+📄 設定ファイル読み込み: data/jobs/configs/jgQsnkq0XER1KMnFsOUW0x.json
+📁 出力ディレクトリ: public/images/blog/auto-generated/jgQsnkq0XER1KMnFsOUW0x
+📦 Stable Diffusion パイプライン初期化中...
+🎯 モデル: /Users/gotohiro/Documents/user/Products/AI/models/diffusers/juggernaut-xl
+[Python Error]: Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]
+[Python Error]: 
+[Python Error]: Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+[Python Error]: 
+[Python Error]: Loading checkpoint shards:  50%|█████     | 1/2 [00:17<00:17, 17.88s/it][A
+[Python Error]: 
+[Python Error]: Loading checkpoint shards: 100%|██████████| 2/2 [00:18<00:00,  7.73s/it][A
+[Python Error]: Loading checkpoint shards: 100%|██████████| 2/2 [00:18<00:00,  9.26s/it]
+[Python Error]: Loading pipeline components...:  29%|██▊       | 2/7 [00:18<00:46,  9.29s/it]
+[Python Error]: Loading pipeline components...:  43%|████▎     | 3/7 [00:18<00:22,  5.53s/it]
+[Python Error]: Loading pipeline components...:  57%|█████▋    | 4/7 [00:19<00:10,  3.53s/it]
+[Python Error]: Loading pipeline components...:  71%|███████▏  | 5/7 [00:19<00:04,  2.48s/it]
+[Python Error]: Loading pipeline components...: 100%|██████████| 7/7 [00:26<00:00,  2.88s/it]Loading pipeline components...: 100%|██████████| 7/7 [00:26<00:00,  3.73s/it]
+📊 Stats: 1 pending, 2 completed
+[Python]: ✅ パイプライン初期化完了
+🎯 記事: 情報の波に飲まれない生き方〜家族と向き合う時間を取り戻すコツ
+🎨 スタイル: hirolog
+📊 生成予定: 4シーン × 1バリエーション
+🎨 hero 画像生成開始...
+📝 プロンプト: compass on old map representing direction and purpose, geometric abstract art, warm lighting, peacef...
+[Python Error]: 0%|          | 0/25 [00:00<?, ?it/s]
+[Python Error]: 4%|▍         | 1/25 [00:10<04:15, 10.66s/it]
+📊 Stats: 1 pending, 2 completed
+[Python Error]: 8%|▊         | 2/25 [00:34<07:06, 18.53s/it]
+📊 Stats: 1 pending, 2 completed
+[Python Error]: 12%|█▏        | 3/25 [00:59<07:50, 21.37s/it]
+[Python Error]: 16%|█▌        | 4/25 [01:18<07:10, 20.52s/it]
+📊 Stats: 1 pending, 2 completed
+[Python Error]: 20%|██        | 5/25 [01:34<06:18, 18.93s/it]
+[Python Error]: 24%|██▍       | 6/25 [01:47<05:22, 16.96s/it]
+📊 Stats: 1 pending, 2 completed
+[Python Error]: 28%|██▊       | 7/25 [01:55<04:07, 13.76s/it]
+[Python Error]: 32%|███▏      | 8/25 [02:22<05:07, 18.08s/it]
+📊 Stats: 1 pending, 2 completed
+[Python Error]: 36%|███▌      | 9/25 [02:36<04:30, 16.89s/it]
+[Python Error]: 40%|████      | 10/25 [02:48<03:48, 15.25s/it]
+📊 Stats: 1 pending, 2 completed
+[Python Error]: 44%|████▍     | 11/25 [03:04<03:37, 15.53s/it]
+[Python Error]: 48%|████▊     | 12/25 [03:20<03:22, 15.58s/it]
+📊 Stats: 1 pending, 2 completed
+[Python Error]: 52%|█████▏    | 13/25 [03:27<02:37, 13.15s/it]
+[Python Error]: 56%|█████▌    | 14/25 [03:35<02:06, 11.46s/it]
+[Python Error]: 60%|██████    | 15/25 [03:43<01:43, 10.37s/it]
+[Python Error]: 64%|██████▍   | 16/25 [03:51<01:27,  9.67s/it]
+📊 Stats: 1 pending, 2 completed
+[Python Error]: 68%|██████▊   | 17/25 [03:58<01:12,  9.05s/it]
+[Python Error]: 72%|███████▏  | 18/25 [04:06<00:59,  8.55s/it]
+[Python Error]: 76%|███████▌  | 19/25 [04:13<00:49,  8.18s/it]
+[Python Error]: 80%|████████  | 20/25 [04:20<00:38,  7.80s/it]
+📊 Stats: 1 pending, 2 completed
+[Python Error]: 84%|████████▍ | 21/25 [04:26<00:29,  7.44s/it]
+[Python Error]: 88%|████████▊ | 22/25 [04:34<00:22,  7.53s/it]
+[Python Error]: 92%|█████████▏| 23/25 [04:43<00:15,  7.86s/it]
+[Python Error]: 96%|█████████▌| 24/25 [04:50<00:07,  7.71s/it]
+📊 Stats: 1 pending, 2 completed
+[Python Error]: 100%|██████████| 25/25 [04:58<00:00,  7.69s/it]
+[Python Error]: 100%|██████████| 25/25 [04:58<00:00, 11.93s/it]
+[Python Error]: 
+[Python]: ✅ technology-hero-001-20250709_121926.png 生成完了 (306.0秒)
+📈 進行状況: 1/4
+🎨 section1 画像生成開始...
+📝 プロンプト: circuit board patterns with organic flowing lines, geometric abstract art, warm lighting, peaceful m...
+[Python Error]: 0%|          | 0/25 [00:00<?, ?it/s]
+📊 Stats: 1 pending, 2 completed
+[Python Error]: 4%|▍         | 1/25 [00:27<10:48, 27.04s/it]
+📊 Stats: 1 pending, 2 completed
+[Python Error]: 8%|▊         | 2/25 [00:52<10:03, 26.25s/it]
+[Python Error]: 12%|█▏        | 3/25 [01:06<07:27, 20.33s/it]
+📊 Stats: 1 pending, 2 completed
+[Python Error]: 16%|█▌        | 4/25 [01:14<05:27, 15.59s/it]
+[Python Error]: 20%|██        | 5/25 [01:30<05:18, 15.93s/it]
+📊 Stats: 1 pending, 2 completed
+[Python Error]: 24%|██▍       | 6/25 [01:58<06:15, 19.75s/it]
+📊 Stats: 1 pending, 2 completed
+[Python Error]: 28%|██▊       | 7/25 [02:28<06:58, 23.23s/it]
+📊 Stats: 1 pending, 2 completed
+[Python Error]: 32%|███▏      | 8/25 [02:53<06:44, 23.81s/it]
+[Python Error]: 36%|███▌      | 9/25 [03:11<05:49, 21.86s/it]
+📊 Stats: 1 pending, 2 completed
+[Python Error]: 40%|████      | 10/25 [03:42<06:11, 24.77s/it]
+📊 Stats: 1 pending, 2 completed
+📊 Stats: 1 pending, 2 completed
+[Python Error]: 44%|████▍     | 11/25 [04:23<06:55, 29.65s/it]
+🛑 Received SIGTERM, shutting down gracefully...
+🛑 Hybrid Image Worker stopped

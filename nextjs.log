@@ -1,0 +1,1095 @@
+npm warn cli npm v11.4.2 does not support Node.js v20.11.0. This version of npm supports the following node versions: `^20.17.0 || >=22.9.0`. You can find the latest version at https://nodejs.org/.
+
+> hiro-logue-sanity@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.3.5
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.0.95:3000
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 1683ms
+ ○ Compiling / ...
+ ✓ Compiled / in 2.7s (1122 modules)
+ GET / 200 in 4555ms
+ ○ Compiling /blog/[slug] ...
+ ✓ Compiled /blog/[slug] in 674ms (1110 modules)
+ GET /blog/ai-1 200 in 4806ms
+ ⚠ The "images.domains" configuration is deprecated. Please use "images.remotePatterns" configuration instead.
+ GET /blog/ai-1 200 in 2216ms
+ ✓ Compiled /api/integrate-images in 224ms (1117 modules)
+🔄 API: Starting Sanity integration for article: 82lit7DefJsRxG4Tv4MGAX
+📂 API: Output directory: public/images/blog/auto-generated/82lit7DefJsRxG4Tv4MGAX
+🔄 Starting complete image integration for article: 82lit7DefJsRxG4Tv4MGAX
+📁 Processing images from: public/images/blog/auto-generated/82lit7DefJsRxG4Tv4MGAX
+📤 Uploading image to Sanity: technology-hero-001-20250709_072259.png
+✅ Image uploaded successfully: image-ec747f4709be81ea2f3460c8c3fdfb49c370de85-1600x896-png
+📤 Uploading image to Sanity: technology-hero-001-20250709_075337.png
+✅ Image uploaded successfully: image-88be026a74628bed63bc36453f7036fa9d0b0f98-1600x896-png
+📤 Uploading image to Sanity: technology-section1-001-20250709_073558.png
+✅ Image uploaded successfully: image-d49fdfcf6db220d47461f026b8d0fab5221c8cda-1600x896-png
+📤 Uploading image to Sanity: technology-section1-001-20250709_080343.png
+✅ Image uploaded successfully: image-edc288d8a6740f354c708f2a7eed6e08fce5ca8e-1600x896-png
+📤 Uploading image to Sanity: technology-section2-001-20250709_074023.png
+✅ Image uploaded successfully: image-df80491f8fa81f0def7d0aeba0ab1ea5cfce121c-1600x896-png
+📤 Uploading image to Sanity: technology-section2-001-20250709_080710.png
+✅ Image uploaded successfully: image-dd8ec9f0896963c30b6774a9547c5d67306124fa-1600x896-png
+📤 Uploading image to Sanity: technology-section3-001-20250709_081153.png
+✅ Image uploaded successfully: image-a020bfa07ac20f1c380a8ed4ca958ae4b2da6fb3-1600x896-png
+✅ Uploaded 7/7 images
+📝 Updating article images: 82lit7DefJsRxG4Tv4MGAX
+✅ Article images updated successfully: 82lit7DefJsRxG4Tv4MGAX
+🎉 Image integration completed successfully for article: 82lit7DefJsRxG4Tv4MGAX
+✅ API: Sanity integration completed successfully
+📊 API: Integration result details: {
+  articleId: '82lit7DefJsRxG4Tv4MGAX',
+  heroImage: true,
+  sectionImagesCount: 5,
+  uploadedImagesCount: 7,
+  heroImageId: 'image-ec747f4709be81ea2f3460c8c3fdfb49c370de85-1600x896-png',
+  sectionImageIds: [
+    'image-d49fdfcf6db220d47461f026b8d0fab5221c8cda-1600x896-png',
+    'image-edc288d8a6740f354c708f2a7eed6e08fce5ca8e-1600x896-png',
+    'image-df80491f8fa81f0def7d0aeba0ab1ea5cfce121c-1600x896-png',
+    'image-dd8ec9f0896963c30b6774a9547c5d67306124fa-1600x896-png',
+    'image-a020bfa07ac20f1c380a8ed4ca958ae4b2da6fb3-1600x896-png'
+  ]
+}
+📝 API: Updated article check: {
+  _id: '82lit7DefJsRxG4Tv4MGAX',
+  heroImage: {
+    _type: 'image',
+    alt: 'Hero image for article',
+    asset: {
+      _ref: 'image-ec747f4709be81ea2f3460c8c3fdfb49c370de85-1600x896-png',
+      _type: 'reference'
+    }
+  },
+  sectionImages: [
+    {
+      _key: 'section-1',
+      _type: 'image',
+      alt: 'Section 1 image',
+      asset: [Object]
+    },
+    {
+      _key: 'section-2',
+      _type: 'image',
+      alt: 'Section 2 image',
+      asset: [Object]
+    },
+    {
+      _key: 'section-3',
+      _type: 'image',
+      alt: 'Section 3 image',
+      asset: [Object]
+    },
+    {
+      _key: 'section-4',
+      _type: 'image',
+      alt: 'Section 4 image',
+      asset: [Object]
+    },
+    {
+      _key: 'section-5',
+      _type: 'image',
+      alt: 'Section 5 image',
+      asset: [Object]
+    }
+  ],
+  title: 'AIに代替されない価値の作り方〜ビジネスマンが磨くべき本質的スキル'
+}
+ POST /api/integrate-images 200 in 24128ms
+ ✓ Compiled in 198ms (1131 modules)
+ GET /blog/ai-1 200 in 112ms
+ ✓ Compiled in 148ms (1131 modules)
+ GET /blog/ai-1 200 in 504ms
+ ✓ Compiled in 193ms (1131 modules)
+ ✓ Compiled /_not-found in 436ms (1121 modules)
+ GET /blog/ai-1 404 in 493ms
+ GET /blog/ai-1 200 in 1489ms
+ ✓ Compiled in 167ms (1135 modules)
+ GET /blog/ai-1 200 in 104ms
+ GET /blog/ai-1 200 in 3744ms
+ ✓ Compiled /blog in 164ms (1105 modules)
+ GET /blog 200 in 734ms
+ GET /blog/ai-1 200 in 2082ms
+ GET /blog/ai-1 200 in 2183ms
+ GET /blog 200 in 547ms
+ GET /blog 200 in 1562ms
+ ✓ Compiled /favicon.ico in 182ms (789 modules)
+ GET /favicon.ico 200 in 236ms
+ ✓ Compiled in 472ms (1131 modules)
+ GET /blog/ai-1 200 in 151ms
+ GET /blog 200 in 584ms
+ ✓ Compiled in 175ms (1115 modules)
+ GET /blog 200 in 168ms
+ GET /blog/ai-1 200 in 172ms
+ ✓ Compiled in 224ms (1112 modules)
+ ⨯ ReferenceError: EnhancedPortableText is not defined
+    at BlogPost (app/blog/[slug]/page.tsx:239:25)
+  237 |         {/* Content with Embedded Section Images */}
+  238 |         <div className="prose prose-lg max-w-none">
+> 239 |           {post.body && <EnhancedPortableText body={post.body} sectionImages={post.sectionImages} />}
+      |                         ^
+  240 |         </div>
+  241 |
+  242 |         {/* Footer */} {
+  digest: '284879382'
+}
+ GET /blog 200 in 93ms
+ GET /blog/ai-1 200 in 94ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 163ms (1115 modules)
+ ✓ Compiled in 0ms (773 modules)
+ ✓ Compiled in 0ms (773 modules)
+ ✓ Compiled in 0ms (773 modules)
+ GET /blog 200 in 495ms
+ GET /blog/ai-1 200 in 1838ms
+ GET /blog/ai-1 200 in 2107ms
+ GET /blog/article-2 200 in 2989ms
+ ✓ Compiled /api/integrate-images in 302ms (793 modules)
+🔄 API: Starting Sanity integration for article: 82lit7DefJsRxG4Tv4MGAX
+📂 API: Output directory: public/images/blog/auto-generated/82lit7DefJsRxG4Tv4MGAX
+🔄 Starting complete image integration for article: 82lit7DefJsRxG4Tv4MGAX
+📁 Processing images from: public/images/blog/auto-generated/82lit7DefJsRxG4Tv4MGAX
+📤 Uploading image to Sanity: technology-hero-001-20250709_072259.png
+ GET /blog/ai-1 200 in 143ms
+ GET /blog/article-2 200 in 145ms
+✅ Image uploaded successfully: image-ec747f4709be81ea2f3460c8c3fdfb49c370de85-1600x896-png
+📤 Uploading image to Sanity: technology-hero-001-20250709_075337.png
+✅ Image uploaded successfully: image-88be026a74628bed63bc36453f7036fa9d0b0f98-1600x896-png
+📤 Uploading image to Sanity: technology-section1-001-20250709_073558.png
+✅ Image uploaded successfully: image-d49fdfcf6db220d47461f026b8d0fab5221c8cda-1600x896-png
+📤 Uploading image to Sanity: technology-section1-001-20250709_080343.png
+✅ Image uploaded successfully: image-edc288d8a6740f354c708f2a7eed6e08fce5ca8e-1600x896-png
+📤 Uploading image to Sanity: technology-section2-001-20250709_074023.png
+✅ Image uploaded successfully: image-df80491f8fa81f0def7d0aeba0ab1ea5cfce121c-1600x896-png
+📤 Uploading image to Sanity: technology-section2-001-20250709_080710.png
+✅ Image uploaded successfully: image-dd8ec9f0896963c30b6774a9547c5d67306124fa-1600x896-png
+📤 Uploading image to Sanity: technology-section3-001-20250709_081153.png
+✅ Image uploaded successfully: image-a020bfa07ac20f1c380a8ed4ca958ae4b2da6fb3-1600x896-png
+✅ Uploaded 7/7 images
+📝 Updating article images: 82lit7DefJsRxG4Tv4MGAX
+✅ Article images updated successfully: 82lit7DefJsRxG4Tv4MGAX
+🎉 Image integration completed successfully for article: 82lit7DefJsRxG4Tv4MGAX
+✅ API: Sanity integration completed successfully
+📊 API: Integration result details: {
+  articleId: '82lit7DefJsRxG4Tv4MGAX',
+  heroImage: true,
+  sectionImagesCount: 5,
+  uploadedImagesCount: 7,
+  heroImageId: 'image-ec747f4709be81ea2f3460c8c3fdfb49c370de85-1600x896-png',
+  sectionImageIds: [
+    'image-d49fdfcf6db220d47461f026b8d0fab5221c8cda-1600x896-png',
+    'image-edc288d8a6740f354c708f2a7eed6e08fce5ca8e-1600x896-png',
+    'image-df80491f8fa81f0def7d0aeba0ab1ea5cfce121c-1600x896-png',
+    'image-dd8ec9f0896963c30b6774a9547c5d67306124fa-1600x896-png',
+    'image-a020bfa07ac20f1c380a8ed4ca958ae4b2da6fb3-1600x896-png'
+  ]
+}
+📝 API: Updated article check: {
+  _id: '82lit7DefJsRxG4Tv4MGAX',
+  heroImage: {
+    _type: 'image',
+    alt: 'Hero image for article',
+    asset: {
+      _ref: 'image-ec747f4709be81ea2f3460c8c3fdfb49c370de85-1600x896-png',
+      _type: 'reference'
+    }
+  },
+  sectionImages: [
+    {
+      _key: 'section-1',
+      _type: 'image',
+      alt: 'Section 1 image',
+      asset: [Object]
+    },
+    {
+      _key: 'section-2',
+      _type: 'image',
+      alt: 'Section 2 image',
+      asset: [Object]
+    },
+    {
+      _key: 'section-3',
+      _type: 'image',
+      alt: 'Section 3 image',
+      asset: [Object]
+    },
+    {
+      _key: 'section-4',
+      _type: 'image',
+      alt: 'Section 4 image',
+      asset: [Object]
+    },
+    {
+      _key: 'section-5',
+      _type: 'image',
+      alt: 'Section 5 image',
+      asset: [Object]
+    }
+  ],
+  title: 'AIに代替されない価値の作り方〜ビジネスマンが磨くべき本質的スキル'
+}
+ POST /api/integrate-images 200 in 25895ms
+ ✓ Compiled in 139ms (342 modules)
+ GET /blog/ai-1 200 in 200ms
+ GET /blog/article-2 200 in 202ms
+ ✓ Compiled in 192ms (1121 modules)
+ GET /blog/ai-1 200 in 335ms
+ GET /blog/article-2 200 in 354ms
+ GET /blog/ai-1 200 in 58ms
+ GET /blog/article-2 200 in 58ms
+ ✓ Compiled /api/remove-images in 110ms (1119 modules)
+🗑️ API: Removing images from article: 82lit7DefJsRxG4Tv4MGAX
+   - Remove Hero: false
+   - Remove Section Indexes: 4
+✅ Images removed successfully from article: 82lit7DefJsRxG4Tv4MGAX
+❌ API: Failed to remove images: ReferenceError: removedSectionIndexes is not defined
+    at POST (app/api/remove-images/route.ts:75:8)
+  73 |         articleId,
+  74 |         removedHero: removeHero,
+> 75 |         removedSectionIndexes,
+     |        ^
+  76 |         updatedArticle
+  77 |       }
+  78 |     })
+ POST /api/remove-images 500 in 3392ms
+ ✓ Compiled in 139ms (1133 modules)
+ GET /blog/ai-1 200 in 86ms
+ GET /blog/article-2 200 in 88ms
+🗑️ API: Removing images from article: 82lit7DefJsRxG4Tv4MGAX
+   - Remove Hero: false
+   - Remove Section Indexes: 4
+✅ Images removed successfully from article: 82lit7DefJsRxG4Tv4MGAX
+ POST /api/remove-images 200 in 3732ms
+ GET /blog/ai-1 200 in 3814ms
+ ✓ Compiled /api/posts in 198ms (1123 modules)
+ GET /api/posts 200 in 1715ms
+ GET /api/posts 200 in 1460ms
+ GET /api/posts 200 in 1462ms
+🗑️ API: Removing images from article: 7PgKQm7wEDjbbP2oMAnQaR
+   - Remove Hero: false
+   - Remove Section Indexes: 0,1,2,3
+✅ Images removed successfully from article: 7PgKQm7wEDjbbP2oMAnQaR
+ POST /api/remove-images 200 in 2857ms
+ GET /blog/ai-1 200 in 3790ms
+ GET /blog/article-2 200 in 2091ms
+ GET /blog/ai-yohaku-balance 200 in 3630ms
+ GET /blog/ai-yohaku-balance 200 in 2948ms
+ GET /blog/ai-yohaku-balance 200 in 2199ms
+ GET /blog/article-1 200 in 2129ms
+ ✓ Compiled / in 318ms (775 modules)
+ GET / 200 in 18ms
+ GET /blog/ai-1 200 in 168ms
+ GET / 200 in 1953ms
+ GET /blog 200 in 1635ms
+ GET /blog/ai-yohaku-balance 200 in 3803ms
+ GET /blog/article-1 200 in 2886ms
+ GET /blog/article 200 in 2124ms
+ GET /blog/article-1 200 in 2901ms
+ GET /blog/article-1 200 in 2864ms
+ GET /blog/ai40-1 200 in 2891ms
+ ✓ Compiled /api/posts in 189ms (795 modules)
+ GET /api/posts 200 in 1759ms
+ GET /api/posts 200 in 1494ms
+ GET /api/posts 200 in 749ms
+ GET /api/posts 200 in 1496ms
+ ✓ Compiled in 148ms (342 modules)
+ GET /blog/ai-1 200 in 175ms
+ GET /blog/ai40-1 200 in 179ms
+ GET /blog/ai-1 200 in 3835ms
+ GET /blog/article-2 200 in 3746ms
+ GET /blog/ai-yohaku-balance 200 in 1245ms
+ GET /blog/article-2 200 in 2883ms
+ GET /blog/ai-1 200 in 2066ms
+ GET /blog/ai-1 200 in 2293ms
+ GET /blog/article-2 200 in 2206ms
+ ✓ Compiled in 382ms (1117 modules)
+ GET /blog/article-2 200 in 595ms
+ GET /blog/ai-1 200 in 1364ms
+ ✓ Compiled in 293ms (1117 modules)
+ GET /blog/ai-1 200 in 625ms
+ GET /blog/ai-yohaku-balance 200 in 2625ms
+ ✓ Compiled in 178ms (1117 modules)
+ GET /blog/ai-1 200 in 155ms
+ GET /blog/ai-yohaku-balance 200 in 157ms
+ ✓ Compiled in 359ms (1117 modules)
+ GET /blog/ai-1 200 in 97ms
+ GET /blog/ai-yohaku-balance 200 in 96ms
+ GET /blog/ai-yohaku-balance 200 in 2070ms
+ GET /blog/article-1 200 in 5000ms
+ GET /blog/article-1 200 in 3159ms
+ GET /blog/article 200 in 3744ms
+ ⨯ [TypeError: fetch failed] {
+  isNetworkError: true,
+  request: [Object],
+  digest: '3773295158',
+  [cause]: [Error: getaddrinfo ENOTFOUND 9dzq8f77.api.sanity.io] {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: '9dzq8f77.api.sanity.io'
+  }
+}
+ GET /blog/ai-1 200 in 3461ms
+ GET /blog/ai-1 200 in 16429ms
+ GET /blog/ai-1 200 in 1503ms
+ GET /blog/ai-1 200 in 2423ms
+ ✓ Compiled in 195ms (342 modules)
+ GET /blog/ai-1 200 in 70ms
+ ✓ Compiled in 97ms (342 modules)
+ GET /blog/ai-1 200 in 33ms
+ ✓ Compiled in 70ms (342 modules)
+ GET /blog/ai-1 200 in 33ms
+ ✓ Compiled in 68ms (342 modules)
+ GET /blog/ai-1 200 in 31ms
+ ✓ Compiled in 66ms (342 modules)
+ GET /blog/ai-1 200 in 32ms
+ ✓ Compiled in 126ms (342 modules)
+ GET /blog/ai-1 200 in 77ms
+ ✓ Compiled in 68ms (342 modules)
+ GET /blog/ai-1 200 in 32ms
+ ✓ Compiled in 68ms (342 modules)
+ GET /blog/ai-1 200 in 53ms
+ ✓ Compiled in 69ms (342 modules)
+ GET /blog/ai-1 200 in 31ms
+ ✓ Compiled in 73ms (342 modules)
+ ✓ Compiled in 108ms (342 modules)
+ GET /blog/ai-1 200 in 179ms
+ GET /blog/ai-1 200 in 69ms
+ ✓ Compiled in 110ms (342 modules)
+ ✓ Compiled in 122ms (342 modules)
+ GET /blog/ai-1 200 in 152ms
+ GET /blog/ai-1 200 in 33ms
+ ✓ Compiled in 72ms (342 modules)
+ GET /blog/ai-1 200 in 33ms
+ ✓ Compiled in 72ms (342 modules)
+ GET /blog/ai-1 200 in 33ms
+ ✓ Compiled in 68ms (342 modules)
+ GET /blog/ai-1 200 in 32ms
+ ✓ Compiled in 66ms (342 modules)
+ GET /blog/ai-1 200 in 64ms
+ ✓ Compiled in 71ms (342 modules)
+ GET /blog/ai-1 200 in 32ms
+ ✓ Compiled in 71ms (342 modules)
+ GET /blog/ai-1 200 in 36ms
+ ✓ Compiled in 65ms (342 modules)
+ GET /blog/ai-1 200 in 32ms
+ ✓ Compiled in 105ms (342 modules)
+ GET /blog/ai-1 200 in 31ms
+ ✓ Compiled in 120ms (342 modules)
+ GET /blog/ai-1 200 in 57ms
+ ✓ Compiled in 280ms (1103 modules)
+ GET /blog/ai-1 200 in 273ms
+ GET /blog/ai-1 200 in 114ms
+ ✓ Compiled /api/ai-post in 361ms (1123 modules)
+🚀 [next-api] 📝 新しいセッション開始: 朝活で人生が変わる理由
+   📊 データ: {
+  "topic": "朝活で人生が変わる理由",
+  "sessionId": "session_1752030812318_cwp5olttl"
+}
+🔄 [next-api] 📝 記事コンテンツ生成完了、品質チェック開始
+   📊 データ: {
+  "title": "情報の波に飲まれない生き方〜家族と向き合う時間を取り戻すコツ",
+  "contentLength": 1748
+}
+ ✓ Compiled /api/quality-check in 133ms (1125 modules)
+ POST /api/quality-check 200 in 161ms
+ ✓ Compiled /api/posts in 90ms (801 modules)
+✅ Post created successfully: jgQsnkq0XER1KMnFsOUW0x
+✅ Post published successfully: jgQsnkq0XER1KMnFsOUW0x
+✅ Post published automatically: jgQsnkq0XER1KMnFsOUW0x
+ POST /api/posts 200 in 6526ms
+✅ [next-api] 📝 記事作成完了: 情報の波に飲まれない生き方〜家族と向き合う時間を取り戻すコツ
+   📊 データ: {
+  "articleId": "jgQsnkq0XER1KMnFsOUW0x",
+  "title": "情報の波に飲まれない生き方〜家族と向き合う時間を取り戻すコツ",
+  "qualityScore": 83
+}
+🚀 [next-api] 🎨 バックグラウンド画像生成開始
+   📊 データ: {
+  "articleId": "jgQsnkq0XER1KMnFsOUW0x",
+  "flagPath": "data/jobs/flags/jgQsnkq0XER1KMnFsOUW0x.flag",
+  "promptCount": 4
+}
+ POST /api/ai-post 200 in 7140ms
+ ✓ Compiled in 74ms (342 modules)
+ GET /blog/ai-1 200 in 69ms
+ ✓ Compiled /api/logs in 388ms (1131 modules)
+ GET /api/logs?sessionId=session_1752030812318_cwp5olttl&action=summary 200 in 420ms
+ GET /api/logs?sessionId=session_1752030812318_cwp5olttl 200 in 17ms
+ GET /blog/article-3 200 in 5216ms
+ ○ Compiling /api/remove-images ...
+ ✓ Compiled /api/remove-images in 1685ms (793 modules)
+🗑️ API: Removing images from article: jgQsnkq0XER1KMnFsOUW0x
+   - Remove Hero: true
+   - Remove Section Indexes: 0,1,2,3,4,5,6
+✅ Images removed successfully from article: jgQsnkq0XER1KMnFsOUW0x
+ POST /api/remove-images 200 in 4360ms
+ ✓ Compiled in 810ms (342 modules)
+ GET /blog/article-3 200 in 193ms
+ GET /blog/ai-1 200 in 196ms
+ ✓ Compiled in 140ms (342 modules)
+ GET /blog/article-3 200 in 132ms
+ GET /blog/ai-1 200 in 136ms
+ ✓ Compiled in 125ms (342 modules)
+ GET /blog/article-3 200 in 110ms
+ GET /blog/ai-1 200 in 113ms
+ ✓ Compiled in 127ms (342 modules)
+ GET /blog/article-3 200 in 125ms
+ GET /blog/ai-1 200 in 126ms
+ ✓ Compiled in 127ms (342 modules)
+ GET /blog/article-3 200 in 194ms
+ GET /blog/ai-1 200 in 218ms
+ ✓ Compiled /_not-found in 369ms (1107 modules)
+ GET /_next/static/css/app/layout.css?v=1752034973530 404 in 530ms
+ GET /_next/static/css/app/layout.css?v=1752034973531 404 in 531ms
+ GET /_next/static/css/app/layout.css?v=1752034973530 404 in 55ms
+ GET /_next/static/css/app/layout.css?v=1752034973531 404 in 66ms
+ ✓ Compiled in 84ms (345 modules)
+ ⨯ Error: Cannot find module './447.js'
+Require stack:
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/webpack-runtime.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/app/_not-found/page.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/require.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/load-components.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/utils.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/swc/options.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/swc/index.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/config.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/next.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/blog/[slug]/page.js:99:14151)
+    at Object.<anonymous> (.next/server/app/blog/[slug]/page.js:99:14208) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/blog/ai-1'
+}
+ ⨯ Error: Cannot find module './447.js'
+Require stack:
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/webpack-runtime.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/app/_not-found/page.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/require.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/load-components.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/utils.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/swc/options.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/swc/index.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/config.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/next.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/blog/[slug]/page.js:99:14151)
+    at Object.<anonymous> (.next/server/app/blog/[slug]/page.js:99:14208) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/blog/article-3'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 940ms (1440 modules)
+ GET /blog/ai-1 500 in 1307ms
+ GET /blog/article-3 500 in 1307ms
+ GET /blog/ai-1 200 in 288ms
+ GET /blog/article-3 200 in 287ms
+ ⨯ Failed to generate static paths for /blog/[slug]:
+Error: Cannot find module './vendor-chunks/@sanity.js'
+Require stack:
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/webpack-runtime.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/app/blog/[slug]/page.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/require.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/load-components.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/utils.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/dev/static-paths-worker.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/compiled/jest-worker/processChild.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67) {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Failed to generate static paths for /blog/[slug]:
+Error: Cannot find module './vendor-chunks/@sanity.js'
+Require stack:
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/webpack-runtime.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/app/blog/[slug]/page.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/require.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/load-components.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/utils.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/dev/static-paths-worker.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/compiled/jest-worker/processChild.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67) {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Failed to generate static paths for /blog/[slug]:
+Error: Cannot find module './vendor-chunks/@sanity.js'
+Require stack:
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/webpack-runtime.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/app/blog/[slug]/page.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/require.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/load-components.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/utils.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/dev/static-paths-worker.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/compiled/jest-worker/processChild.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67) {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Failed to generate static paths for /blog/[slug]:
+Error: Cannot find module './vendor-chunks/@sanity.js'
+Require stack:
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/webpack-runtime.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/app/blog/[slug]/page.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/require.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/load-components.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/utils.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/dev/static-paths-worker.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/compiled/jest-worker/processChild.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67) {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Failed to generate static paths for /blog/[slug]:
+Error: Cannot find module './vendor-chunks/@sanity.js'
+Require stack:
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/webpack-runtime.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/app/blog/[slug]/page.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/require.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/load-components.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/utils.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/dev/static-paths-worker.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/compiled/jest-worker/processChild.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67) {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Failed to generate static paths for /blog/[slug]:
+Error: Cannot find module './vendor-chunks/@sanity.js'
+Require stack:
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/webpack-runtime.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/app/blog/[slug]/page.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/require.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/load-components.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/utils.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/dev/static-paths-worker.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/compiled/jest-worker/processChild.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67) {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET /blog/ai-1 200 in 182ms
+ GET /blog/article-3 200 in 179ms
+ ⨯ Error: Cannot find module './447.js'
+Require stack:
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/webpack-runtime.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/pages/_document.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/require.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/load-components.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/utils.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/swc/options.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/swc/index.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/config.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/next.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:1821)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:1870) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET /blog/article-3 200 in 1447ms
+ ⨯ Error: Cannot find module './447.js'
+Require stack:
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/webpack-runtime.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/pages/_document.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/require.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/load-components.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/utils.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/swc/options.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/swc/index.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/config.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/next.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:1821)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:1870) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './447.js'
+Require stack:
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/webpack-runtime.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/pages/_document.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/require.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/load-components.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/utils.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/swc/options.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/swc/index.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/config.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/next.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:1821)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:1870) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './447.js'
+Require stack:
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/webpack-runtime.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/pages/_document.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/require.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/load-components.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/utils.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/swc/options.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/swc/index.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/config.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/next.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:1821)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:1870) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET /blog/ai-1 200 in 4069ms
+ GET /_next/static/css/app/layout.css?v=1752034990192 500 in 2601ms
+ ⨯ Error: Cannot find module './447.js'
+Require stack:
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/webpack-runtime.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/pages/_document.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/require.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/load-components.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/utils.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/swc/options.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/swc/index.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/config.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/next.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:1821)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:1870) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './447.js'
+Require stack:
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/webpack-runtime.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/pages/_document.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/require.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/load-components.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/utils.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/swc/options.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/swc/index.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/config.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/next.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:1821)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:1870) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET /_next/static/chunks/app-pages-internals.js 500 in 685ms
+ GET /_next/static/chunks/app/blog/%5Bslug%5D/page.js 500 in 646ms
+ GET /_next/static/css/app/layout.css?v=1752034990107 500 in 5051ms
+ ⨯ Error: Cannot find module './447.js'
+Require stack:
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/webpack-runtime.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/pages/_document.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/require.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/load-components.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/utils.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/swc/options.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/swc/index.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/config.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/next.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:1821)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:1870) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ Error: Cannot find module './447.js'
+Require stack:
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/webpack-runtime.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/pages/_document.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/require.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/load-components.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/utils.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/swc/options.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/swc/index.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/config.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/next.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/app/_not-found/page.js:1:1821)
+    at Object.<anonymous> (.next/server/app/_not-found/page.js:1:1870) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET /_next/static/chunks/main-app.js?v=1752034990107 500 in 5533ms
+ GET /_next/static/chunks/app-pages-internals.js 500 in 87ms
+ GET /_next/static/chunks/app/blog/%5Bslug%5D/page.js 500 in 81ms
+ GET /_next/static/chunks/main-app.js?v=1752034990192 500 in 5425ms
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/cache/webpack/client-development-fallback/0.pack.gz_' -> '/Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/cache/webpack/client-development-fallback/0.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/cache/webpack/client-development-fallback/0.pack.gz_' -> '/Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/cache/webpack/client-development-fallback/0.pack.gz'
+ ✓ Compiled in 92ms (591 modules)
+ ✓ Compiled in 112ms (591 modules)
+ ✓ Compiled in 111ms (591 modules)
+ ✓ Compiled in 92ms (591 modules)
+ ✓ Compiled in 453ms (1454 modules)
+ ✓ Compiled in 199ms (587 modules)
+ ✓ Compiled in 1741ms (587 modules)
+ ✓ Compiled in 2.8s (587 modules)
+ ○ Compiling /api/integrate-images ...
+ ✓ Compiled /api/integrate-images in 2s (841 modules)
+🔄 API: Starting Sanity integration for article: jgQsnkq0XER1KMnFsOWaQt
+📂 API: Output directory: public/images/blog/auto-generated/jgQsnkq0XER1KMnFsOWaQt
+🚀 [next-api] 🔄 Sanity統合API開始: jgQsnkq0XER1KMnFsOWaQt
+   📊 データ: {
+  "articleId": "jgQsnkq0XER1KMnFsOWaQt",
+  "outputDir": "public/images/blog/auto-generated/jgQsnkq0XER1KMnFsOWaQt"
+}
+🔄 Starting complete image integration for article: jgQsnkq0XER1KMnFsOWaQt
+📁 Processing images from: public/images/blog/auto-generated/jgQsnkq0XER1KMnFsOWaQt
+📤 Uploading image to Sanity: technology-hero-001-20250709_141244.png
+✅ Image uploaded successfully: image-adbbc5b216904a3f6e616798bb238606addebfd9-1600x896-png
+📤 Uploading image to Sanity: technology-hero-001-20250709_144154.png
+✅ Image uploaded successfully: image-25296b3a162b9c076b83c246ef898a22783cffb3-1600x896-png
+📤 Uploading image to Sanity: technology-hero-001-20250709_151111.png
+✅ Image uploaded successfully: image-45a83275109ac54ddb252716cb4f57da56608247-1600x896-png
+📤 Uploading image to Sanity: technology-section1-001-20250709_142500.png
+✅ Image uploaded successfully: image-75157d107dd0b95b34cd6056bc1feb9897c34c19-1600x896-png
+📤 Uploading image to Sanity: technology-section1-001-20250709_145722.png
+✅ Image uploaded successfully: image-d872531376f1b592bc6abb91545f1012b76509e2-1600x896-png
+📤 Uploading image to Sanity: technology-section1-001-20250709_152102.png
+✅ Image uploaded successfully: image-18c6cc75ffe0dfdb4eb8a4468addbe5e7af86a25-1600x896-png
+📤 Uploading image to Sanity: technology-section2-001-20250709_153208.png
+✅ Image uploaded successfully: image-825ae0f074d3c912b38f6c6a406908ecad15f472-1600x896-png
+📤 Uploading image to Sanity: technology-section3-001-20250709_153553.png
+✅ Image uploaded successfully: image-a83a7748f1ed5fa19f9ee7d64b8576b91b81776b-1600x896-png
+✅ Uploaded 8/8 images
+📝 Updating article images: jgQsnkq0XER1KMnFsOWaQt
+✅ Article images updated successfully: jgQsnkq0XER1KMnFsOWaQt
+🎉 Image integration completed successfully for article: jgQsnkq0XER1KMnFsOWaQt
+✅ API: Sanity integration completed successfully
+📊 API: Integration result details: {
+  articleId: 'jgQsnkq0XER1KMnFsOWaQt',
+  heroImage: true,
+  sectionImagesCount: 5,
+  uploadedImagesCount: 8,
+  heroImageId: 'image-adbbc5b216904a3f6e616798bb238606addebfd9-1600x896-png',
+  sectionImageIds: [
+    'image-75157d107dd0b95b34cd6056bc1feb9897c34c19-1600x896-png',
+    'image-d872531376f1b592bc6abb91545f1012b76509e2-1600x896-png',
+    'image-18c6cc75ffe0dfdb4eb8a4468addbe5e7af86a25-1600x896-png',
+    'image-825ae0f074d3c912b38f6c6a406908ecad15f472-1600x896-png',
+    'image-a83a7748f1ed5fa19f9ee7d64b8576b91b81776b-1600x896-png'
+  ]
+}
+📝 API: Updated article check: {
+  _id: 'jgQsnkq0XER1KMnFsOWaQt',
+  heroImage: {
+    _type: 'image',
+    alt: 'Hero image for article',
+    asset: {
+      _ref: 'image-adbbc5b216904a3f6e616798bb238606addebfd9-1600x896-png',
+      _type: 'reference'
+    }
+  },
+  sectionImages: [
+    {
+      _key: 'section-1',
+      _type: 'image',
+      alt: 'Section 1 image',
+      asset: [Object]
+    },
+    {
+      _key: 'section-2',
+      _type: 'image',
+      alt: 'Section 2 image',
+      asset: [Object]
+    },
+    {
+      _key: 'section-3',
+      _type: 'image',
+      alt: 'Section 3 image',
+      asset: [Object]
+    },
+    {
+      _key: 'section-4',
+      _type: 'image',
+      alt: 'Section 4 image',
+      asset: [Object]
+    },
+    {
+      _key: 'section-5',
+      _type: 'image',
+      alt: 'Section 5 image',
+      asset: [Object]
+    }
+  ],
+  title: 'プログラミング学習で大切なことを通して考える、これからの生き方'
+}
+✅ [sanity-integration] 🎉 ワークフロー完了: 記事・画像統合済み
+   📊 データ: {
+  "articleId": "jgQsnkq0XER1KMnFsOWaQt",
+  "title": "プログラミング学習で大切なことを通して考える、これからの生き方",
+  "uploadedImages": 8,
+  "heroImage": true,
+  "sectionImages": 5,
+  "duration": 28.932,
+  "totalDuration": 28.932,
+  "status": "ready-for-deploy"
+}
+ POST /api/integrate-images 200 in 31845ms
+ ✓ Compiled in 185ms (587 modules)
+ ✓ Compiled in 211ms (587 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/cache/webpack/client-development/10.pack.gz_' -> '/Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/cache/webpack/client-development/10.pack.gz'
+ ✓ Compiled in 115ms (587 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/cache/webpack/client-development/0.pack.gz_' -> '/Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/cache/webpack/client-development/0.pack.gz'
+ ✓ Compiled in 109ms (587 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/cache/webpack/client-development/0.pack.gz_' -> '/Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/cache/webpack/client-development/0.pack.gz'
+ ✓ Compiled in 113ms (587 modules)
+ ✓ Compiled in 94ms (587 modules)
+ ✓ Compiled in 117ms (587 modules)
+ ✓ Compiled in 104ms (587 modules)
+ ✓ Compiled in 100ms (587 modules)
+ ✓ Compiled in 112ms (587 modules)
+ ✓ Compiled in 164ms (587 modules)
+ ✓ Compiled in 104ms (587 modules)
+ ✓ Compiled in 109ms (587 modules)
+ ✓ Compiled in 108ms (587 modules)
+ ✓ Compiled in 127ms (587 modules)
+ ✓ Compiled in 156ms (587 modules)
+ ✓ Compiled in 122ms (587 modules)
+ ✓ Compiled in 104ms (587 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/cache/webpack/client-development/0.pack.gz_' -> '/Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/cache/webpack/client-development/0.pack.gz'
+ ✓ Compiled /api/ai-post in 255ms (840 modules)
+🚀 [next-api] 📝 新しいセッション開始: おとなになってからの学び
+   📊 データ: {
+  "topic": "おとなになってからの学び",
+  "sessionId": "session_1752051609379_2ey73rxjd"
+}
+🚀 [next-api] 📝 Claude Code記事生成開始: おとなになってからの学び
+   📊 データ: {
+  "topic": "おとなになってからの学び",
+  "authorName": "AI Assistant",
+  "category": "ai"
+}
+🔄 [next-api] 📝 記事生成完了
+   📊 データ: {
+  "title": "おとなになってからの学びを体験してみて気づいたこと〜40代プログラマー父親の発見ノート〜",
+  "contentLength": 1125,
+  "excerptLength": 78
+}
+🔄 [next-api] 📝 記事コンテンツ生成完了、品質チェック開始
+   📊 データ: {
+  "title": "おとなになってからの学びを体験してみて気づいたこと〜40代プログラマー父親の発見ノート〜",
+  "contentLength": 1125
+}
+ ✓ Compiled /api/quality-check in 100ms (842 modules)
+ POST /api/quality-check 200 in 122ms
+⚠️ [next-api] 📝 記事品質チェックで改善推奨項目あり
+   📊 データ: {
+  "recommendations": [
+    "「実は先日」「考えてみると」等のHiro-Logueスタイル表現を増加",
+    "「皆さんはどうでしょうか？」等の読者への問いかけを増加"
+  ]
+}
+ ✓ Compiled /api/posts in 125ms (846 modules)
+✅ Post created successfully: 82lit7DefJsRxG4Tv5F217
+✅ Post published successfully: 82lit7DefJsRxG4Tv5F217
+✅ Post published automatically: 82lit7DefJsRxG4Tv5F217
+ POST /api/posts 200 in 4367ms
+✅ [next-api] 📝 記事作成完了: おとなになってからの学びを体験してみて気づいたこと〜40代プログラマー父親の発見ノート〜
+   📊 データ: {
+  "articleId": "82lit7DefJsRxG4Tv5F217",
+  "title": "おとなになってからの学びを体験してみて気づいたこと〜40代プログラマー父親の発見ノート〜",
+  "qualityScore": 75
+}
+ POST /api/ai-post 200 in 4779ms
+ ⨯ Error: ENOENT: no such file or directory, open '/Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/vendor-chunks/@swc.js'
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:203:28)
+    at <unknown> (.next/server/webpack-runtime.js:116:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:115:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:167:22)
+    at <unknown> (.next/server/app/blog/[slug]/page.js:379:47)
+    at Object.<anonymous> (.next/server/app/blog/[slug]/page.js:382:3) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/vendor-chunks/@swc.js',
+  page: '/blog/40'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 567ms (1436 modules)
+ ⨯ Error: Cannot find module './548.js'
+Require stack:
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/webpack-runtime.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/pages/_document.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/require.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/load-components.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/utils.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/swc/options.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/swc/index.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/config.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/next.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/pages/_document.js:1:339)
+    at Object.<anonymous> (.next/server/pages/_document.js:1:381) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET /blog/40 500 in 723ms
+ ✓ Compiled /_not-found in 450ms (1440 modules)
+ GET /_next/static/chunks/fallback/main.js 404 in 863ms
+ GET /_next/static/chunks/fallback/webpack.js 404 in 866ms
+ GET /_next/static/chunks/fallback/pages/_app.js 404 in 656ms
+ GET /_next/static/chunks/fallback/pages/_error.js 404 in 654ms
+ GET /_next/static/chunks/fallback/react-refresh.js 404 in 865ms
+ ⨯ Error: Cannot find module './vendor-chunks/@sanity.js'
+Require stack:
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/webpack-runtime.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/app/blog/[slug]/page.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/require.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/load-components.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/utils.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/dev/static-paths-worker.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/compiled/jest-worker/processChild.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67) {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/blog/40'
+}
+ ⨯ Error: Cannot find module './548.js'
+Require stack:
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/webpack-runtime.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/.next/server/app/_not-found/page.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/require.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/load-components.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/utils.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/swc/options.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/swc/index.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/config.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/next.js
+- /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/node_modules/next/dist/server/lib/start-server.js
+    at __webpack_require__.f.require (.next/server/webpack-runtime.js:198:28)
+    at <unknown> (.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (.next/server/webpack-runtime.js:162:22)
+    at <unknown> (.next/server/pages/_document.js:1:339)
+    at Object.<anonymous> (.next/server/pages/_document.js:1:381) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ GET /blog/40 500 in 537ms
+ GET /_next/static/chunks/fallback/webpack.js 404 in 123ms
+ GET /_next/static/chunks/fallback/react-refresh.js 404 in 123ms
+ GET /_next/static/chunks/fallback/main.js 404 in 122ms
+ GET /_next/static/chunks/fallback/pages/_error.js 404 in 80ms
+ GET /_next/static/chunks/fallback/pages/_app.js 404 in 82ms
+[?25h

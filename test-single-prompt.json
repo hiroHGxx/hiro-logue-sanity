@@ -1,0 +1,17 @@
+{
+  "prompts": [
+    {
+      "name": "section1",
+      "prompt": "person using advanced technology thoughtfully, warm lighting, cozy atmosphere, family-friendly, japanese minimalist style, soft colors, peaceful mood, subtle concern or challenge, soft lighting, innovative mood, clean composition",
+      "negative_prompt": "blurry, lowres, bad anatomy, saturated colors, extra fingers, bad hands, malformed limbs, chaotic background, watermark, signature, text overlay",
+      "filename_prefix": "technology-section1",
+      "description": "問題提起・課題を表現する画像"
+    }
+  ],
+  "article_info": {
+    "title": "AI活用と余白の作り方〜section1のみ〜",
+    "estimated_scenes": 1,
+    "style": "hirolog",
+    "theme": "technology"
+  }
+}

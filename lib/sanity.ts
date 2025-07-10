@@ -33,6 +33,19 @@ export interface BlogPost {
     }
     alt?: string
   }
+  heroImage?: {
+    asset: {
+      _ref: string
+    }
+    alt?: string
+  }
+  sectionImages?: Array<{
+    _key: string
+    asset: {
+      _ref: string
+    }
+    alt?: string
+  }>
   body: any[]
   excerpt?: string
   publishedAt: string
@@ -54,6 +67,8 @@ export const postsQuery = `*[_type == "post" && !(_id in path("drafts.**"))] | o
   title,
   slug,
   mainImage,
+  heroImage,
+  sectionImages,
   body,
   excerpt,
   publishedAt,
@@ -70,6 +85,8 @@ export const postQuery = `*[_type == "post" && slug.current == $slug && !(_id in
   title,
   slug,
   mainImage,
+  heroImage,
+  sectionImages,
   body,
   excerpt,
   publishedAt,

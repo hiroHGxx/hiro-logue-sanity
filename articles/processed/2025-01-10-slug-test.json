@@ -1,0 +1,6 @@
+{
+  "title": "スラッグ生成テスト記事〜技術の進歩と人間らしさの両立",
+  "body": "## はじめに\n\nこれはスラッグ生成機能のテスト記事です。",
+  "slug": "technology-humanity-balance-test",
+  "categories": ["技術", "テスト"]
+}

@@ -1,0 +1,23 @@
+{
+  "articleId": "7PgKQm7wEDjbbP2oMAnQaR",
+  "configPath": "data/jobs/configs/7PgKQm7wEDjbbP2oMAnQaR.json",
+  "outputDir": "public/images/blog/auto-generated/7PgKQm7wEDjbbP2oMAnQaR",
+  "generatedFiles": [
+    "public/images/blog/auto-generated/7PgKQm7wEDjbbP2oMAnQaR/technology-hero-001-20250708_235552.png",
+    "public/images/blog/auto-generated/7PgKQm7wEDjbbP2oMAnQaR/technology-hero-001-20250709_002518.png",
+    "public/images/blog/auto-generated/7PgKQm7wEDjbbP2oMAnQaR/technology-hero-001-20250709_005541.png",
+    "public/images/blog/auto-generated/7PgKQm7wEDjbbP2oMAnQaR/technology-hero-001-20250709_012516.png",
+    "public/images/blog/auto-generated/7PgKQm7wEDjbbP2oMAnQaR/technology-section1-001-20250709_002047.png",
+    "public/images/blog/auto-generated/7PgKQm7wEDjbbP2oMAnQaR/technology-section1-001-20250709_004019.png",
+    "public/images/blog/auto-generated/7PgKQm7wEDjbbP2oMAnQaR/technology-section1-001-20250709_010530.png",
+    "public/images/blog/auto-generated/7PgKQm7wEDjbbP2oMAnQaR/technology-section1-001-20250709_013118.png",
+    "public/images/blog/auto-generated/7PgKQm7wEDjbbP2oMAnQaR/technology-section2-001-20250709_004441.png",
+    "public/images/blog/auto-generated/7PgKQm7wEDjbbP2oMAnQaR/technology-section2-001-20250709_013450.png",
+    "public/images/blog/auto-generated/7PgKQm7wEDjbbP2oMAnQaR/technology-section3-001-20250709_014603.png"
+  ],
+  "imageCount": 11,
+  "startedAt": "2025-07-08T14:51:36.875Z",
+  "completedAt": "2025-07-08T16:46:05.442Z",
+  "duration": 6868567,
+  "status": "completed"
+}

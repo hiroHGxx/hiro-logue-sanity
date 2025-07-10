@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "generated_files": {
+    "hero": [
+      "public/images/blog/auto-generated/82lit7DefJsRxG4Tv4MGAX/technology-hero-001-20250709_075337.png"
+    ],
+    "section1": [
+      "public/images/blog/auto-generated/82lit7DefJsRxG4Tv4MGAX/technology-section1-001-20250709_080343.png"
+    ],
+    "section2": [
+      "public/images/blog/auto-generated/82lit7DefJsRxG4Tv4MGAX/technology-section2-001-20250709_080710.png"
+    ],
+    "section3": [
+      "public/images/blog/auto-generated/82lit7DefJsRxG4Tv4MGAX/technology-section3-001-20250709_081153.png"
+    ]
+  },
+  "stats": {
+    "total_images": 4,
+    "successful_generations": 4,
+    "failed_generations": 0,
+    "total_time": 1318.148732
+  },
+  "article_info": {
+    "title": "AIに代替されない価値の作り方〜ビジネスマンが磨くべき本質的スキル",
+    "estimated_scenes": 4,
+    "style": "hirolog",
+    "theme": "auto-generated"
+  }
+}
