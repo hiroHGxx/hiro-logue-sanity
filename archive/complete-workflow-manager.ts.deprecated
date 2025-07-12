@@ -1,0 +1,501 @@
+/**
+ * 完全一気通貫ワークフロー管理システム
+ * 記事生成 → 画像生成 → Sanity統合の全プロセスを自動化
+ */
+
+import { BackgroundProcessManager, BackgroundProcessConfig } from './background-process-manager';
+import { ImageStatusManager } from './image-status-manager';
+import { promises as fs } from 'fs';
+import path from 'path';
+import { exec } from 'child_process';
+import { promisify } from 'util';
+
+const execAsync = promisify(exec);
+
+export interface CompleteWorkflowConfig {
+  sessionId: string;
+  theme: string;
+  articleType?: 'blog' | 'experience' | 'technical';
+  generateImages?: boolean;
+  imageCount?: number;
+  autoPublish?: boolean;
+}
+
+export interface WorkflowResult {
+  success: boolean;
+  sessionId: string;
+  phase: 'article' | 'images' | 'integration' | 'completed';
+  article?: {
+    filename: string;
+    title: string;
+    slug: string;
+    wordCount: number;
+  };
+  images?: {
+    generated: number;
+    total: number;
+    files: string[];
+  };
+  publication?: {
+    sanityDocumentId?: string;
+    publishedUrl?: string;
+  };
+  errors?: string[];
+  nextSteps?: string[];
+}
+
+export class CompleteWorkflowManager {
+  private static readonly PYTHON_PATH = '/Users/gotohiro/Documents/user/Products/stable-diffusion-local/venv310/bin/python';
+  private static readonly ARTICLES_DIR = path.join(process.cwd(), 'articles');
+  private static readonly UPLOAD_SCRIPT = path.join(process.cwd(), 'upload-from-json.js');
+
+  /**
+   * 完全ワークフロー実行
+   */
+  static async executeCompleteWorkflow(config: CompleteWorkflowConfig): Promise<WorkflowResult> {
+    const result: WorkflowResult = {
+      success: false,
+      sessionId: config.sessionId,
+      phase: 'article',
+      errors: [],
+      nextSteps: []
+    };
+
+    try {
+      console.log(`🚀 完全ワークフロー開始: ${config.sessionId}`);
+      console.log(`📝 テーマ: ${config.theme}`);
+
+      // Phase 1: 記事生成
+      console.log('\n📝 Phase 1: 記事生成開始...');
+      const articleResult = await this.generateArticle(config);
+      
+      if (!articleResult.success) {
+        result.errors?.push(`記事生成失敗: ${articleResult.error}`);
+        return result;
+      }
+
+      result.article = articleResult.article;
+      console.log(`✅ 記事生成完了: ${articleResult.article?.filename}`);
+
+      // Phase 2: 画像生成（オプション）
+      if (config.generateImages) {
+        console.log('\n🎨 Phase 2: 画像生成開始...');
+        result.phase = 'images';
+
+        const imageResult = await this.generateImages(config, articleResult.article!);
+        
+        if (!imageResult.success) {
+          result.errors?.push(`画像生成失敗: ${imageResult.error}`);
+          result.nextSteps?.push('画像生成を後で再実行してください');
+        } else {
+          result.images = imageResult.images;
+          console.log(`✅ 画像生成完了: ${imageResult.images?.generated}/${imageResult.images?.total}枚`);
+        }
+      }
+
+      // Phase 3: Sanity統合
+      if (config.autoPublish) {
+        console.log('\n🔄 Phase 3: Sanity統合開始...');
+        result.phase = 'integration';
+
+        const publishResult = await this.publishToSanity(articleResult.article!);
+        
+        if (!publishResult.success) {
+          result.errors?.push(`Sanity統合失敗: ${publishResult.error}`);
+          result.nextSteps?.push('手動でSanityに投稿してください');
+        } else {
+          result.publication = publishResult.publication;
+          console.log(`✅ Sanity投稿完了: ${publishResult.publication?.publishedUrl}`);
+        }
+      }
+
+      result.phase = 'completed';
+      result.success = result.errors?.length === 0;
+
+      if (result.success) {
+        console.log('\n🎉 完全ワークフロー成功!');
+      } else {
+        console.log('\n⚠️ 部分的成功（一部エラーあり）');
+      }
+
+      return result;
+
+    } catch (error) {
+      console.error('🚨 ワークフロー実行エラー:', error);
+      result.errors?.push(`実行エラー: ${error instanceof Error ? error.message : 'Unknown error'}`);
+      return result;
+    }
+  }
+
+  /**
+   * Phase 1: 記事生成
+   */
+  private static async generateArticle(config: CompleteWorkflowConfig): Promise<{
+    success: boolean;
+    error?: string;
+    article?: {
+      filename: string;
+      title: string;
+      slug: string;
+      wordCount: number;
+    };
+  }> {
+    try {
+      // マスタープロンプトテンプレート生成
+      const masterPrompt = this.generateMasterPrompt(config.theme, config.articleType || 'blog');
+      
+      // 記事生成（Claude Code Write tool相当の処理）
+      const articleData = await this.generateArticleContent(masterPrompt);
+      
+      // JSONファイル保存
+      const filename = `${config.sessionId}.json`;
+      const filepath = path.join(this.ARTICLES_DIR, filename);
+      
+      // ディレクトリ作成
+      await fs.mkdir(this.ARTICLES_DIR, { recursive: true });
+      
+      // ファイル保存
+      await fs.writeFile(filepath, JSON.stringify(articleData, null, 2), 'utf-8');
+      
+      console.log(`💾 記事JSON保存: ${filepath}`);
+      
+      return {
+        success: true,
+        article: {
+          filename,
+          title: articleData.title,
+          slug: articleData.slug,
+          wordCount: articleData.body.length
+        }
+      };
+
+    } catch (error) {
+      return {
+        success: false,
+        error: error instanceof Error ? error.message : 'Article generation error'
+      };
+    }
+  }
+
+  /**
+   * Phase 2: 画像生成
+   */
+  private static async generateImages(
+    config: CompleteWorkflowConfig,
+    article: { filename: string; title: string; slug: string; wordCount: number }
+  ): Promise<{
+    success: boolean;
+    error?: string;
+    images?: {
+      generated: number;
+      total: number;
+      files: string[];
+    };
+  }> {
+    try {
+      const imageCount = config.imageCount || 4;
+      const estimatedTimeMinutes = imageCount * 3.5;
+
+      console.log(`🎨 画像生成開始: ${imageCount}枚 (推定${estimatedTimeMinutes}分)`);
+
+      // 画像プロンプト生成
+      const imagePrompts = this.generateImagePrompts(article.title, config.theme, imageCount);
+
+      // スマート生成（タイムアウト対応）
+      const backgroundConfig: BackgroundProcessConfig = {
+        sessionId: `${config.sessionId}-images`,
+        totalImages: imageCount,
+        imagePrompts
+      };
+
+      const smartResult = await BackgroundProcessManager.smartGeneration(backgroundConfig, 8);
+
+      if (!smartResult.success) {
+        return {
+          success: false,
+          error: smartResult.message
+        };
+      }
+
+      if (smartResult.mode === 'background') {
+        console.log('⏰ バックグラウンド処理に切り替わりました');
+        
+        // バックグラウンド処理の場合は状態監視
+        const monitorResult = await this.monitorBackgroundGeneration(smartResult.sessionId, 30);
+        
+        return {
+          success: monitorResult.completed > 0,
+          images: {
+            generated: monitorResult.completed,
+            total: imageCount,
+            files: monitorResult.files
+          }
+        };
+      } else {
+        // フォアグラウンド処理の場合は直接実行
+        const directResult = await this.executeDirectImageGeneration(imagePrompts);
+        
+        return {
+          success: directResult.success,
+          error: directResult.error,
+          images: directResult.images
+        };
+      }
+
+    } catch (error) {
+      return {
+        success: false,
+        error: error instanceof Error ? error.message : 'Image generation error'
+      };
+    }
+  }
+
+  /**
+   * Phase 3: Sanity統合
+   */
+  private static async publishToSanity(article: { filename: string; title: string; slug: string }): Promise<{
+    success: boolean;
+    error?: string;
+    publication?: {
+      sanityDocumentId?: string;
+      publishedUrl?: string;
+    };
+  }> {
+    try {
+      console.log(`🔄 Sanity統合開始: ${article.filename}`);
+
+      // upload-from-json.js スクリプト実行
+      const command = `node ${this.UPLOAD_SCRIPT} articles/${article.filename}`;
+      
+      const { stdout, stderr } = await execAsync(command);
+      
+      if (stderr && !stderr.includes('warning')) {
+        throw new Error(`Upload script error: ${stderr}`);
+      }
+
+      // Sanity Document ID抽出（stdout から）
+      const documentIdMatch = stdout.match(/Document ID: ([a-zA-Z0-9]+)/);
+      const documentId = documentIdMatch ? documentIdMatch[1] : undefined;
+
+      // 公開URL生成
+      const publishedUrl = `https://hiro-logue.vercel.app/blog/${article.slug}`;
+
+      console.log(`✅ Sanity投稿完了: ${publishedUrl}`);
+
+      return {
+        success: true,
+        publication: {
+          sanityDocumentId: documentId,
+          publishedUrl
+        }
+      };
+
+    } catch (error) {
+      return {
+        success: false,
+        error: error instanceof Error ? error.message : 'Sanity integration error'
+      };
+    }
+  }
+
+  /**
+   * マスタープロンプト生成
+   */
+  private static generateMasterPrompt(theme: string, articleType: string): string {
+    return `HIRO_PERSONA.mdとHIRO_ARTICLE_STRUCTURE.mdを完全に参照して、「${theme}」についての${articleType === 'technical' ? '技術的な' : articleType === 'experience' ? '体験重視の' : ''}記事を書いてください。
+
+以下のJSON形式で、articles/${Date.now()}.json に保存してください：
+
+\`\`\`json
+{
+  "title": "記事タイトル",
+  "body": "## はじめに\\n\\n個人体験ベースの導入...\\n\\n## ${theme}との出会い\\n\\n具体的な体験談...\\n\\n## おわりに\\n\\n読者への問いかけ...",
+  "slug": "article-slug",
+  "categories": ["適切なカテゴリ1", "カテゴリ2"],
+  "excerpt": "記事の簡潔な説明"
+}
+\`\`\`
+
+重要な要件：
+1. ヒロの一人称で、実体験ベースの内容
+2. 家族（妻・3人の子ども・ペット）の話を自然に織り込む
+3. 技術者視点での具体的な発見や学び
+4. 読者への問いかけを複数回含める
+5. 2000-2500文字程度の充実した内容
+6. 穏やかで丁寧な敬語、推測表現を多用
+7. 音声配信的表現は避け、ブログ適切な表現を使用`;
+  }
+
+  /**
+   * 記事コンテンツ生成（模擬実装）
+   */
+  private static async generateArticleContent(masterPrompt: string): Promise<any> {
+    // 実際の実装では Claude Code の Write tool を使用
+    // ここでは模擬的なデータを返す
+    const timestamp = Date.now();
+    const slug = `generated-article-${timestamp}`;
+    
+    return {
+      title: `AI技術と日常生活の融合について考えてみました`,
+      body: `## はじめに\n\nこんにちは、ヒロです。\n\n最近、私たちの日常生活にAI技術が自然に溶け込んできているのを実感しています。\n\n## AI技術との日々の出会い\n\n先日、我が家の中学生の子どもが宿題でAIを使って調べ物をしているのを見て、時代の変化を感じました。\n\n妻とも「私たちが子どもの頃とは全然違うよね」と話していたんですね。\n\n## 技術と人間らしさのバランス\n\nプログラマーとして、AIの進歩は本当に素晴らしいと思います。\n\nでも同時に、人間らしさや温かみも大切にしたいなと感じています。\n\n## おわりに\n\n皆さんも、AIと人間らしさのバランスについて、どのように感じていらっしゃいますか？\n\nもしよろしければ、コメントで教えてくださいね。`,
+      slug: slug,
+      categories: ["AI", "技術", "日常生活"],
+      excerpt: "AI技術が日常生活に溶け込む現代において、技術と人間らしさのバランスについて考察しました。"
+    };
+  }
+
+  /**
+   * 画像プロンプト生成
+   */
+  private static generateImagePrompts(title: string, theme: string, count: number): any[] {
+    const basePrompt = `A peaceful cozy room representing ${theme}, modern technology harmoniously integrated with natural elements, empty comfortable seating area, japanese minimalist interior design, warm atmosphere, professional photography`;
+    
+    const negativePrompt = `person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy`;
+
+    const styles = [
+      { name: 'warm_minimal', style: 'warm lighting, cozy atmosphere, japanese minimalist', description: '温かみのあるミニマル' },
+      { name: 'modern_tech', style: 'modern technology focus, clean lines, contemporary', description: 'モダンテクノロジー' },
+      { name: 'natural_organic', style: 'natural materials, organic shapes, plant-focused', description: '自然素材重視' },
+      { name: 'soft_bokeh', style: 'soft focus, bokeh effect, dreamy atmosphere', description: 'ソフトフォーカス' }
+    ];
+
+    return Array.from({ length: count }, (_, i) => {
+      const style = styles[i % styles.length];
+      return {
+        index: i,
+        position: i === 0 ? 'header' : `section${i}`,
+        prompt: `${basePrompt}, ${style.style}`,
+        negative_prompt: negativePrompt,
+        style: style.name,
+        description: style.description,
+        parameters: {
+          width: 1600,
+          height: 896,
+          num_inference_steps: 25,
+          guidance_scale: 7.5
+        }
+      };
+    });
+  }
+
+  /**
+   * バックグラウンド生成監視
+   */
+  private static async monitorBackgroundGeneration(sessionId: string, timeoutMinutes: number): Promise<{
+    completed: number;
+    total: number;
+    files: string[];
+  }> {
+    const startTime = Date.now();
+    const timeoutMs = timeoutMinutes * 60 * 1000;
+
+    while (Date.now() - startTime < timeoutMs) {
+      try {
+        const status = await BackgroundProcessManager.getProcessStatus();
+        const generationStatus = await BackgroundProcessManager.getGenerationStatus();
+
+        if (!status.isRunning && generationStatus?.status === 'completed') {
+          // 完了
+          return {
+            completed: generationStatus.completed || 0,
+            total: generationStatus.total || 0,
+            files: (generationStatus.variations || [])
+              .filter((v: any) => v.status === 'success')
+              .map((v: any) => v.filename)
+          };
+        }
+
+        if (status.isRunning) {
+          console.log(`🔄 バックグラウンド生成進行中: ${status.progress?.completed}/${status.progress?.total}`);
+        }
+
+        // 5秒待機
+        await new Promise(resolve => setTimeout(resolve, 5000));
+
+      } catch (error) {
+        console.error('監視エラー:', error);
+        break;
+      }
+    }
+
+    // タイムアウトまたはエラー
+    const finalStatus = await BackgroundProcessManager.getGenerationStatus();
+    return {
+      completed: finalStatus?.completed || 0,
+      total: finalStatus?.total || 0,
+      files: (finalStatus?.variations || [])
+        .filter((v: any) => v.status === 'success')
+        .map((v: any) => v.filename)
+    };
+  }
+
+  /**
+   * 直接画像生成（フォアグラウンド）
+   */
+  private static async executeDirectImageGeneration(prompts: any[]): Promise<{
+    success: boolean;
+    error?: string;
+    images?: {
+      generated: number;
+      total: number;
+      files: string[];
+    };
+  }> {
+    try {
+      // Python スクリプト直接実行
+      const command = `${this.PYTHON_PATH} test-1x4-variations.py`;
+      
+      const { stdout, stderr } = await execAsync(command, { timeout: 600000 }); // 10分タイムアウト
+      
+      if (stderr && !stderr.includes('warning')) {
+        throw new Error(`Image generation error: ${stderr}`);
+      }
+
+      // 生成ファイル確認
+      const outputDir = 'public/images/blog/test-1x4-variations';
+      const files = await fs.readdir(outputDir).catch(() => []);
+      const imageFiles = files.filter(f => f.endsWith('.png'));
+
+      return {
+        success: true,
+        images: {
+          generated: imageFiles.length,
+          total: prompts.length,
+          files: imageFiles
+        }
+      };
+
+    } catch (error) {
+      return {
+        success: false,
+        error: error instanceof Error ? error.message : 'Direct generation error'
+      };
+    }
+  }
+
+  /**
+   * ワークフロー状態取得
+   */
+  static async getWorkflowStatus(sessionId: string): Promise<WorkflowResult | null> {
+    try {
+      // セッション情報をファイルから読み込み
+      const statusFile = path.join(process.cwd(), `workflow-${sessionId}.json`);
+      const statusContent = await fs.readFile(statusFile, 'utf-8');
+      return JSON.parse(statusContent);
+    } catch (error) {
+      return null;
+    }
+  }
+
+  /**
+   * ワークフロー状態保存
+   */
+  static async saveWorkflowStatus(result: WorkflowResult): Promise<void> {
+    try {
+      const statusFile = path.join(process.cwd(), `workflow-${result.sessionId}.json`);
+      await fs.writeFile(statusFile, JSON.stringify(result, null, 2), 'utf-8');
+    } catch (error) {
+      console.error('ワークフロー状態保存エラー:', error);
+    }
+  }
+}

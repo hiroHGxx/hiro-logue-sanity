@@ -1,0 +1,99 @@
+{
+  "sessionId": "article-20250712-185045",
+  "status": "completed",
+  "imageGeneration": {
+    "startedAt": "2025-07-12T12:08:39.109970",
+    "total": 4,
+    "completed": 4,
+    "failed": 0,
+    "results": [
+      {
+        "success": true,
+        "output_path": "public/images/blog/auto-generated/article-20250712-185045/header-20250712_121205.png",
+        "filename": "header-20250712_121205.png",
+        "generation_time": 206.18041491508484,
+        "position": "header",
+        "description": "記事全体のメインビジュアル：リモートワークの新しい働き方と家族との時間の豊かさを表現する、明るく希望に満ちたホームオフィス空間"
+      },
+      {
+        "success": true,
+        "output_path": "public/images/blog/auto-generated/article-20250712-185045/section1-20250712_122357.png",
+        "filename": "section1-20250712_122357.png",
+        "generation_time": 711.948634147644,
+        "position": "section1",
+        "description": "第1セクション「環境構築から始まった新しい日常」：リモートワーク環境の技術的セットアップと工夫を表現する机上のクローズアップ"
+      },
+      {
+        "success": true,
+        "output_path": "public/images/blog/auto-generated/article-20250712-185045/section2-20250712_123541.png",
+        "filename": "section2-20250712_123541.png",
+        "generation_time": 704.1113889217377,
+        "position": "section2",
+        "description": "第2セクション「通勤時間がもたらした時間の豊かさ」：通勤時間の節約が生み出す時間の豊かさを抽象的に表現"
+      },
+      {
+        "success": true,
+        "output_path": "public/images/blog/auto-generated/article-20250712-185045/section3-20250712_123933.png",
+        "filename": "section3-20250712_123933.png",
+        "generation_time": 231.68390321731567,
+        "position": "section3",
+        "description": "第3セクション「チームワークと個人の成長の両立」：リモートでのチームワークと効率的なコミュニケーションを俯瞰視点で表現"
+      }
+    ],
+    "completedAt": "2025-07-12T12:39:33.652397"
+  },
+  "prompts": [
+    {
+      "position": "header",
+      "prompt": "A bright and inspiring home office space with modern technology setup, large windows showing natural light, plants creating a fresh atmosphere, computer workstation with multiple monitors, warm wooden desk surface, books and notebooks arranged neatly, representing the concept of remote work productivity and work-life balance, photorealistic, cinematic lighting",
+      "description": "記事全体のメインビジュアル：リモートワークの新しい働き方と家族との時間の豊かさを表現する、明るく希望に満ちたホームオフィス空間",
+      "style": "photorealistic, cinematic lighting, warm natural lighting, inviting atmosphere",
+      "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
+      "parameters": {
+        "width": 1600,
+        "height": 896,
+        "num_inference_steps": 25,
+        "guidance_scale": 7.5
+      }
+    },
+    {
+      "position": "section1",
+      "prompt": "A close-up view of a modern desk setup with laptop computer, external monitor, mechanical keyboard, and noise-canceling headphones, technical equipment arranged thoughtfully, cables organized neatly, soft desk lamp providing focused lighting, representing the technical aspects of remote work environment setup, as a watercolor illustration, artistic style",
+      "description": "第1セクション「環境構築から始まった新しい日常」：リモートワーク環境の技術的セットアップと工夫を表現する机上のクローズアップ",
+      "style": "as a watercolor illustration, artistic style, soft and contemplative, japanese minimalist",
+      "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
+      "parameters": {
+        "width": 1600,
+        "height": 896,
+        "num_inference_steps": 25,
+        "guidance_scale": 7.5
+      }
+    },
+    {
+      "position": "section2",
+      "prompt": "An abstract representation of time and freedom, floating clocks and calendar elements dissolving into flowing lines, morning sunlight streaming through windows, empty commuter train tracks fading into distance, symbolic elements representing time savings and life balance, dynamic composition showing movement from constraint to freedom, as an abstract art piece, conceptual",
+      "description": "第2セクション「通勤時間がもたらした時間の豊かさ」：通勤時間の節約が生み出す時間の豊かさを抽象的に表現",
+      "style": "as an abstract art piece, conceptual, dynamic and forward-thinking, vibrant and energetic",
+      "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
+      "parameters": {
+        "width": 1600,
+        "height": 896,
+        "num_inference_steps": 25,
+        "guidance_scale": 7.5
+      }
+    },
+    {
+      "position": "section3",
+      "prompt": "A top-down aerial view of technology arrangement showing multiple digital interfaces and platforms, video screens displaying data visualizations, application interfaces floating in organized layout, digital connectivity symbols and network nodes, representing modern technology integration and information flow, in a flat design style, minimalist",
+      "description": "第3セクション「チームワークと個人の成長の両立」：リモートでのチームワークと効率的なコミュニケーションを俯瞰視点で表現",
+      "style": "in a flat design style, minimalist, clean, modern, tech-focused, professional",
+      "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
+      "parameters": {
+        "width": 1600,
+        "height": 896,
+        "num_inference_steps": 25,
+        "guidance_scale": 7.5
+      }
+    }
+  ]
+}

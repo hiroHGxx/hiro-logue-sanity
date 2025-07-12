@@ -1,0 +1,322 @@
+/**
+ * バックグラウンドプロセス管理システム
+ * Claude Codeタイムアウト制約を回避するため、長時間タスクを
+ * バックグラウンドプロセスで実行し、状態をモニタリングする
+ */
+
+import { exec, spawn } from 'child_process';
+import { promises as fs } from 'fs';
+import path from 'path';
+
+export interface BackgroundProcessConfig {
+  sessionId: string;
+  totalImages: number;
+  imagePrompts?: ImagePromptConfig[];
+  outputDir?: string;
+}
+
+export interface ImagePromptConfig {
+  position: string;
+  prompt: string;
+  negativePrompt: string;
+  style: string;
+  description: string;
+  parameters: {
+    width: number;
+    height: number;
+    num_inference_steps: number;
+    guidance_scale: number;
+  };
+}
+
+export interface BackgroundProcessStatus {
+  isRunning: boolean;
+  pid?: number;
+  sessionId?: string;
+  startedAt?: string;
+  progress?: {
+    completed: number;
+    total: number;
+    failed: number;
+  };
+}
+
+export class BackgroundProcessManager {
+  private static readonly PYTHON_PATH = '/Users/gotohiro/Documents/user/Products/stable-diffusion-local/venv310/bin/python';
+  private static readonly SCRIPT_PATH = path.join(process.cwd(), 'scripts', 'background-image-generator.py');
+  private static readonly PID_FILE = path.join(process.cwd(), 'background-generator.pid');
+  private static readonly LOG_FILE = path.join(process.cwd(), 'background-generation.log');
+
+  /**
+   * バックグラウンドプロセスの状態チェック
+   */
+  static async getProcessStatus(): Promise<BackgroundProcessStatus> {
+    try {
+      // PIDファイル存在確認
+      const pidExists = await fs.access(this.PID_FILE).then(() => true).catch(() => false);
+      
+      if (!pidExists) {
+        return { isRunning: false };
+      }
+
+      // PID読み込み
+      const pidContent = await fs.readFile(this.PID_FILE, 'utf-8');
+      const pid = parseInt(pidContent.trim());
+
+      // プロセス存在確認
+      const isRunning = await this.isProcessRunning(pid);
+      
+      if (!isRunning) {
+        // PIDファイル削除
+        await fs.unlink(this.PID_FILE).catch(() => {});
+        return { isRunning: false };
+      }
+
+      // 状態ファイルから詳細情報取得
+      const statusData = await this.getGenerationStatus();
+      
+      return {
+        isRunning: true,
+        pid,
+        sessionId: statusData?.session_id,
+        startedAt: statusData?.startedAt,
+        progress: {
+          completed: statusData?.completed || 0,
+          total: statusData?.total || 0,
+          failed: statusData?.failed || 0
+        }
+      };
+
+    } catch (error) {
+      console.error('プロセス状態チェックエラー:', error);
+      return { isRunning: false };
+    }
+  }
+
+  /**
+   * プロセス実行確認
+   */
+  private static async isProcessRunning(pid: number): Promise<boolean> {
+    return new Promise((resolve) => {
+      exec(`ps -p ${pid}`, (error) => {
+        resolve(!error);
+      });
+    });
+  }
+
+  /**
+   * バックグラウンド画像生成開始
+   */
+  static async startBackgroundGeneration(config: BackgroundProcessConfig): Promise<{
+    success: boolean;
+    message: string;
+    sessionId?: string;
+  }> {
+    try {
+      // 既存プロセスチェック
+      const status = await this.getProcessStatus();
+      if (status.isRunning) {
+        return {
+          success: false,
+          message: `既にバックグラウンドプロセスが実行中です (PID: ${status.pid})`
+        };
+      }
+
+      console.log(`🚀 バックグラウンド画像生成開始: ${config.sessionId}`);
+
+      // Python スクリプト実行
+      const args = [
+        this.SCRIPT_PATH,
+        '--session-id', config.sessionId,
+        '--total', config.totalImages.toString(),
+        '--daemon'
+      ];
+
+      const child = spawn(this.PYTHON_PATH, args, {
+        detached: true,
+        stdio: ['ignore', 'ignore', 'ignore']
+      });
+
+      child.unref(); // 親プロセスから切り離し
+
+      // 短時間待機してプロセス開始確認
+      await new Promise(resolve => setTimeout(resolve, 2000));
+
+      const finalStatus = await this.getProcessStatus();
+      
+      return {
+        success: finalStatus.isRunning,
+        message: finalStatus.isRunning 
+          ? `バックグラウンド生成開始しました (PID: ${finalStatus.pid})`
+          : 'バックグラウンドプロセスの開始に失敗しました',
+        sessionId: config.sessionId
+      };
+
+    } catch (error) {
+      console.error('バックグラウンド生成開始エラー:', error);
+      return {
+        success: false,
+        message: `エラー: ${error instanceof Error ? error.message : 'Unknown error'}`
+      };
+    }
+  }
+
+  /**
+   * バックグラウンドプロセス停止
+   */
+  static async stopBackgroundGeneration(): Promise<{
+    success: boolean;
+    message: string;
+  }> {
+    try {
+      const status = await this.getProcessStatus();
+      
+      if (!status.isRunning || !status.pid) {
+        return {
+          success: true,
+          message: '実行中のバックグラウンドプロセスはありません'
+        };
+      }
+
+      // プロセス終了
+      process.kill(status.pid, 'SIGTERM');
+      
+      // PIDファイル削除
+      await fs.unlink(this.PID_FILE).catch(() => {});
+
+      return {
+        success: true,
+        message: `バックグラウンドプロセスを停止しました (PID: ${status.pid})`
+      };
+
+    } catch (error) {
+      console.error('バックグラウンドプロセス停止エラー:', error);
+      return {
+        success: false,
+        message: `停止エラー: ${error instanceof Error ? error.message : 'Unknown error'}`
+      };
+    }
+  }
+
+  /**
+   * 生成状態取得（状態ファイルから）
+   */
+  static async getGenerationStatus(): Promise<any> {
+    try {
+      const statusFile = path.join(process.cwd(), 'image-generation-status.json');
+      const statusContent = await fs.readFile(statusFile, 'utf-8');
+      return JSON.parse(statusContent);
+    } catch (error) {
+      return null;
+    }
+  }
+
+  /**
+   * ログファイル読み込み
+   */
+  static async getProcessLogs(tailLines: number = 50): Promise<string[]> {
+    try {
+      const logContent = await fs.readFile(this.LOG_FILE, 'utf-8');
+      const lines = logContent.split('\n').filter(line => line.trim());
+      return lines.slice(-tailLines);
+    } catch (error) {
+      return [];
+    }
+  }
+
+  /**
+   * プロセス監視（定期的な状態確認）
+   */
+  static async monitorProcess(
+    onUpdate: (status: BackgroundProcessStatus) => void,
+    intervalMs: number = 5000
+  ): Promise<() => void> {
+    
+    const checkStatus = async () => {
+      const status = await this.getProcessStatus();
+      onUpdate(status);
+    };
+
+    // 初回チェック
+    await checkStatus();
+
+    // 定期チェック開始
+    const interval = setInterval(checkStatus, intervalMs);
+
+    // 停止関数を返す
+    return () => {
+      clearInterval(interval);
+    };
+  }
+
+  /**
+   * セッション継続（中断から再開）
+   */
+  static async resumeSession(sessionId: string): Promise<{
+    success: boolean;
+    message: string;
+  }> {
+    try {
+      console.log(`🔄 セッション継続: ${sessionId}`);
+
+      const args = [
+        this.SCRIPT_PATH,
+        '--resume', sessionId
+      ];
+
+      const child = spawn(this.PYTHON_PATH, args, {
+        detached: true,
+        stdio: ['ignore', 'ignore', 'ignore']
+      });
+
+      child.unref();
+
+      return {
+        success: true,
+        message: `セッション継続を開始しました: ${sessionId}`
+      };
+
+    } catch (error) {
+      return {
+        success: false,
+        message: `セッション継続エラー: ${error instanceof Error ? error.message : 'Unknown error'}`
+      };
+    }
+  }
+
+  /**
+   * Claude Codeタイムアウト対応のスマート実行
+   * タイムアウトが近い場合は自動的にバックグラウンド処理に切り替え
+   */
+  static async smartGeneration(
+    config: BackgroundProcessConfig,
+    maxExecutionMinutes: number = 8
+  ): Promise<{
+    mode: 'foreground' | 'background';
+    success: boolean;
+    message: string;
+    sessionId: string;
+  }> {
+    
+    const estimatedTimeMinutes = config.totalImages * 3.5; // 1枚あたり約3.5分
+    
+    if (estimatedTimeMinutes > maxExecutionMinutes) {
+      // バックグラウンド処理が必要
+      const result = await this.startBackgroundGeneration(config);
+      return {
+        mode: 'background',
+        success: result.success,
+        message: `推定実行時間${estimatedTimeMinutes}分のため、バックグラウンド処理に切り替えました。${result.message}`,
+        sessionId: config.sessionId
+      };
+    } else {
+      // フォアグラウンド処理で実行可能
+      return {
+        mode: 'foreground',
+        success: true,
+        message: `推定実行時間${estimatedTimeMinutes}分のため、通常処理で実行します`,
+        sessionId: config.sessionId
+      };
+    }
+  }
+}

@@ -1,0 +1,243 @@
+/**
+ * 画像生成状態管理システム
+ * Claude Codeタイムアウト制約対策のための非同期処理状態管理
+ */
+
+import fs from 'fs/promises';
+import path from 'path';
+
+export interface ImageGenerationStatus {
+  status: 'pending' | 'generating' | 'completed' | 'failed' | 'cancelled';
+  startedAt: string;
+  completedAt?: string;
+  total: number;
+  completed: number;
+  failed: number;
+  variations: GeneratedVariation[];
+  currentTask?: string;
+  errorMessage?: string;
+  sessionId?: string;
+}
+
+export interface GeneratedVariation {
+  id: string;
+  position: 'header' | 'section1' | 'section2' | 'section3';
+  filename: string;
+  status: 'pending' | 'generating' | 'completed' | 'failed';
+  generatedAt?: string;
+  path?: string;
+  error?: string;
+}
+
+const STATUS_FILE_PATH = path.join(process.cwd(), 'image-generation-status.json');
+
+export class ImageStatusManager {
+  /**
+   * 状態ファイルを読み込み
+   */
+  static async getStatus(): Promise<ImageGenerationStatus | null> {
+    try {
+      const data = await fs.readFile(STATUS_FILE_PATH, 'utf-8');
+      return JSON.parse(data);
+    } catch (error) {
+      if ((error as any).code === 'ENOENT') {
+        return null;
+      }
+      throw error;
+    }
+  }
+
+  /**
+   * 状態ファイルを更新
+   */
+  static async updateStatus(status: ImageGenerationStatus): Promise<void> {
+    await fs.writeFile(STATUS_FILE_PATH, JSON.stringify(status, null, 2));
+  }
+
+  /**
+   * 新しい画像生成セッションを開始
+   */
+  static async startSession(totalImages: number, sessionId?: string): Promise<void> {
+    const status: ImageGenerationStatus = {
+      status: 'pending',
+      startedAt: new Date().toISOString(),
+      total: totalImages,
+      completed: 0,
+      failed: 0,
+      variations: [],
+      sessionId: sessionId || this.generateSessionId()
+    };
+    
+    await this.updateStatus(status);
+  }
+
+  /**
+   * 生成開始をマーク
+   */
+  static async markGenerating(currentTask?: string): Promise<void> {
+    const status = await this.getStatus();
+    if (!status) throw new Error('No active session found');
+
+    status.status = 'generating';
+    status.currentTask = currentTask;
+    
+    await this.updateStatus(status);
+  }
+
+  /**
+   * バリエーション追加
+   */
+  static async addVariation(variation: GeneratedVariation): Promise<void> {
+    const status = await this.getStatus();
+    if (!status) throw new Error('No active session found');
+
+    status.variations.push(variation);
+    
+    await this.updateStatus(status);
+  }
+
+  /**
+   * バリエーション完了をマーク
+   */
+  static async markVariationCompleted(
+    variationId: string, 
+    filename: string, 
+    filePath: string
+  ): Promise<void> {
+    const status = await this.getStatus();
+    if (!status) throw new Error('No active session found');
+
+    const variation = status.variations.find(v => v.id === variationId);
+    if (!variation) throw new Error(`Variation ${variationId} not found`);
+
+    variation.status = 'completed';
+    variation.generatedAt = new Date().toISOString();
+    variation.filename = filename;
+    variation.path = filePath;
+    
+    status.completed++;
+    
+    await this.updateStatus(status);
+  }
+
+  /**
+   * バリエーション失敗をマーク
+   */
+  static async markVariationFailed(variationId: string, error: string): Promise<void> {
+    const status = await this.getStatus();
+    if (!status) throw new Error('No active session found');
+
+    const variation = status.variations.find(v => v.id === variationId);
+    if (!variation) throw new Error(`Variation ${variationId} not found`);
+
+    variation.status = 'failed';
+    variation.error = error;
+    
+    status.failed++;
+    
+    await this.updateStatus(status);
+  }
+
+  /**
+   * セッション完了をマーク
+   */
+  static async markCompleted(): Promise<void> {
+    const status = await this.getStatus();
+    if (!status) throw new Error('No active session found');
+
+    status.status = 'completed';
+    status.completedAt = new Date().toISOString();
+    
+    await this.updateStatus(status);
+  }
+
+  /**
+   * セッション失敗をマーク
+   */
+  static async markFailed(errorMessage: string): Promise<void> {
+    const status = await this.getStatus();
+    if (!status) throw new Error('No active session found');
+
+    status.status = 'failed';
+    status.completedAt = new Date().toISOString();
+    status.errorMessage = errorMessage;
+    
+    await this.updateStatus(status);
+  }
+
+  /**
+   * 進捗確認
+   */
+  static async getProgress(): Promise<{
+    isActive: boolean;
+    isCompleted: boolean;
+    isFailed: boolean;
+    progress: number;
+    status: ImageGenerationStatus | null;
+  }> {
+    const status = await this.getStatus();
+    
+    if (!status) {
+      return {
+        isActive: false,
+        isCompleted: false,
+        isFailed: false,
+        progress: 0,
+        status: null
+      };
+    }
+
+    const progress = status.total > 0 ? (status.completed / status.total) * 100 : 0;
+    
+    return {
+      isActive: status.status === 'generating' || status.status === 'pending',
+      isCompleted: status.status === 'completed',
+      isFailed: status.status === 'failed',
+      progress,
+      status
+    };
+  }
+
+  /**
+   * セッションをクリア
+   */
+  static async clearSession(): Promise<void> {
+    try {
+      await fs.unlink(STATUS_FILE_PATH);
+    } catch (error) {
+      // ファイルが存在しない場合は無視
+      if ((error as any).code !== 'ENOENT') {
+        throw error;
+      }
+    }
+  }
+
+  /**
+   * セッションID生成
+   */
+  private static generateSessionId(): string {
+    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  }
+
+  /**
+   * Claude Codeタイムアウト制約チェック
+   */
+  static async checkTimeout(maxMinutes: number = 2): Promise<boolean> {
+    const status = await this.getStatus();
+    if (!status || !status.startedAt) return false;
+
+    const startTime = new Date(status.startedAt);
+    const now = new Date();
+    const elapsedMinutes = (now.getTime() - startTime.getTime()) / (1000 * 60);
+
+    return elapsedMinutes > maxMinutes;
+  }
+
+  /**
+   * 非同期処理推奨判定
+   */
+  static async shouldUseBackgroundProcessing(estimatedMinutes: number): Promise<boolean> {
+    // Claude Codeタイムアウト（2分）より長い場合はバックグラウンド処理推奨
+    return estimatedMinutes > 1.5;
+  }
+}
