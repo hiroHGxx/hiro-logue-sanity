@@ -1,0 +1,21 @@
+{
+  "success": false,
+  "sessionId": "complete-1752217056899",
+  "phase": "completed",
+  "errors": [
+    "画像生成失敗: 推定実行時間14分のため、バックグラウンド処理に切り替えました。バックグラウンドプロセスの開始に失敗しました"
+  ],
+  "nextSteps": [
+    "画像生成を後で再実行してください"
+  ],
+  "article": {
+    "filename": "complete-1752217056899.json",
+    "title": "AI技術と日常生活の融合について考えてみました",
+    "slug": "generated-article-1752217057550",
+    "wordCount": 324
+  },
+  "publication": {
+    "sanityDocumentId": "VYus6nyHpjKB0SEJ05X1c6",
+    "publishedUrl": "https://hiro-logue.vercel.app/blog/generated-article-1752217057550"
+  }
+}

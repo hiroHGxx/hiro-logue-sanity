@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "sessionId": "article-only-1752212492458",
+  "phase": "completed",
+  "errors": [],
+  "nextSteps": [],
+  "article": {
+    "filename": "article-only-1752212492458.json",
+    "title": "AI技術と日常生活の融合について考えてみました",
+    "slug": "generated-article-1752212493114",
+    "wordCount": 324
+  }
+}
