@@ -45,22 +45,36 @@
     *   セクション1画像: 第1セクションのテーマ画像（内容理解促進）
     *   セクション2画像: 第2セクションのテーマ画像（内容理解促進）
     *   セクション3画像: 第3セクションのテーマ画像（内容理解促進）
+*   **🎯 GEMINI改善ルール適用（重要）**
+    *   **【ルール1】人間連想語句の徹底排除（最重要）**: 
+        - 禁止語句: family, connection, generations, people, scene, interaction, gathering, hands, together, relationship, community, social, human, person
+        - 特に要注意: 「家族」「人とのつながり」系の表現は必ず物・環境・抽象概念に置き換える
+        - Juggernaut XL v9は人物描画特化モデルのため、連想語句も人物生成を誘発する
+    *   **【ルール2】構図・視点の強制多様化（必須）**: 
+        - 4枚中、机上シーンは1枚まで
+        - 必須バリエーション: 室内全景・机上クローズアップ・窓からの風景・抽象的表現
+        - 視点変更: 俯瞰・正面・斜め・クローズアップを意図的に分散
+        - 比喩表現推奨: 具体的物体よりも抽象的・概念的表現を優先
+    *   **【ルール3】ブランド要素選択的適用**: 
+        - 全画像に同一スタイル適用禁止
+        - セクションごとに最適スタイル要素を選択
+        - 代替スタイル: "vibrant and energetic", "soft and contemplative", "dynamic and forward-thinking"
+
 *   **画像プロンプト生成ルール:**
     *   各画像のコンセプト・目的を明確化
-    *   記事内容との整合性確保
-    *   ヒロ-Logueブランドスタイル統一
-    *   **スタイル多様化**: 記事テーマに応じて以下のスタイル修飾子を動的選択
+    *   記事内容との整合性確保（但し人間連想語句使用禁止）
+    *   **スタイル強制多様化**: 4枚とも異なるスタイル修飾子必須選択
         - 写真調: "photorealistic, cinematic lighting"
-        - イラスト調: "as a watercolor illustration, artistic style"
+        - イラスト調: "as a watercolor illustration, artistic style" 
         - フラットデザイン: "in a flat design style, minimalist"
         - 抽象的: "as an abstract art piece, conceptual"
         - 技術系: "clean, modern, tech-focused, professional"
 *   **プロンプト要件:**
-    *   テーマと記事内容に完全一致
+    *   テーマと記事内容に完全一致（人間連想語句は除外）
     *   人物描画完全防止（強化ネガティブプロンプト必須）
     *   1600×896解像度（16:9比率）
-    *   ヒロらしい温かみのある雰囲気
-    *   日本的ミニマリズム要素
+    *   構図・視点の意図的多様化
+    *   ブランド要素選択的適用
 
 #### **【出力ファイル形式】**
 *   **ファイル名**: `articles/article-{YYYYMMDD-HHMMSS}.json`
@@ -85,7 +99,7 @@
       "position": "header",
       "prompt": "記事全体のメインビジュアルとして、{テーマ}を表現する詳細なプロンプト（記事内容との整合性確保）",
       "description": "ヘッダー画像の目的・記事との関連性説明",
-      "style": "記事テーマに応じたスタイル修飾子（写真調/イラスト調/フラットデザイン/抽象的/技術系から選択） + warm lighting, cozy atmosphere, japanese minimalist",
+      "style": "【GEMINI ルール適用】4枚とも異なるスタイル修飾子必須選択（写真調/イラスト調/フラットデザイン/抽象的/技術系から選択）+ 選択的ブランド要素適用（全画像同一スタイル禁止）",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -98,7 +112,7 @@
       "position": "section1",
       "prompt": "第1セクション用の詳細なプロンプト（セクション内容との関連性確保）",
       "description": "第1セクション内容との関連性・画像の目的説明",
-      "style": "記事テーマに応じたスタイル修飾子（写真調/イラスト調/フラットデザイン/抽象的/技術系から選択） + warm lighting, cozy atmosphere, japanese minimalist",
+      "style": "【GEMINI ルール適用】4枚とも異なるスタイル修飾子必須選択（写真調/イラスト調/フラットデザイン/抽象的/技術系から選択）+ 選択的ブランド要素適用（全画像同一スタイル禁止）",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -111,7 +125,7 @@
       "position": "section2",
       "prompt": "第2セクション用の詳細なプロンプト（セクション内容との関連性確保）",
       "description": "第2セクション内容との関連性・画像の目的説明",
-      "style": "記事テーマに応じたスタイル修飾子（写真調/イラスト調/フラットデザイン/抽象的/技術系から選択） + warm lighting, cozy atmosphere, japanese minimalist",
+      "style": "【GEMINI ルール適用】4枚とも異なるスタイル修飾子必須選択（写真調/イラスト調/フラットデザイン/抽象的/技術系から選択）+ 選択的ブランド要素適用（全画像同一スタイル禁止）",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -124,7 +138,7 @@
       "position": "section3",
       "prompt": "第3セクション用の詳細なプロンプト（セクション内容との関連性確保）",
       "description": "第3セクション内容との関連性・画像の目的説明",
-      "style": "記事テーマに応じたスタイル修飾子（写真調/イラスト調/フラットデザイン/抽象的/技術系から選択） + warm lighting, cozy atmosphere, japanese minimalist",
+      "style": "【GEMINI ルール適用】4枚とも異なるスタイル修飾子必須選択（写真調/イラスト調/フラットデザイン/抽象的/技術系から選択）+ 選択的ブランド要素適用（全画像同一スタイル禁止）",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -145,11 +159,33 @@
     *   例: "adult-learning-journey", "technology-family-balance", "programming-daily-insights"
 
 #### **【重要な生成指示】**
+**🎯 GEMINI改善ルール実装手順（必須遵守）:**
+
+**【ステップ1】人間連想語句チェック（最重要）:**
+- 各プロンプト作成後、禁止語句リストで確認: family, connection, generations, people, scene, interaction, gathering, hands, together, relationship, community, social, human, person
+- 発見時は即座に物・環境・抽象概念に置き換え
+- 例: "family scene" → "cozy interior", "connection" → "harmony", "generations" → "timeless elements"
+
+**【ステップ2】構図多様化強制実装:**
+- Header: 室内全景/概念的表現を優先
+- Section1: 机上クローズアップまたは窓からの風景
+- Section2: 俯瞰視点または抽象的表現  
+- Section3: Header〜Section2で使用していない視点・構図を必須選択
+- 4枚すべて異なる視点・構図になるよう意図的に調整
+
+**【ステップ3】スタイル選択的適用:**
+- 各画像に異なるスタイル修飾子必須適用
+- ブランド要素は全画像同一適用禁止
+- セクションごとに最適な組み合わせを選択
+- 例: Header(photorealistic + warm lighting), Section1(watercolor + japanese minimalist), Section2(tech-focused + dynamic), Section3(abstract + contemplative)
+
 **画像プロンプト生成時の具体的な手順:**
 1. **記事内容を完全理解**してから各セクションに最適な画像を計画
-2. **テーマに応じたスタイル選択**: 技術系なら「clean, modern, tech-focused」、家族系なら「warm, cozy, family-friendly」など
-3. **具体的で詳細なプロンプト作成**: 抽象的な指示ではなく、実際にStable Diffusionが理解できる具体的描写
-4. **各画像の目的明確化**: descriptionフィールドで画像の役割・記事との関連性を説明
+2. **GEMINI ルール1実行**: 人間連想語句完全除去確認
+3. **GEMINI ルール2実行**: 4枚の構図・視点強制多様化
+4. **GEMINI ルール3実行**: スタイル要素選択的適用  
+5. **具体的で詳細なプロンプト作成**: 抽象的な指示ではなく、実際にStable Diffusionが理解できる具体的描写
+6. **各画像の目的明確化**: descriptionフィールドで画像の役割・記事との関連性を説明
 
 #### **【ステップ1の最終的なアクション】**
 上記の条件に従って生成した**完全なJSONコンテンツ**を、`Write` ツールを使い、適切なファイルパスに書き込んでください。
@@ -208,6 +244,32 @@ cd /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition && node sc
 ---
 
 **以上の2ステップを、順番に確実に実行してください。**
+
+---
+
+## 🎯 **GEMINI改善効果の期待値**
+
+### **問題解決の期待結果:**
+| **問題項目** | **改善前** | **GEMINI改善後の予測** |
+|------------|-----------|----------------------|
+| **人物描画発生率** | 25%程度 | **5%以下** |
+| **画像類似度** | 80%以上 | **30%以下** |
+| **構図多様性** | 低（主に机上） | **高（4つの異なる視点）** |
+| **スタイル統一感** | 過度に画一化 | **適度な多様性保持** |
+
+### **技術的改善ポイント:**
+- **ルール1効果**: Juggernaut XL v9の人物特化特性を理解した根本的解決
+- **ルール2効果**: 強制的構図分散による視覚的多様性確保
+- **ルール3効果**: ブランド要素選択適用による適度な統一感維持
+
+### **品質向上の確認方法:**
+1. **人物描画チェック**: 生成された4枚すべてで人物不在確認
+2. **多様性評価**: 4枚の構図・視点・スタイルが明確に異なることを確認
+3. **ブランド統一感**: ヒロ-Logueらしさを保ちつつ画一化回避を確認
+
+---
+
+**以上の2ステップを、GEMINI改善ルール適用の上、順番に確実に実行してください。**
 
 ## 💡 実行例
 
