@@ -1,53 +1,53 @@
 {
-  "sessionId": "article-20250113-165200",
+  "sessionId": "article-20250716-121500",
   "status": "completed",
   "imageGeneration": {
-    "startedAt": "2025-07-14T09:07:59.365689",
+    "startedAt": "2025-07-16T09:35:57.136582",
     "total": 4,
     "completed": 4,
     "failed": 0,
     "results": [
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-20250113-165200/header-20250714_091056.png",
-        "filename": "header-20250714_091056.png",
-        "generation_time": 177.5883870124817,
+        "output_path": "public/images/blog/auto-generated/article-20250716-121500/header-20250716_093858.png",
+        "filename": "header-20250716_093858.png",
+        "generation_time": 181.53091311454773,
         "position": "header",
-        "description": "40代からのリスキリングという記事全体のテーマを表現。学習環境の温かみと現代的な学習ツールの融合を表現。"
+        "description": "記事全体のメインビジュアル。プログラミング教育とボランティア活動の温かい雰囲気を表現した教室の全景。子どもたちの学習環境と教育への情熱を象徴する空間。"
       },
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-20250113-165200/section1-20250714_093114.png",
-        "filename": "section1-20250714_093114.png",
-        "generation_time": 1217.0221087932587,
+        "output_path": "public/images/blog/auto-generated/article-20250716-121500/section1-20250716_094352.png",
+        "filename": "section1-20250716_094352.png",
+        "generation_time": 293.6155548095703,
         "position": "section1",
-        "description": "「最初の一歩は思っていたより重かった」セクションに対応。学習開始時の重圧感と真剣さを表現。"
+        "description": "第1セクション「なぜ？の力」のテーマ画像。机上のクローズアップで好奇心と学習への探求心を表現。疑問符の抽象的表現で純粋な質問の力を視覚化。"
       },
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-20250113-165200/section2-20250714_094043.png",
-        "filename": "section2-20250714_094043.png",
-        "generation_time": 569.2506113052368,
+        "output_path": "public/images/blog/auto-generated/article-20250716-121500/section2-20250716_094721.png",
+        "filename": "section2-20250716_094721.png",
+        "generation_time": 208.4803307056427,
         "position": "section2",
-        "description": "「年齢は制限ではなく、むしろ強みになる」セクションに対応。俯瞰視点で経験の積み重ねと成熟した学習アプローチを表現。"
+        "description": "第2セクション「教えることで見えた理解の浅さ」のテーマ画像。俯瞰視点で学習と教育のプロセスを表現。教材の配置で理解の深化を視覚的に示す。"
       },
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-20250113-165200/section3-20250714_095324.png",
-        "filename": "section3-20250714_095324.png",
-        "generation_time": 760.7893869876862,
+        "output_path": "public/images/blog/auto-generated/article-20250716-121500/section3-20250716_095522.png",
+        "filename": "section3-20250716_095522.png",
+        "generation_time": 481.29848074913025,
         "position": "section3",
-        "description": "「技術と人間らしさのバランスを見つける」セクションに対応。技術と人間性の調和を抽象的に表現。"
+        "description": "第3セクション「小さな成功の瞬間」のテーマ画像。抽象的表現で成功と達成の喜びを表現。学習の魔法的瞬間と創造の喜びを光と色彩で視覚化。"
       }
     ],
-    "completedAt": "2025-07-14T09:53:24.664688"
+    "completedAt": "2025-07-16T09:55:22.686893"
   },
   "prompts": [
     {
       "position": "header",
-      "prompt": "A peaceful study corner with modern learning materials and technology, warm natural lighting streaming through window, books and digital devices arranged on wooden desk, cozy interior atmosphere, japanese minimalist aesthetic, soft shadows and natural textures",
-      "description": "40代からのリスキリングという記事全体のテーマを表現。学習環境の温かみと現代的な学習ツールの融合を表現。",
-      "style": "photorealistic, cinematic lighting, warm atmosphere",
+      "prompt": "A bright, inspiring classroom environment with modern educational technology setup, computer workstations arranged in a circle, warm natural lighting streaming through large windows, colorful educational posters on walls, empty chairs suggesting readiness for learning, clean minimal aesthetic with educational materials organized neatly, photorealistic style with warm golden lighting",
+      "description": "記事全体のメインビジュアル。プログラミング教育とボランティア活動の温かい雰囲気を表現した教室の全景。子どもたちの学習環境と教育への情熱を象徴する空間。",
+      "style": "photorealistic, cinematic lighting, warm golden hour lighting, educational environment",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -58,9 +58,9 @@
     },
     {
       "position": "section1",
-      "prompt": "Heavy textbooks and learning materials scattered on a surface, representing the weight of starting new learning, dramatic side lighting creating strong shadows, contemplative mood, depth of field effect, close-up perspective",
-      "description": "「最初の一歩は思っていたより重かった」セクションに対応。学習開始時の重圧感と真剣さを表現。",
-      "style": "as a watercolor illustration, artistic style, soft brush strokes",
+      "prompt": "Close-up view of a wooden desk surface with open programming book, pencils in a holder, question mark symbols floating as abstract light particles above the book pages, soft natural lighting from window, curious learning atmosphere, warm wooden textures, intellectual discovery mood, as a watercolor illustration with soft flowing colors",
+      "description": "第1セクション「なぜ？の力」のテーマ画像。机上のクローズアップで好奇心と学習への探求心を表現。疑問符の抽象的表現で純粋な質問の力を視覚化。",
+      "style": "as a watercolor illustration, artistic style, soft flowing brushstrokes, gentle color transitions",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -71,9 +71,9 @@
     },
     {
       "position": "section2",
-      "prompt": "View from above looking down at organized workspace with experience-based learning tools, timeline elements and achievement symbols, bird's eye perspective, organized and structured composition, representing wisdom and experience",
-      "description": "「年齢は制限ではなく、むしろ強みになる」セクションに対応。俯瞰視点で経験の積み重ねと成熟した学習アプローチを表現。",
-      "style": "in a flat design style, minimalist, clean geometric shapes",
+      "prompt": "Aerial bird's eye view of scattered coding books, notebooks with handwritten diagrams, colorful sticky notes, and a laptop displaying simple code, organized chaos of learning materials, soft shadows creating depth, understanding and teaching process visualization, in a flat design style with clean geometric shapes and minimalist color palette",
+      "description": "第2セクション「教えることで見えた理解の浅さ」のテーマ画像。俯瞰視点で学習と教育のプロセスを表現。教材の配置で理解の深化を視覚的に示す。",
+      "style": "in a flat design style, minimalist, clean geometric shapes, modern educational aesthetic",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -84,9 +84,9 @@
     },
     {
       "position": "section3",
-      "prompt": "Abstract representation of balance between technology and humanity, flowing organic shapes intertwining with geometric digital elements, conceptual art piece showing harmony and integration, soft contemplative colors",
-      "description": "「技術と人間らしさのバランスを見つける」セクションに対応。技術と人間性の調和を抽象的に表現。",
-      "style": "as an abstract art piece, conceptual, soft and contemplative",
+      "prompt": "Abstract conceptual representation of success and achievement through geometric light bursts, rainbow-colored particles flowing upward, crystalline formations suggesting breakthrough moments, ethereal glow effects, celebration of learning milestones, magical transformation energy, as an abstract art piece with dynamic movement and vibrant colors",
+      "description": "第3セクション「小さな成功の瞬間」のテーマ画像。抽象的表現で成功と達成の喜びを表現。学習の魔法的瞬間と創造の喜びを光と色彩で視覚化。",
+      "style": "as an abstract art piece, conceptual, dynamic movement, vibrant energy, ethereal lighting effects",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
