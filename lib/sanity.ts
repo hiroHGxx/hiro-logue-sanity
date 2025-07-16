@@ -39,6 +39,30 @@ export interface BlogPost {
     }
     alt?: string
   }
+  headerImage?: {
+    asset: {
+      _ref: string
+    }
+    alt?: string
+  }
+  section1Image?: {
+    asset: {
+      _ref: string
+    }
+    alt?: string
+  }
+  section2Image?: {
+    asset: {
+      _ref: string
+    }
+    alt?: string
+  }
+  section3Image?: {
+    asset: {
+      _ref: string
+    }
+    alt?: string
+  }
   sectionImages?: Array<{
     _key: string
     asset: {
@@ -68,6 +92,10 @@ export const postsQuery = `*[_type == "post" && !(_id in path("drafts.**"))] | o
   slug,
   mainImage,
   heroImage,
+  headerImage,
+  section1Image,
+  section2Image,
+  section3Image,
   sectionImages,
   body,
   excerpt,
@@ -86,6 +114,10 @@ export const postQuery = `*[_type == "post" && slug.current == $slug && !(_id in
   slug,
   mainImage,
   heroImage,
+  headerImage,
+  section1Image,
+  section2Image,
+  section3Image,
   sectionImages,
   body,
   excerpt,
