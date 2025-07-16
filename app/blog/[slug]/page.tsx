@@ -39,8 +39,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   // 著者情報
   const authorName = post.author?.name || 'ヒロ'
   
-  // OG画像URL（メイン画像がある場合はそれを使用、なければデフォルト）
-  const ogImageUrl = post.mainImage 
+  // OG画像URL（ヘッダー画像 > メイン画像 > デフォルトの優先順位）
+  const ogImageUrl = post.headerImage
+    ? urlFor(post.headerImage).width(1200).height(630).url()
+    : post.mainImage 
     ? urlFor(post.mainImage).width(1200).height(630).url()
     : '/og-image.svg'
 
@@ -144,21 +146,23 @@ const components = {
 }
 
 // Enhanced PortableText with embedded section images
-function EnhancedPortableText({ body, sectionImages }: { body: any[], sectionImages?: any[] }) {
-  if (!sectionImages || sectionImages.length === 0) {
+function EnhancedPortableText({ body, post }: { body: any[], post: any }) {
+  // Collect section images from individual fields
+  const sectionImages = []
+  if (post.section1Image) sectionImages.push(post.section1Image)
+  if (post.section2Image) sectionImages.push(post.section2Image)
+  if (post.section3Image) sectionImages.push(post.section3Image)
+  
+  if (sectionImages.length === 0) {
     return <PortableText value={body} components={components} />
   }
 
   // Split body content into sections and embed images
   const enhancedBody = []
-  const h2Blocks = body.filter(block => block.style === 'h2')
-  
   let imageIndex = 0
-  let currentIndex = 0
   
   for (const block of body) {
     enhancedBody.push(block)
-    currentIndex++
     
     // Insert image after h2 blocks (except the first one "はじめに")
     if (block.style === 'h2' && imageIndex < sectionImages.length) {
@@ -185,13 +189,13 @@ function EnhancedPortableText({ body, sectionImages }: { body: any[], sectionIma
       sectionImage: ({ value }: any) => (
         <div className="my-8">
           <Image
-            src={urlFor(value.image).width(800).height(450).url()}
+            src={urlFor(value.image).width(1600).height(896).url()}
             alt={value.image.alt || `セクション ${value.imageIndex + 1} の画像`}
-            width={800}
-            height={450}
+            width={1600}
+            height={896}
             className="w-full rounded-lg shadow-md hover:shadow-lg transition-shadow"
             loading="lazy"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1600px"
           />
         </div>
       )
@@ -262,8 +266,23 @@ export default async function BlogPost({ params }: PageProps) {
           )}
         </header>
 
+        {/* Header Image (Auto-generated from ContentFlow) */}
+        {post.headerImage && (
+          <div className="mb-8">
+            <Image
+              src={urlFor(post.headerImage).width(1600).height(896).url()}
+              alt={post.headerImage.alt || `${post.title}のヘッダー画像`}
+              width={1600}
+              height={896}
+              className="w-full rounded-lg shadow-lg"
+              priority
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1600px"
+            />
+          </div>
+        )}
+
         {/* Hero Image (Auto-generated) */}
-        {post.heroImage && (
+        {!post.headerImage && post.heroImage && (
           <div className="mb-8">
             <Image
               src={urlFor(post.heroImage).width(1200).height(600).url()}
@@ -278,7 +297,7 @@ export default async function BlogPost({ params }: PageProps) {
         )}
 
         {/* Featured Image (Manual) */}
-        {!post.heroImage && post.mainImage && (
+        {!post.headerImage && !post.heroImage && post.mainImage && (
           <div className="mb-8">
             <Image
               src={urlFor(post.mainImage).width(1200).height(600).url()}
@@ -294,7 +313,7 @@ export default async function BlogPost({ params }: PageProps) {
 
         {/* Content with Embedded Section Images */}
         <div className="prose prose-lg max-w-none">
-          {post.body && <EnhancedPortableText body={post.body} sectionImages={post.sectionImages} />}
+          {post.body && <EnhancedPortableText body={post.body} post={post} />}
         </div>
 
         {/* Footer */}
