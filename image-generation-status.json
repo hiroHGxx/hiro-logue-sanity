@@ -1,53 +1,53 @@
 {
-  "sessionId": "article-20250117-163021",
+  "sessionId": "article-20250121-183045",
   "status": "completed",
   "imageGeneration": {
-    "startedAt": "2025-07-17T11:51:55.405544",
+    "startedAt": "2025-07-18T12:00:29.340812",
     "total": 4,
     "completed": 4,
     "failed": 0,
     "results": [
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-20250117-163021/header-20250717_115713.png",
-        "filename": "header-20250717_115713.png",
-        "generation_time": 318.0807409286499,
+        "output_path": "public/images/blog/auto-generated/article-20250121-183045/header-20250718_120355.png",
+        "filename": "header-20250718_120355.png",
+        "generation_time": 206.41980171203613,
         "position": "header",
-        "description": "記事全体のテーマである朝活・時間管理を表現するヘッダー画像。整理された朝の作業環境を穏やかな雰囲気で表現"
+        "description": "記事全体のメインビジュアル。AI時代の新しい余白というテーマを表現する、穏やかで居心地の良い空間。効率化された現代における心の余白を象徴する静謐な室内風景。"
       },
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-20250117-163021/section1-20250717_121713.png",
-        "filename": "section1-20250717_121713.png",
-        "generation_time": 1200.112550020218,
+        "output_path": "public/images/blog/auto-generated/article-20250121-183045/section1-20250718_121530.png",
+        "filename": "section1-20250718_121530.png",
+        "generation_time": 694.9373459815979,
         "position": "section1",
-        "description": "第1セクションのタイムトラッキング体験を表現する画像。時間測定・記録のイメージ"
+        "description": "第1セクション「効率化が生み出した新しい問題」に対応。AI技術による作業効率化を表現する机上のクローズアップビュー。効率化された仕事環境と時間の節約を視覚的に表現。"
       },
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-20250117-163021/section2-20250717_123124.png",
-        "filename": "section2-20250717_123124.png",
-        "generation_time": 850.261666059494,
+        "output_path": "public/images/blog/auto-generated/article-20250121-183045/section2-20250718_122016.png",
+        "filename": "section2-20250718_122016.png",
+        "generation_time": 285.50116300582886,
         "position": "section2",
-        "description": "第2セクションの前日準備システムを表現する画像。俯瞰視点で準備の様子を表現"
+        "description": "第2セクション「無駄だと思っていた時間の価値」に対応。窓から見える夕日の風景。何もしない時間の価値と心の平静を表現する穏やかな室内からの眺望。"
       },
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-20250117-163021/section3-20250717_124923.png",
-        "filename": "section3-20250717_124923.png",
-        "generation_time": 1079.1635918617249,
+        "output_path": "public/images/blog/auto-generated/article-20250121-183045/section3-20250718_122553.png",
+        "filename": "section3-20250718_122553.png",
+        "generation_time": 336.29654002189636,
         "position": "section3",
-        "description": "第3セクションの習慣化・継続のコツを表現する抽象的な画像。習慣の形成・継続の概念を視覚化"
+        "description": "第3セクション「暇を見つける具体的な方法」に対応。時間と余暇の概念を抽象的に表現。AI時代における意図的な暇時間の創造と、テクノロジーとの調和を象徴する現代的なアート作品。"
       }
     ],
-    "completedAt": "2025-07-17T12:49:23.662719"
+    "completedAt": "2025-07-18T12:25:53.141005"
   },
   "prompts": [
     {
       "position": "header",
-      "prompt": "peaceful early morning workspace with organized desk setup, warm golden sunlight streaming through window, open notebook with pen, coffee cup steaming, minimalist arrangement on wooden desk, soft natural lighting, cozy atmosphere",
-      "description": "記事全体のテーマである朝活・時間管理を表現するヘッダー画像。整理された朝の作業環境を穏やかな雰囲気で表現",
-      "style": "photorealistic, cinematic lighting, warm golden hour tones",
+      "prompt": "A peaceful cozy interior room with warm evening lighting streaming through large windows, comfortable empty armchair with soft cushions, wooden coffee table with open book, vintage clock on wall showing relaxed time, potted plants in corners, gentle shadows creating calm atmosphere, serene domestic space perfect for quiet contemplation",
+      "description": "記事全体のメインビジュアル。AI時代の新しい余白というテーマを表現する、穏やかで居心地の良い空間。効率化された現代における心の余白を象徴する静謐な室内風景。",
+      "style": "photorealistic, cinematic lighting, warm and cozy atmosphere",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -58,9 +58,9 @@
     },
     {
       "position": "section1",
-      "prompt": "stopwatch and timer devices on wooden surface, smartphone displaying timer app interface, notebook with handwritten time logs, measurement tools scattered around, close-up macro shot, soft morning light",
-      "description": "第1セクションのタイムトラッキング体験を表現する画像。時間測定・記録のイメージ",
-      "style": "as a watercolor illustration, artistic style, soft and contemplative",
+      "prompt": "Close-up view of modern workspace desk from above, laptop computer displaying code editor with automated programming interface, coffee mug, notebook with technical sketches, digital clock showing saved time, clean minimalist workspace setup, afternoon natural lighting, organized efficiency concept",
+      "description": "第1セクション「効率化が生み出した新しい問題」に対応。AI技術による作業効率化を表現する机上のクローズアップビュー。効率化された仕事環境と時間の節約を視覚的に表現。",
+      "style": "clean, modern, tech-focused, professional lighting",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -71,9 +71,9 @@
     },
     {
       "position": "section2",
-      "prompt": "evening preparation scene from bird's eye view, organized items laid out methodically on table surface, open book with bookmark, coffee machine ready for morning, laptop in sleep mode, everything positioned for easy access, overhead perspective",
-      "description": "第2セクションの前日準備システムを表現する画像。俯瞰視点で準備の様子を表現",
-      "style": "in a flat design style, minimalist, clean geometric shapes",
+      "prompt": "Serene window view from inside room looking out to golden sunset sky, curtains gently swaying, empty comfortable seating area bathed in warm orange light, house plants silhouettes, peaceful evening atmosphere representing mindful moments and quiet reflection, soft contemplative mood",
+      "description": "第2セクション「無駄だと思っていた時間の価値」に対応。窓から見える夕日の風景。何もしない時間の価値と心の平静を表現する穏やかな室内からの眺望。",
+      "style": "as a watercolor illustration, artistic style, soft and contemplative",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -84,9 +84,9 @@
     },
     {
       "position": "section3",
-      "prompt": "abstract concept of habit formation and consistency, flowing calendar pages with gentle motion blur, circular clock patterns dissolving into organic shapes, soft pastel gradients representing continuity and growth, conceptual artistic interpretation",
-      "description": "第3セクションの習慣化・継続のコツを表現する抽象的な画像。習慣の形成・継続の概念を視覚化",
-      "style": "as an abstract art piece, conceptual, dynamic and forward-thinking",
+      "prompt": "Abstract conceptual artwork representing time and leisure, flowing geometric shapes in calming blue and green tones, clock elements dissolving into organic forms, balance between technology symbols and natural elements, harmonious composition suggesting mindful time management, contemporary digital art style",
+      "description": "第3セクション「暇を見つける具体的な方法」に対応。時間と余暇の概念を抽象的に表現。AI時代における意図的な暇時間の創造と、テクノロジーとの調和を象徴する現代的なアート作品。",
+      "style": "as an abstract art piece, conceptual, modern digital art",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,

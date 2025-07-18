@@ -113,12 +113,33 @@ class FullWorkflowOrchestrator {
         throw new Error('有効な記事JSONファイルが見つかりません。新しい形式のファイルを生成してください。');
       }
 
+      // タイムスタンプ検証機能
+      this.validateTimestampConsistency(validArticleFiles);
+
       // 作成時刻順でソート（最新が最初）
       validArticleFiles.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
+      // 候補ファイル一覧表示
+      console.log('\n📋 候補ファイル一覧:');
+      validArticleFiles.forEach((file, index) => {
+        console.log(`${index + 1}. ${file.file} (${file.createdAt})`);
+      });
+
       const latestFile = validArticleFiles[0];
 
-      console.log(`✅ 最新記事ファイル発見: ${latestFile.file}`);
+      // ユーザー確認プロンプト
+      console.log(`\n🎯 選択予定ファイル: ${latestFile.file}`);
       console.log(`📅 作成時刻: ${latestFile.createdAt}`);
+      console.log(`📝 記事タイトル: ${JSON.parse(await fs.readFile(latestFile.filePath, 'utf-8')).article.title}`);
+      console.log('\n❓ この記事で処理を続行しますか？');
+      console.log('   - Enter: 続行');
+      console.log('   - Ctrl+C: 中止');
+      console.log('');
+
+      // ユーザー入力待機（簡易実装）
+      await this.waitForUserConfirmation();
+
+      console.log(`✅ 選択確定: ${latestFile.file}`);
       
       return latestFile.filePath;
 
@@ -412,6 +433,52 @@ class FullWorkflowOrchestrator {
       console.warn('⚠️ 品質チェック失敗 - 投稿は継続');
       return null;
     }
+  }
+
+  /**
+   * タイムスタンプ検証機能
+   */
+  validateTimestampConsistency(articleFiles) {
+    console.log('\n📅 タイムスタンプ検証実行中...');
+    
+    const formats = articleFiles.map(file => {
+      const date = new Date(file.createdAt);
+      return {
+        file: file.file,
+        isValid: !isNaN(date.getTime()),
+        format: file.createdAt,
+        parsedDate: date
+      };
+    });
+    
+    const invalidFormats = formats.filter(f => !f.isValid);
+    if (invalidFormats.length > 0) {
+      console.warn('⚠️ 無効なタイムスタンプ発見:');
+      invalidFormats.forEach(f => {
+        console.warn(`  - ${f.file}: ${f.format}`);
+      });
+    }
+    
+    console.log(`✅ タイムスタンプ検証完了: ${formats.length}件中${formats.length - invalidFormats.length}件が有効`);
+    return formats;
+  }
+
+  /**
+   * ユーザー確認プロンプト
+   */
+  async waitForUserConfirmation() {
+    return new Promise((resolve) => {
+      const readline = require('readline');
+      const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+      });
+
+      rl.question('続行するにはEnterキーを押してください...', () => {
+        rl.close();
+        resolve();
+      });
+    });
   }
 
   /**
