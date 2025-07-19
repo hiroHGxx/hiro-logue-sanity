@@ -1,0 +1,485 @@
+{
+  "_id": "OZZy7GcMr0hgy03qg38fIL",
+  "body": [
+    {
+      "_key": "heading-1752884058487-eaajy46qv",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-oe9posdqp",
+          "_type": "span",
+          "marks": [],
+          "text": "はじめに"
+        }
+      ],
+      "style": "h2"
+    },
+    {
+      "_key": "block-1752884058487-5ybnuzayg",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-8g78t0exq",
+          "_type": "span",
+          "marks": [],
+          "text": "皆さんは、現在どれくらいのサブスクリプションサービスに登録していらっしゃいますか？"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1752884058487-tpw5nawvl",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-qavbxl9uy",
+          "_type": "span",
+          "marks": [],
+          "text": "先日、妻から「今月の支出を確認してほしい」と言われて家計簿を見たところ、驚愕の事実が発覚しました。なんと、サブスクリプション関連の支出が月額2万円を超えていたんです。最初は妻の計算ミスかなと思ったのですが、実際に調べてみると、確かに様々なサービスにお金を払っていました。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1752884058487-if9aabqoa",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-isue3zdta",
+          "_type": "span",
+          "marks": [],
+          "text": "中学生の息子からも「お父さん、結構いろんなサービス使ってるよね」と指摘され、改めて自分のサブスク利用状況を見直してみることにしました。今回は、そんな私の「サブスク課金が止められない」体験について書いていきます。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1752884058487-gfe5jn0vf",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-nqopl7y7i",
+          "_type": "span",
+          "marks": [],
+          "text": "同じような状況になっている方も、きっといらっしゃるのではないでしょうか？"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "heading-1752884058487-0w9sxzeja",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-q1ej8xlcq",
+          "_type": "span",
+          "marks": [],
+          "text": "どうやって2万円に到達したのか"
+        }
+      ],
+      "style": "h2"
+    },
+    {
+      "_key": "block-1752884058487-688lah6m4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-r6f0g1l24",
+          "_type": "span",
+          "marks": [],
+          "text": "実はですね、一つ一つのサービスは決して高額ではないんです。でも、積み重なると恐ろしいことになっていました。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1752884058487-q8tcqcmq2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-zgcgz7kcg",
+          "_type": "span",
+          "marks": [],
+          "text": "まず基本的なところから挙げてみると、Netflix（1,980円）、Amazon Prime（600円）、YouTube Premium（1,180円）の動画系だけで約3,800円。ここに音楽系のSpotify（980円）、クラウドストレージのiCloud（400円）、Google One（390円）が加わって、さらに約1,800円。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1752884058487-39lfr88my",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-672ufptuw",
+          "_type": "span",
+          "marks": [],
+          "text": "それだけならまだ良かったんですが、プログラマーとしての職業柄、技術系のサービスもいくつか契約していました。GitHub Pro（400円）、各種開発ツール、そして気になったAIサービスのお試し版が複数。これらで月額約8,000円。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1752884058487-vaksj2ni5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-96bmzec9b",
+          "_type": "span",
+          "marks": [],
+          "text": "妻に指摘されて初めて気づいたのですが、「1週間無料お試し」で始めたサービスを解約し忘れていたものも3つほどありました。例えばですね、ある写真整理アプリは月額1,200円で課金が続いていたのですが、実際には3ヶ月間一度も使っていませんでした。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1752884058487-b98hpge7t",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-el706n1ms",
+          "_type": "span",
+          "marks": [],
+          "text": "保護犬ちゃんの写真を整理するために試したサービスだったのですが、結局スマホの標準アプリで十分だったんですね。でも、解約を忘れていて、気づいたら総額3,600円も無駄に支払っていました。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1752884058487-i4msprpry",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-z2xdvoxbe",
+          "_type": "span",
+          "marks": [],
+          "text": "皆さんも、似たような「解約し忘れ」はありませんか？"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "heading-1752884058487-gfgkkbv7k",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-xs055yov3",
+          "_type": "span",
+          "marks": [],
+          "text": "なぜサブスクは止められないのか"
+        }
+      ],
+      "style": "h2"
+    },
+    {
+      "_key": "block-1752884058487-llpqfifj8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-mf0ou2yfn",
+          "_type": "span",
+          "marks": [],
+          "text": "家族会議（といっても妻との二人だけですが）で話し合った結果、サブスクが止められない理由がいくつか見えてきました。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1752884058487-om0y9gjxs",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-xxsrhm1s7",
+          "_type": "span",
+          "marks": [],
+          "text": "一番大きな理由は、「いつか使うかもしれない」という心理でした。例えばですね、Adobe Creative Cloudは月額5,680円と高額なのですが、「ブログの画像編集に使うかもしれない」「子どもの学校行事の資料作成に役立つかもしれない」という理由で継続していました。でも実際には、3ヶ月間で2回しか使っていませんでした。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1752884058487-q3flksbx9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-hyl9dskiq",
+          "_type": "span",
+          "marks": [],
+          "text": "妻からは「1回あたり8,520円の計算になってるよ」と言われて、さすがにこれはコスパが悪すぎるなと反省しました。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1752884058487-ajcalr3tf",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-ynuccyc9f",
+          "_type": "span",
+          "marks": [],
+          "text": "また、「解約が面倒」という心理的な壁もありました。特に海外のサービスは、解約手続きが英語だったり、カスタマーサポートに連絡が必要だったりして、ついつい後回しにしてしまいがちです。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1752884058487-w847n9be1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-epaql4vum",
+          "_type": "span",
+          "marks": [],
+          "text": "中学生の息子に「なんで使わないサービスにお金払い続けるの？」と聞かれたときは、確かにその通りだなと思いました。子どもの方が合理的に考えられているのかもしれません。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1752884058487-afj7307c4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-1tqbx1c2t",
+          "_type": "span",
+          "marks": [],
+          "text": "技術者として新しいサービスを試したい気持ちと、家計を管理する大人としての責任感の間で、バランスを取るのは思っていたより難しいということも、改めて感じました。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1752884058487-qogixczti",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-gejqkq8jk",
+          "_type": "span",
+          "marks": [],
+          "text": "皆さんは、どのような理由でサブスクを継続していらっしゃいますか？"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "heading-1752884058487-8hiv6nj1k",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-ybc1gyk61",
+          "_type": "span",
+          "marks": [],
+          "text": "実践した「サブスク整理術」"
+        }
+      ],
+      "style": "h2"
+    },
+    {
+      "_key": "block-1752884058487-zv3629z14",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-gv2x32h78",
+          "_type": "span",
+          "marks": [],
+          "text": "妻の提案もあって、実際にサブスクの整理に取り組んでみました。意外と効果的だった方法をいくつかご紹介します。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1752884058487-58f8cxk2s",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-33j1h8h5n",
+          "_type": "span",
+          "marks": [],
+          "text": "まず実践したのは「3ヶ月ルール」です。過去3ヶ月間で一度も使っていないサービスは、問答無用で解約することにしました。これだけで月額約6,000円の削減に成功しました。写真整理アプリや、試しに契約したAIサービスなど、合計5つのサービスを解約しました。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1752884058487-ecmc8484i",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-drzkew6sq",
+          "_type": "span",
+          "marks": [],
+          "text": "次に「代替可能性チェック」も有効でした。例えばですね、複数の音楽ストリーミングサービスに登録していたのですが、よく考えてみるとSpotifyがあれば十分だったんです。Apple Musicを解約して月額980円を節約できました。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1752884058487-j1lf1y2ob",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-b59q2whhw",
+          "_type": "span",
+          "marks": [],
+          "text": "クラウドストレージも同様で、iCloudとGoogle Oneの両方を契約していましたが、家族写真の共有はGoogle Photosで十分だったので、iCloudの有料プランを解約しました。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1752884058487-nebpjbulo",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-lqrdh1or6",
+          "_type": "span",
+          "marks": [],
+          "text": "家族みんなで「サブスク会議」を開いたのも良かったです。妻や子どもたちも含めて、どのサービスを実際に使っているかを確認し合いました。意外だったのは、私が契約したNetflixよりも、妻が契約していたU-NEXTの方が家族全員が利用していたことです。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1752884058487-0uy5a8htd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-afu6xwn4w",
+          "_type": "span",
+          "marks": [],
+          "text": "保護猫ちゃんも会議に参加（膝の上でゴロゴロしていただけですが）していて、なんだか家族の一大事業になりました。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1752884058487-olon7gx0j",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-lcerwar5o",
+          "_type": "span",
+          "marks": [],
+          "text": "最終的に、月額2万円だったサブスク費用を約1万3千円まで削減することができました。7,000円の削減は、家族での外食1回分にもなるので、けっこう大きな節約効果だったと思います。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1752884058487-iio2fmkhm",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-9f36q0vsn",
+          "_type": "span",
+          "marks": [],
+          "text": "皆さんは、どのような方法でサブスクを整理していらっしゃいますか？良い方法があれば、ぜひ教えてください。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "heading-1752884058487-s0x567rxa",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-i8q4yhwsm",
+          "_type": "span",
+          "marks": [],
+          "text": "おわりに"
+        }
+      ],
+      "style": "h2"
+    },
+    {
+      "_key": "block-1752884058487-xzizt3ljy",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-ao319unns",
+          "_type": "span",
+          "marks": [],
+          "text": "今回は、私の「サブスク課金が止められない」体験について書きました。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1752884058487-14pah71l6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-rnm8e9iec",
+          "_type": "span",
+          "marks": [],
+          "text": "振り返ってみると、一つ一つは小額でも、積み重なると大きな出費になってしまうのがサブスクの怖いところですね。でも同時に、本当に価値のあるサービスを見極めることで、むしろ生活の質を向上させることもできるなと感じました。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1752884058487-oz9hdjywb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-3cz4b6ncd",
+          "_type": "span",
+          "marks": [],
+          "text": "技術者として新しいサービスに興味を持つのは大切ですが、家族の一員として責任ある判断をすることも同じくらい重要だということを、改めて学んだ経験でした。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1752884058487-dz09m40it",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-nfd3bzdad",
+          "_type": "span",
+          "marks": [],
+          "text": "妻からは「もう少し計画的にお試ししてね」と言われ、息子からは「お父さん、意外とちゃんと整理できるじゃん」と褒められました。家族の理解とサポートがあったからこそ、うまく整理できたのかもしれません。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1752884058487-zm18twt02",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-fjnlb02gh",
+          "_type": "span",
+          "marks": [],
+          "text": "皆さんも、もしサブスクの支出が気になるようでしたら、一度家族と一緒に見直してみてはいかがでしょうか。思わぬ発見があるかもしれませんし、家族での良いコミュニケーションの機会にもなると思います。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1752884058487-joiqvtgz7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1752884058487-c2swp9mzu",
+          "_type": "span",
+          "marks": [],
+          "text": "どのような工夫をしていらっしゃるか、もしよろしければコメントで教えてください。"
+        }
+      ],
+      "style": "normal"
+    }
+  ],
+  "headerImage": null,
+  "heroImage": null,
+  "mainImage": null,
+  "section1Image": null,
+  "section2Image": null,
+  "section3Image": null,
+  "sectionImages": null,
+  "slug": {
+    "_type": "slug",
+    "current": "subscription-payment-trap-experience"
+  },
+  "title": "サブスク課金の罠――気づけば月額2万円を超えていた話"
+}
