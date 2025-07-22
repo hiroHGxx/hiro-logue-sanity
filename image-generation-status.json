@@ -1,53 +1,53 @@
 {
-  "sessionId": "article-20250721-200530",
+  "sessionId": "article-20250122-151230",
   "status": "completed",
   "imageGeneration": {
-    "startedAt": "2025-07-21T10:09:50.480506",
+    "startedAt": "2025-07-22T21:18:25.359230",
     "total": 4,
     "completed": 4,
     "failed": 0,
     "results": [
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-20250721-200530/header-20250721_101300.png",
-        "filename": "header-20250721_101300.png",
-        "generation_time": 190.12172412872314,
+        "output_path": "public/images/blog/auto-generated/article-20250122-151230/header-20250722_212241.png",
+        "filename": "header-20250722_212241.png",
+        "generation_time": 256.6163501739502,
         "position": "header",
-        "description": "記事全体のメインビジュアルとして、朝の散歩の静かで思索的な雰囲気を表現し、コードレビューという内面的な活動との調和を示す"
+        "description": "記事全体のメインビジュアル。未来的な技術が家庭に溶け込んだ空間を表現し、技術進歩のテーマを象徴する"
       },
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-20250721-200530/section1-20250721_102423.png",
-        "filename": "section1-20250721_102423.png",
-        "generation_time": 682.9450869560242,
+        "output_path": "public/images/blog/auto-generated/article-20250122-151230/section1-20250722_212806.png",
+        "filename": "section1-20250722_212806.png",
+        "generation_time": 324.1688711643219,
         "position": "section1",
-        "description": "第1セクション「なぜ歩きながらだとコードが見えるのか」の内容に対応し、技術的思考の可視化を表現"
+        "description": "AIがより身近なパートナーになることを表現。デスク上のAIデバイスのクローズアップ"
       },
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-20250721-200530/section2-20250721_102818.png",
-        "filename": "section2-20250721_102818.png",
-        "generation_time": 234.6678237915039,
+        "output_path": "public/images/blog/auto-generated/article-20250122-151230/section2-20250722_213751.png",
+        "filename": "section2-20250722_213751.png",
+        "generation_time": 584.5399558544159,
         "position": "section2",
-        "description": "第2セクション「リズムが生み出すリファクタリングの視点」に対応し、リズムとコード構造の関連性を抽象的に表現"
+        "description": "プログラミング概念の変化を都市全体のシステムとして俯瞰的に表現。働き方とコミュニケーションの進化"
       },
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-20250721-200530/section3-20250721_105544.png",
-        "filename": "section3-20250721_105544.png",
-        "generation_time": 1645.6776032447815,
+        "output_path": "public/images/blog/auto-generated/article-20250122-151230/section3-20250722_214838.png",
+        "filename": "section3-20250722_214838.png",
+        "generation_time": 647.1762392520905,
         "position": "section3",
-        "description": "第3セクション「実践的な歩くコードレビューの方法」に対応し、整理された思考と実践的アプローチを俯瞰的に表現"
+        "description": "働き方とコミュニケーション進化の抽象的表現。技術の本質的な変化を象徴的に描写"
       }
     ],
-    "completedAt": "2025-07-21T10:55:44.539167"
+    "completedAt": "2025-07-22T21:48:38.516649"
   },
   "prompts": [
     {
       "position": "header",
-      "prompt": "Early morning peaceful street view with soft golden sunlight filtering through trees, quiet residential pathway with gentle shadows, clean modern environment suggesting contemplation and clarity of thought, warm ambient lighting creating a serene atmosphere",
-      "description": "記事全体のメインビジュアルとして、朝の散歩の静かで思索的な雰囲気を表現し、コードレビューという内面的な活動との調和を示す",
-      "style": "photorealistic, cinematic lighting, warm golden hour atmosphere, japanese residential aesthetic",
+      "prompt": "A modern cozy study room interior with cutting-edge technology devices on a wooden desk, holographic displays floating in the air, ambient blue lighting, warm wooden textures, minimalist Japanese design, advanced computer setup with multiple curved monitors, warm afternoon lighting streaming through windows",
+      "description": "記事全体のメインビジュアル。未来的な技術が家庭に溶け込んだ空間を表現し、技術進歩のテーマを象徴する",
+      "style": "photorealistic, cinematic lighting, warm atmosphere",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -58,9 +58,9 @@
     },
     {
       "position": "section1",
-      "prompt": "Close-up view of a modern laptop screen displaying lines of clean, organized code syntax highlighting, soft keyboard illumination in a dimly lit workspace, technological precision meets organic thinking patterns",
-      "description": "第1セクション「なぜ歩きながらだとコードが見えるのか」の内容に対応し、技術的思考の可視化を表現",
-      "style": "clean, modern, tech-focused, professional, soft ambient lighting",
+      "prompt": "Close-up view of a sleek AI assistant device on a desk with glowing interface, neural network visualization patterns, voice wave animations, modern minimalist design, soft LED indicators, premium materials like metal and glass, macro photography style",
+      "description": "AIがより身近なパートナーになることを表現。デスク上のAIデバイスのクローズアップ",
+      "style": "as a watercolor illustration, artistic style, soft colors",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -71,9 +71,9 @@
     },
     {
       "position": "section2",
-      "prompt": "Abstract representation of rhythmic patterns and flowing structures, geometric shapes arranged in harmonious sequences suggesting code architecture, watercolor-style flowing lines creating organic yet structured movement",
-      "description": "第2セクション「リズムが生み出すリファクタリングの視点」に対応し、リズムとコード構造の関連性を抽象的に表現",
-      "style": "as a watercolor illustration, artistic style, soft flowing patterns, harmonious composition",
+      "prompt": "Aerial bird's eye view of a modern city with smart buildings, automated transportation systems, clean energy infrastructure, connected network lines between buildings, sustainable urban design, golden hour lighting, futuristic architecture blending with nature",
+      "description": "プログラミング概念の変化を都市全体のシステムとして俯瞰的に表現。働き方とコミュニケーションの進化",
+      "style": "in a flat design style, minimalist, geometric shapes",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -84,9 +84,9 @@
     },
     {
       "position": "section3",
-      "prompt": "Bird's eye overhead view of an organized desk workspace with notebook, clean geometric design elements, minimalist flat design aesthetic showing systematic approach to organization and planning",
-      "description": "第3セクション「実践的な歩くコードレビューの方法」に対応し、整理された思考と実践的アプローチを俯瞰的に表現",
-      "style": "in a flat design style, minimalist, aerial perspective, organized layout, contemporary workspace design",
+      "prompt": "Abstract conceptual artwork representing technological evolution, flowing data streams, interconnected nodes of light, digital transformation waves, gradient colors from blue to purple, ethereal atmosphere, symbols of progress and innovation floating in space",
+      "description": "働き方とコミュニケーション進化の抽象的表現。技術の本質的な変化を象徴的に描写",
+      "style": "as an abstract art piece, conceptual, flowing forms",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
