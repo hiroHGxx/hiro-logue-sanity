@@ -1,28 +1,53 @@
 {
-  "sessionId": "article-20250123-145823",
-  "status": "generating",
+  "sessionId": "article-20250123-205030",
+  "status": "completed",
   "imageGeneration": {
-    "startedAt": "2025-07-23T11:02:24.511417",
+    "startedAt": "2025-07-24T06:53:19.844548",
     "total": 4,
-    "completed": 1,
+    "completed": 4,
     "failed": 0,
     "results": [
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-20250123-145823/header-20250723_110706.png",
-        "filename": "header-20250723_110706.png",
-        "generation_time": 281.7078769207001,
+        "output_path": "public/images/blog/auto-generated/article-20250123-205030/header-20250724_065619.png",
+        "filename": "header-20250724_065619.png",
+        "generation_time": 180.08893704414368,
         "position": "header",
-        "description": "記事全体のメインビジュアルとして、インプットとアウトプットのバランスを象徴する学習空間を表現。開かれた本（インプット）とノート・ペン（アウトプット）の両方を配置"
+        "description": "記事全体のメインビジュアルとして、AI時代の創造性をテーマに、現代的な書斎での創作環境を表現"
+      },
+      {
+        "success": true,
+        "output_path": "public/images/blog/auto-generated/article-20250123-205030/section1-20250724_070419.png",
+        "filename": "section1-20250724_070419.png",
+        "generation_time": 479.795223236084,
+        "position": "section1",
+        "description": "第1セクション「子どもの疑問から始まった気づき」に対応し、伝統的創作とAI創作の出会いを表現"
+      },
+      {
+        "success": true,
+        "output_path": "public/images/blog/auto-generated/article-20250123-205030/section2-20250724_071752.png",
+        "filename": "section2-20250724_071752.png",
+        "generation_time": 811.9847791194916,
+        "position": "section2",
+        "description": "第2セクション「保護犬ちゃんから学んだ模倣の力」に対応し、動物たちの自然な学習プロセスを俯瞰視点で表現"
+      },
+      {
+        "success": true,
+        "output_path": "public/images/blog/auto-generated/article-20250123-205030/section3-20250724_072235.png",
+        "filename": "section3-20250724_072235.png",
+        "generation_time": 283.1703722476959,
+        "position": "section3",
+        "description": "第3セクション「技術と人間性のバランスを見つける」に対応し、AIと人間の協働を抽象的に表現"
       }
-    ]
+    ],
+    "completedAt": "2025-07-24T07:22:35.487524"
   },
   "prompts": [
     {
       "position": "header",
-      "prompt": "A cozy modern study room with open books scattered on a wooden desk, laptop computer displaying code, empty notebook and pen ready for writing, warm afternoon light streaming through window, japanese minimalist interior design, peaceful learning atmosphere",
-      "description": "記事全体のメインビジュアルとして、インプットとアウトプットのバランスを象徴する学習空間を表現。開かれた本（インプット）とノート・ペン（アウトプット）の両方を配置",
-      "style": "photorealistic, cinematic lighting, warm colors",
+      "prompt": "A serene study room interior with warm lighting, showing a modern desk setup with computer monitors displaying abstract creative content, scattered notebooks and sketches, soft natural light streaming through a window, cozy atmosphere with bookshelves in background, emphasizing creativity and contemplation",
+      "description": "記事全体のメインビジュアルとして、AI時代の創造性をテーマに、現代的な書斎での創作環境を表現",
+      "style": "photorealistic, cinematic lighting, warm and inviting atmosphere",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -33,9 +58,9 @@
     },
     {
       "position": "section1",
-      "prompt": "Close-up view of stacked books about programming and technology, tablet showing online course video paused, highlighter and sticky notes on pages, representing passive learning and consumption of information, soft natural lighting, shallow depth of field",
-      "description": "第1セクション「インプットが楽しすぎる罠」の内容に対応。受動的な学習ツールにフォーカスした構図で、インプット中心の学習スタイルを表現",
-      "style": "as a watercolor illustration, artistic style, soft colors",
+      "prompt": "Close-up view of a child's art supplies on a wooden desk, including colored pencils, sketches, a tablet displaying digital art tools, representing the intersection of traditional and digital creativity, soft afternoon lighting",
+      "description": "第1セクション「子どもの疑問から始まった気づき」に対応し、伝統的創作とAI創作の出会いを表現",
+      "style": "as a watercolor illustration, artistic style, soft and contemplative",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -46,9 +71,9 @@
     },
     {
       "position": "section2",
-      "prompt": "Bird's eye view of workspace showing transformation from consumption to creation, whiteboard with diagrams and explanations, completed project files and documentation, tools for building and making, dynamic composition showing active learning",
-      "description": "第2セクション「アウトプットで見えてくる本当の理解」に対応。俯瞰視点で創造的な活動と理解の深化プロセスを表現",
-      "style": "in a flat design style, minimalist, vibrant colors",
+      "prompt": "A peaceful japanese-style interior viewed from above, showing a cat and dog resting together on a tatami mat near a sliding door with garden view, representing harmony and learning through observation, zen-like composition",
+      "description": "第2セクション「保護犬ちゃんから学んだ模倣の力」に対応し、動物たちの自然な学習プロセスを俯瞰視点で表現",
+      "style": "in a flat design style, minimalist, japanese aesthetic",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -59,9 +84,9 @@
     },
     {
       "position": "section3",
-      "prompt": "Abstract representation of small steps and gradual progress, geometric shapes forming stairs or building blocks, timer showing 30 minutes, metaphorical elements of growth and development, conceptual art style with organic flow",
-      "description": "第3セクション「小さなアウトプットから始める実践法」に対応。段階的な成長と小さな習慣の積み重ねを抽象的に表現",
-      "style": "as an abstract art piece, conceptual, dynamic composition",
+      "prompt": "Abstract representation of technology and humanity balance, featuring flowing organic shapes interwoven with geometric digital elements, representing the harmony between AI capabilities and human creativity, dynamic and forward-thinking composition",
+      "description": "第3セクション「技術と人間性のバランスを見つける」に対応し、AIと人間の協働を抽象的に表現",
+      "style": "as an abstract art piece, conceptual, vibrant and energetic",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
