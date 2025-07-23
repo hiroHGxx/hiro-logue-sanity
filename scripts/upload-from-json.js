@@ -10,6 +10,9 @@
  * JSONファイルが指定されない場合は、articlesディレクトリ内の最新ファイルを使用
  */
 
+// 環境変数を読み込み
+require('dotenv').config({ path: '.env.local' });
+
 const { createClient } = require('@sanity/client');
 const fs = require('fs');
 const path = require('path');
@@ -220,7 +223,10 @@ async function main() {
     }
     
     const jsonContent = fs.readFileSync(jsonFilePath, 'utf8');
-    const articleData = JSON.parse(jsonContent);
+    const jsonData = JSON.parse(jsonContent);
+    
+    // 新しい形式（article プロパティあり）か古い形式かを判定
+    const articleData = jsonData.article || jsonData;
     
     // 必須フィールドをチェック
     if (!articleData.title || !articleData.body) {
