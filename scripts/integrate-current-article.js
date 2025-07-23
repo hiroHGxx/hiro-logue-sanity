@@ -13,29 +13,29 @@ const client = createClient({
 
 // 今回の記事設定
 const articleConfig = {
-  articleId: 'CamHzSyS1JT3ENpT8Dde2Q', // 今回生成された記事ID
-  slug: 'adult-learning-reskilling-journey',
-  sessionId: 'article-20250113-165200',
+  articleId: 'pnkFeZ6saTOgO27Op2NX5f', // 今回生成された記事ID
+  slug: 'ai-era-originality-creativity',
+  sessionId: 'article-20250123-205030',
   images: {
     header: {
-      path: '/Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/public/images/blog/auto-generated/article-20250113-165200/header-20250714_091056.png',
-      alt: '40代からのリスキリング - 温かい自然光に包まれた学習環境と現代的な学習ツール',
-      filename: 'reskilling-header.png'
+      path: '/Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/public/images/blog/auto-generated/article-20250123-205030/header-20250724_065619.png',
+      alt: 'AI時代の創造性 - 現代的な書斎での創作環境',
+      filename: 'ai-creativity-header.png'
     },
     section1: {
-      path: '/Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/public/images/blog/auto-generated/article-20250113-165200/section1-20250714_093114.png',
-      alt: '学習開始の重圧感 - 積み重ねられた教科書と学習教材の水彩画風イラスト',
-      filename: 'reskilling-section1.png'
+      path: '/Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/public/images/blog/auto-generated/article-20250123-205030/section1-20250724_070419.png',
+      alt: '伝統的創作とAI創作の出会い - 子どもの画材とデジタルツール',
+      filename: 'ai-creativity-section1.png'
     },
     section2: {
-      path: '/Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/public/images/blog/auto-generated/article-20250113-165200/section2-20250714_094043.png',
-      alt: '経験の積み重ねと成熟したアプローチ - 俯瞰視点でのワークスペース配置',
-      filename: 'reskilling-section2.png'
+      path: '/Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/public/images/blog/auto-generated/article-20250123-205030/section2-20250724_071752.png',
+      alt: '動物たちの学習プロセス - 和風インテリアでの調和',
+      filename: 'ai-creativity-section2.png'
     },
     section3: {
-      path: '/Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/public/images/blog/auto-generated/article-20250113-165200/section3-20250714_095324.png',
-      alt: '技術と人間性の調和 - 抽象的な概念アートで表現されたバランス',
-      filename: 'reskilling-section3.png'
+      path: '/Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/public/images/blog/auto-generated/article-20250123-205030/section3-20250724_072235.png',
+      alt: 'AIと人間の協働 - 技術と人間性のバランス',
+      filename: 'ai-creativity-section3.png'
     }
   }
 };
