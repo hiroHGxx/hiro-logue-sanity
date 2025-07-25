@@ -1,52 +1,52 @@
 {
-  "sessionId": "article-250725-114200",
+  "sessionId": "article-250726-081310",
   "status": "completed",
   "imageGeneration": {
-    "startedAt": "2025-07-25T13:27:01.756567",
+    "startedAt": "2025-07-26T08:13:37.257966",
     "total": 4,
     "completed": 4,
     "failed": 0,
     "results": [
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-250725-114200/header-20250725_132949.png",
-        "filename": "header-20250725_132949.png",
-        "generation_time": 167.79982495307922,
+        "output_path": "public/images/blog/auto-generated/article-250726-081310/header-20250726_081622.png",
+        "filename": "header-20250726_081622.png",
+        "generation_time": 164.90748000144958,
         "position": "header",
-        "description": "記事全体のメインビジュアル：経験値ゼロから一歩踏み出す前の静かな瞬間を表現"
+        "description": "記事全体のメインビジュアル。AIと人間の調和をテーマにした温かい書斎空間"
       },
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-250725-114200/section1-20250725_133314.png",
-        "filename": "section1-20250725_133314.png",
-        "generation_time": 204.75035691261292,
+        "output_path": "public/images/blog/auto-generated/article-250726-081310/section1-20250726_081933.png",
+        "filename": "section1-20250726_081933.png",
+        "generation_time": 191.45424103736877,
         "position": "section1",
-        "description": "第1セクション「恐怖から好奇心への変化」：技術への最初の取り組みを表現"
+        "description": "第1セクション用画像。AIレシピ提案と実際の料理材料のギャップを表現"
       },
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-250725-114200/section2-20250725_133630.png",
-        "filename": "section2-20250725_133630.png",
-        "generation_time": 195.42048406600952,
+        "output_path": "public/images/blog/auto-generated/article-250726-081310/section2-20250726_082243.png",
+        "filename": "section2-20250726_082243.png",
+        "generation_time": 189.99734497070312,
         "position": "section2",
-        "description": "第2セクション「想像と現実のギャップ」：俯瞰視点で学習環境を表現"
+        "description": "第2セクション用画像。プログラミングにおけるAIと人間の協働作業環境"
       },
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-250725-114200/section3-20250725_134104.png",
-        "filename": "section3-20250725_134104.png",
-        "generation_time": 273.95126390457153,
+        "output_path": "public/images/blog/auto-generated/article-250726-081310/section3-20250726_082617.png",
+        "filename": "section3-20250726_082617.png",
+        "generation_time": 213.5005829334259,
         "position": "section3",
-        "description": "第3セクション「『1』になってから見える新しい世界」：無限の可能性を抽象的に表現"
+        "description": "第3セクション用画像。70点から100点超えへの変化と価値創造を抽象的に表現"
       }
     ],
-    "completedAt": "2025-07-25T13:41:04.285789"
+    "completedAt": "2025-07-26T08:26:17.713901"
   },
   "prompts": [
     {
       "position": "header",
-      "prompt": "A peaceful study room with an empty comfortable chair facing a window, warm natural light streaming in, a clean wooden desk with closed notebook and pen, representing the moment before taking the first step, soft morning atmosphere",
-      "description": "記事全体のメインビジュアル：経験値ゼロから一歩踏み出す前の静かな瞬間を表現",
+      "prompt": "A warm, cozy study room with modern AI technology elements, soft natural lighting from a window, clean wooden desk with laptop, floating digital elements and circuits subtly integrated into the environment, peaceful and harmonious atmosphere",
+      "description": "記事全体のメインビジュアル。AIと人間の調和をテーマにした温かい書斎空間",
       "style": "photorealistic, cinematic lighting, warm and inviting atmosphere",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
@@ -58,9 +58,9 @@
     },
     {
       "position": "section1",
-      "prompt": "A close-up view of an open laptop displaying colorful code on screen, surrounded by scattered notebooks and a warm cup of coffee, representing the transition from fear to curiosity in learning",
-      "description": "第1セクション「恐怖から好奇心への変化」：技術への最初の取り組みを表現",
-      "style": "as a watercolor illustration, artistic style, soft and contemplative",
+      "prompt": "Close-up view of a modern kitchen counter with fresh ingredients scattered naturally, laptop screen showing recipe interface, soft cooking lighting, ingredients like vegetables and spices arranged organically, clean modern kitchen aesthetic",
+      "description": "第1セクション用画像。AIレシピ提案と実際の料理材料のギャップを表現",
+      "style": "as a watercolor illustration, artistic style, japanese minimalist",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -71,9 +71,9 @@
     },
     {
       "position": "section2",
-      "prompt": "A bird's eye view of a cozy living room with scattered books, a tablet showing educational content, and warm lighting, representing the gap between imagination and reality in learning experiences",
-      "description": "第2セクション「想像と現実のギャップ」：俯瞰視点で学習環境を表現",
-      "style": "in a flat design style, minimalist, clean composition",
+      "prompt": "Bird's-eye view of a programming workstation with multiple code editors open, clean lines of code visible on screens, coffee cup, notebook with handwritten notes, cables organized neatly, soft blue developer lighting",
+      "description": "第2セクション用画像。プログラミングにおけるAIと人間の協働作業環境",
+      "style": "in a flat design style, minimalist, clean modern tech-focused",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -84,9 +84,9 @@
     },
     {
       "position": "section3",
-      "prompt": "An abstract representation of opening doors and pathways made of light, with geometric shapes and flowing lines symbolizing infinite possibilities, vibrant colors transitioning from dark to bright",
-      "description": "第3セクション「『1』になってから見える新しい世界」：無限の可能性を抽象的に表現",
-      "style": "as an abstract art piece, conceptual, dynamic and forward-thinking",
+      "prompt": "Abstract representation of collaboration and enhancement, flowing organic shapes merging with geometric digital patterns, warm golden light emanating from the center, concept of transformation and improvement, ethereal and inspiring",
+      "description": "第3セクション用画像。70点から100点超えへの変化と価値創造を抽象的に表現",
+      "style": "as an abstract art piece, conceptual, soft and contemplative",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
