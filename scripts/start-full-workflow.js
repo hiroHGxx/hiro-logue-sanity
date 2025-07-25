@@ -57,6 +57,9 @@ class FullWorkflowOrchestrator {
       // 6. 最終結果報告
       await this.reportFinalResults(backgroundProcess);
 
+      // 7. 処理済みファイルのアーカイブ（画像統合後に移動）
+      // await this.archiveProcessedFile(); // 画像統合完了後に実行するため一時的に無効化
+
       console.log('\n🎉 完全ワークフロー起動成功!');
       
     } catch (error) {
@@ -70,82 +73,129 @@ class FullWorkflowOrchestrator {
    */
   async findLatestArticleFile() {
     try {
-      console.log('\n📄 最新記事JSONファイル検索中...');
+      console.log('\n📄 記事JSONファイル検索中...');
       
-      const files = await fs.readdir(ARTICLES_DIR);
-      const articleFiles = files.filter(file => 
-        file.startsWith('article-') && 
-        file.endsWith('.json') && 
-        !file.includes('-status') && 
-        !file.includes('-uploaded')
-      );
-
-      if (articleFiles.length === 0) {
-        throw new Error('記事JSONファイルが見つかりません。先にマスタープロンプトで記事を生成してください。');
-      }
-
-      // 正しいタイムスタンプベースのソート
-      const validArticleFiles = [];
+      // 新形式: 固定ファイル名 'new-article.json' をチェック
+      const newArticleFile = path.join(ARTICLES_DIR, 'new-article.json');
       
-      for (const file of articleFiles) {
-        const filePath = path.join(ARTICLES_DIR, file);
-        try {
-          // ファイル内容を確認して、正しい形式のみ選択
-          const rawData = await fs.readFile(filePath, 'utf-8');
-          const data = JSON.parse(rawData);
+      try {
+        // new-article.json の存在確認と検証
+        const rawData = await fs.readFile(newArticleFile, 'utf-8');
+        const data = JSON.parse(rawData);
+        
+        // 新しい形式（metadata + article + imagePrompts）の検証
+        if (data.metadata && data.article && data.article.title) {
+          console.log(`✅ 処理対象ファイル: new-article.json`);
+          console.log(`📰 記事タイトル: ${data.article.title}`);
+          console.log(`🎯 テーマ: ${data.metadata.theme}`);
           
-          // 新しい形式（metadata + article + imagePrompts）のファイルのみ対象
-          if (data.metadata && data.article && data.article.title) {
-            const stats = await fs.stat(filePath);
-            validArticleFiles.push({
-              file,
-              filePath,
-              createdAt: data.metadata.createdAt || stats.mtime.toISOString(),
-              mtime: stats.mtime
-            });
-          }
-        } catch (error) {
-          console.warn(`⚠️ ファイル ${file} をスキップ: ${error.message}`);
+          // 正確なタイムスタンプを生成
+          const now = new Date();
+          const sessionId = `article-${now.getFullYear().toString().slice(-2)}${String(now.getMonth() + 1).padStart(2, '0')}${String(now.getDate()).padStart(2, '0')}-${String(now.getHours()).padStart(2, '0')}${String(now.getMinutes()).padStart(2, '0')}${String(now.getSeconds()).padStart(2, '0')}`;
+          const createdAt = now.toISOString();
+          
+          // メタデータを正確なタイムスタンプで更新
+          data.metadata.sessionId = sessionId;
+          data.metadata.createdAt = createdAt;
+          
+          // 更新されたデータをファイルに書き戻し
+          await fs.writeFile(newArticleFile, JSON.stringify(data, null, 2), 'utf-8');
+          
+          console.log(`🕐 タイムスタンプ更新: ${sessionId} (${createdAt})`);
+          
+          // sessionIdを設定
+          this.sessionId = sessionId;
+          
+          return newArticleFile;
+        } else {
+          throw new Error('new-article.json の形式が不正です');
         }
+        
+      } catch (fileError) {
+        // new-article.json が存在しない場合は従来の検索方法を実行
+        console.log('📄 new-article.json が見つかりません。既存ファイルから検索します...');
+        return await this.findLatestArticleFileLegacy();
       }
-
-      if (validArticleFiles.length === 0) {
-        throw new Error('有効な記事JSONファイルが見つかりません。新しい形式のファイルを生成してください。');
-      }
-
-      // タイムスタンプ検証機能
-      this.validateTimestampConsistency(validArticleFiles);
-
-      // 作成時刻順でソート（最新が最初）
-      validArticleFiles.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-
-      // 候補ファイル一覧表示
-      console.log('\n📋 候補ファイル一覧:');
-      validArticleFiles.forEach((file, index) => {
-        console.log(`${index + 1}. ${file.file} (${file.createdAt})`);
-      });
-
-      const latestFile = validArticleFiles[0];
-
-      // ユーザー確認プロンプト
-      console.log(`\n🎯 選択予定ファイル: ${latestFile.file}`);
-      console.log(`📅 作成時刻: ${latestFile.createdAt}`);
-      console.log(`📝 記事タイトル: ${JSON.parse(await fs.readFile(latestFile.filePath, 'utf-8')).article.title}`);
-      console.log('\n❓ この記事で処理を続行しますか？');
-      console.log('   - Enter: 続行');
-      console.log('   - Ctrl+C: 中止');
-      console.log('');
-
-      // ユーザー入力待機（簡易実装）
-      await this.waitForUserConfirmation();
-
-      console.log(`✅ 選択確定: ${latestFile.file}`);
-      
-      return latestFile.filePath;
 
     } catch (error) {
       throw new Error(`記事ファイル検索エラー: ${error.message}`);
     }
+  }
+
+  /**
+   * 従来方式の記事ファイル検索（フォールバック）
+   */
+  async findLatestArticleFileLegacy() {
+    const files = await fs.readdir(ARTICLES_DIR);
+    const articleFiles = files.filter(file => 
+      file.startsWith('article-') && 
+      file.endsWith('.json') && 
+      !file.includes('-status') && 
+      !file.includes('-uploaded')
+    );
+
+    if (articleFiles.length === 0) {
+      throw new Error('記事JSONファイルが見つかりません。先にマスタープロンプトで記事を生成してください。');
+    }
+
+    // 正しいタイムスタンプベースのソート
+    const validArticleFiles = [];
+    
+    for (const file of articleFiles) {
+      const filePath = path.join(ARTICLES_DIR, file);
+      try {
+        // ファイル内容を確認して、正しい形式のみ選択
+        const rawData = await fs.readFile(filePath, 'utf-8');
+        const data = JSON.parse(rawData);
+        
+        // 新しい形式（metadata + article + imagePrompts）のファイルのみ対象
+        if (data.metadata && data.article && data.article.title) {
+          const stats = await fs.stat(filePath);
+          validArticleFiles.push({
+            file,
+            filePath,
+            createdAt: data.metadata.createdAt || stats.mtime.toISOString(),
+            mtime: stats.mtime
+          });
+        }
+      } catch (error) {
+        console.warn(`⚠️ ファイル ${file} をスキップ: ${error.message}`);
+      }
+    }
+
+    if (validArticleFiles.length === 0) {
+      throw new Error('有効な記事JSONファイルが見つかりません。新しい形式のファイルを生成してください。');
+    }
+
+    // タイムスタンプ検証機能
+    this.validateTimestampConsistency(validArticleFiles);
+
+    // 作成時刻順でソート（最新が最初）
+    validArticleFiles.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
+    // 候補ファイル一覧表示
+    console.log('\n📋 候補ファイル一覧:');
+    validArticleFiles.forEach((file, index) => {
+      console.log(`${index + 1}. ${file.file} (${file.createdAt})`);
+    });
+
+    const latestFile = validArticleFiles[0];
+
+    // ユーザー確認プロンプト
+    console.log(`\n🎯 選択予定ファイル: ${latestFile.file}`);
+    console.log(`📅 作成時刻: ${latestFile.createdAt}`);
+    console.log(`📝 記事タイトル: ${JSON.parse(await fs.readFile(latestFile.filePath, 'utf-8')).article.title}`);
+    console.log('\n❓ この記事で処理を続行しますか？');
+    console.log('   - Enter: 続行');
+    console.log('   - Ctrl+C: 中止');
+    console.log('');
+
+    // ユーザー入力待機（簡易実装）
+    await this.waitForUserConfirmation();
+
+    console.log(`✅ 選択確定: ${latestFile.file}`);
+    
+    return latestFile.filePath;
   }
 
   /**
@@ -479,6 +529,48 @@ class FullWorkflowOrchestrator {
         resolve();
       });
     });
+  }
+
+  /**
+   * 処理済みファイルのアーカイブ
+   */
+  async archiveProcessedFile() {
+    try {
+      const newArticleFile = path.join(ARTICLES_DIR, 'new-article.json');
+      
+      // new-article.json が存在する場合のみアーカイブ
+      try {
+        await fs.access(newArticleFile);
+      } catch {
+        console.log('📄 new-article.json が存在しないため、アーカイブをスキップ');
+        return;
+      }
+
+      console.log('\n📦 処理済みファイルのアーカイブ中...');
+      
+      // processed ディレクトリの確認・作成
+      const processedDir = path.join(ARTICLES_DIR, 'processed');
+      try {
+        await fs.access(processedDir);
+      } catch {
+        await fs.mkdir(processedDir, { recursive: true });
+        console.log(`📁 processedディレクトリを作成: ${processedDir}`);
+      }
+      
+      // アーカイブファイル名（sessionIdベース）
+      const archiveFileName = `${this.sessionId}.json`;
+      const archiveFilePath = path.join(processedDir, archiveFileName);
+      
+      // ファイル移動
+      await fs.rename(newArticleFile, archiveFilePath);
+      
+      console.log(`✅ ファイルアーカイブ完了: ${archiveFileName}`);
+      console.log(`📂 アーカイブ先: articles/processed/`);
+      
+    } catch (error) {
+      console.error(`❌ ファイルアーカイブエラー: ${error.message}`);
+      console.log('⚠️ アーカイブ失敗 - ワークフローは正常完了');
+    }
   }
 
   /**

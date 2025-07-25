@@ -77,14 +77,14 @@
     *   ブランド要素選択的適用
 
 #### **【出力ファイル形式】**
-*   **ファイル名**: `articles/article-{YYYYMMDD-HHMMSS}.json`
+*   **ファイル名**: `articles/new-article.json`（固定ファイル名 - タイムスタンプはスクリプトが自動生成）
 *   **JSON構造**:
 ```json
 {
   "metadata": {
-    "sessionId": "article-{YYYYMMDD-HHMMSS}",
+    "sessionId": "new-article",
     "theme": "{テーマ}",
-    "createdAt": "2025-07-11T16:00:00.000Z",
+    "createdAt": "2025-01-01T00:00:00.000Z",
     "version": "2.0"
   },
   "article": {
@@ -279,8 +279,8 @@ cd /Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition && node sc
 
 期待される実行:
 1. Claude Codeがテーマに基づいてHiro Persona準拠の高品質記事+4枚の画像プロンプトを生成
-2. article-20250711-163000.json に出力
-3. scripts/start-full-workflow.js 実行
+2. articles/new-article.json に出力（固定ファイル名）
+3. scripts/start-full-workflow.js 実行（スクリプトが正確なタイムスタンプを生成・ファイルリネーム）
 4. 記事公開URL即座表示 + 画像生成バックグラウンド開始
 ```
 

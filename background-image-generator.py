@@ -46,7 +46,7 @@ class BackgroundImageGenerator:
     
     def load_article_data(self):
         """記事JSONファイルから画像プロンプト情報を読み込み"""
-        article_file = f"articles/{self.session_id}.json"
+        article_file = "articles/new-article.json"
         
         if not os.path.exists(article_file):
             print(f"❌ 記事ファイルが見つかりません: {article_file}")
