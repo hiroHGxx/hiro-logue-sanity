@@ -25,7 +25,7 @@ async function findLatestArticleFile() {
     const articleFiles = [];
     
     for (const file of files) {
-      if (file.startsWith('article-') && 
+      if ((file.startsWith('article-') || file === 'new-article.json') && 
           file.endsWith('.json') && 
           !file.includes('-status') && 
           !file.includes('-uploaded')) {
@@ -99,6 +99,35 @@ async function findArticleInSanity(slug) {
   }
   
   return posts[0];
+}
+
+async function archiveProcessedFile(filePath, sessionId) {
+  try {
+    console.log('\n📦 処理済みファイルのアーカイブ中...');
+    
+    // processed ディレクトリの確認・作成
+    const processedDir = path.join('./articles', 'processed');
+    try {
+      await fs.access(processedDir);
+    } catch {
+      await fs.mkdir(processedDir, { recursive: true });
+      console.log(`📁 processedディレクトリを作成: ${processedDir}`);
+    }
+    
+    // アーカイブファイル名（sessionIdベース）
+    const archiveFileName = `${sessionId}.json`;
+    const archiveFilePath = path.join(processedDir, archiveFileName);
+    
+    // ファイル移動
+    await fs.rename(filePath, archiveFilePath);
+    
+    console.log(`✅ ファイルアーカイブ完了: ${archiveFileName}`);
+    console.log(`📂 アーカイブ先: articles/processed/`);
+    
+  } catch (error) {
+    console.error(`❌ ファイルアーカイブエラー: ${error.message}`);
+    console.log('⚠️ アーカイブ失敗 - 統合は正常完了');
+  }
 }
 
 async function buildImageFilesPaths(sessionId) {
@@ -193,6 +222,9 @@ async function integrateCurrentArticleSafe() {
         console.log(`📊 統合画像数: ${result.uploadedCount}枚`);
         console.log(`🔄 統合モード: ${result.mode}`);
         console.log(`🌐 記事URL: https://hiro-logue.vercel.app/blog/${articleData.article.slug}`);
+        
+        // 画像統合完了後にファイルアーカイブを実行
+        await archiveProcessedFile(filePath, articleData.metadata.sessionId);
         
         if (result.backupPath) {
           console.log(`💾 バックアップ: ${result.backupPath}`);
