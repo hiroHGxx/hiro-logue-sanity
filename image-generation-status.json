@@ -1,52 +1,52 @@
 {
-  "sessionId": "article-250726-081310",
+  "sessionId": "article-250727-083215",
   "status": "completed",
   "imageGeneration": {
-    "startedAt": "2025-07-26T08:13:37.257966",
+    "startedAt": "2025-07-27T08:32:46.343414",
     "total": 4,
     "completed": 4,
     "failed": 0,
     "results": [
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-250726-081310/header-20250726_081622.png",
-        "filename": "header-20250726_081622.png",
-        "generation_time": 164.90748000144958,
+        "output_path": "public/images/blog/auto-generated/article-250727-083215/header-20250727_083537.png",
+        "filename": "header-20250727_083537.png",
+        "generation_time": 171.28811502456665,
         "position": "header",
-        "description": "記事全体のメインビジュアル。AIと人間の調和をテーマにした温かい書斎空間"
+        "description": "記事全体のメインビジュアルとして、学びと成長の象徴的な空間を表現。温かく落ち着いた学習環境で、日々の小さなチャレンジを始める場所を表現。"
       },
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-250726-081310/section1-20250726_081933.png",
-        "filename": "section1-20250726_081933.png",
-        "generation_time": 191.45424103736877,
+        "output_path": "public/images/blog/auto-generated/article-250727-083215/section1-20250727_083902.png",
+        "filename": "section1-20250727_083902.png",
+        "generation_time": 204.19946813583374,
         "position": "section1",
-        "description": "第1セクション用画像。AIレシピ提案と実際の料理材料のギャップを表現"
+        "description": "第1セクションの「変化の激しい時代だからこそ、立ち止まれない」に対応。技術の進歩と変化の速さを抽象的に表現。"
       },
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-250726-081310/section2-20250726_082243.png",
-        "filename": "section2-20250726_082243.png",
-        "generation_time": 189.99734497070312,
+        "output_path": "public/images/blog/auto-generated/article-250727-083215/section2-20250727_084241.png",
+        "filename": "section2-20250727_084241.png",
+        "generation_time": 219.0142457485199,
         "position": "section2",
-        "description": "第2セクション用画像。プログラミングにおけるAIと人間の協働作業環境"
+        "description": "第2セクションの「小さな発見が、日常を鮮やかにしてくれる」に対応。色彩学習とアートに関する発見を俯瞰視点で表現。"
       },
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-250726-081310/section3-20250726_082617.png",
-        "filename": "section3-20250726_082617.png",
-        "generation_time": 213.5005829334259,
+        "output_path": "public/images/blog/auto-generated/article-250727-083215/section3-20250727_084600.png",
+        "filename": "section3-20250727_084600.png",
+        "generation_time": 199.55993795394897,
         "position": "section3",
-        "description": "第3セクション用画像。70点から100点超えへの変化と価値創造を抽象的に表現"
+        "description": "第3セクションの「失敗を恐れずに、楽しみながら続けるコツ」に対応。プログラミング学習の継続と小さな積み重ねを技術的なデスク環境で表現。"
       }
     ],
-    "completedAt": "2025-07-26T08:26:17.713901"
+    "completedAt": "2025-07-27T08:46:01.022534"
   },
   "prompts": [
     {
       "position": "header",
-      "prompt": "A warm, cozy study room with modern AI technology elements, soft natural lighting from a window, clean wooden desk with laptop, floating digital elements and circuits subtly integrated into the environment, peaceful and harmonious atmosphere",
-      "description": "記事全体のメインビジュアル。AIと人間の調和をテーマにした温かい書斎空間",
+      "prompt": "A warm, cozy study room interior with natural lighting streaming through a window, showcasing an organized workspace with books, notebooks scattered on a wooden desk, a laptop computer, coffee cup, and plants. Peaceful learning atmosphere with soft shadows and golden hour lighting. Japanese minimalist aesthetic with natural wood textures and clean lines.",
+      "description": "記事全体のメインビジュアルとして、学びと成長の象徴的な空間を表現。温かく落ち着いた学習環境で、日々の小さなチャレンジを始める場所を表現。",
       "style": "photorealistic, cinematic lighting, warm and inviting atmosphere",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
@@ -58,9 +58,9 @@
     },
     {
       "position": "section1",
-      "prompt": "Close-up view of a modern kitchen counter with fresh ingredients scattered naturally, laptop screen showing recipe interface, soft cooking lighting, ingredients like vegetables and spices arranged organically, clean modern kitchen aesthetic",
-      "description": "第1セクション用画像。AIレシピ提案と実際の料理材料のギャップを表現",
-      "style": "as a watercolor illustration, artistic style, japanese minimalist",
+      "prompt": "An abstract representation of rapid technological change and evolution, featuring flowing digital streams, geometric patterns representing data flow, circuit board patterns merging with organic growth patterns like tree branches. Dynamic composition with cool blues and vibrant teals suggesting digital transformation and continuous learning.",
+      "description": "第1セクションの「変化の激しい時代だからこそ、立ち止まれない」に対応。技術の進歩と変化の速さを抽象的に表現。",
+      "style": "as an abstract art piece, conceptual, dynamic and forward-thinking",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -71,9 +71,9 @@
     },
     {
       "position": "section2",
-      "prompt": "Bird's-eye view of a programming workstation with multiple code editors open, clean lines of code visible on screens, coffee cup, notebook with handwritten notes, cables organized neatly, soft blue developer lighting",
-      "description": "第2セクション用画像。プログラミングにおけるAIと人間の協働作業環境",
-      "style": "in a flat design style, minimalist, clean modern tech-focused",
+      "prompt": "A bird's eye view of an artist's palette with vibrant, mixed colors creating beautiful gradients and patterns. Watercolor paints blending together in organic shapes, paintbrushes arranged around the palette, color theory charts visible, natural lighting creating soft reflections on wet paint surfaces. Artistic discovery and creative exploration theme.",
+      "description": "第2セクションの「小さな発見が、日常を鮮やかにしてくれる」に対応。色彩学習とアートに関する発見を俯瞰視点で表現。",
+      "style": "as a watercolor illustration, artistic style, soft and contemplative",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -84,9 +84,9 @@
     },
     {
       "position": "section3",
-      "prompt": "Abstract representation of collaboration and enhancement, flowing organic shapes merging with geometric digital patterns, warm golden light emanating from the center, concept of transformation and improvement, ethereal and inspiring",
-      "description": "第3セクション用画像。70点から100点超えへの変化と価値創造を抽象的に表現",
-      "style": "as an abstract art piece, conceptual, soft and contemplative",
+      "prompt": "A minimal, clean workspace viewed from an angled perspective showing a keyboard, monitor displaying code editor with colorful syntax highlighting, small potted succulent plants, a simple notebook with handwritten notes, and morning coffee. Modern tech-focused environment emphasizing continuous learning and small daily progress. Clean geometric lines and organized layout.",
+      "description": "第3セクションの「失敗を恐れずに、楽しみながら続けるコツ」に対応。プログラミング学習の継続と小さな積み重ねを技術的なデスク環境で表現。",
+      "style": "clean, modern, tech-focused, professional, minimalist design approach",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
