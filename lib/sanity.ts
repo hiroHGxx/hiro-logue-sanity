@@ -11,6 +11,10 @@ export const client = createClient({
   apiVersion,
   useCdn: false, // Set to false for development
   token: process.env.SANITY_API_TOKEN,
+  requestTagPrefix: 'contentflow',
+  timeout: 120000, // 2分タイムアウト（デフォルト30秒から延長）
+  maxRetries: 3, // API失敗時の最大リトライ回数
+  retryDelay: (attemptNumber: number) => Math.min(1000 * Math.pow(2, attemptNumber), 10000), // 指数バックオフ
 })
 
 const builder = imageUrlBuilder(client)
