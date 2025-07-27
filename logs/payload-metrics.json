@@ -1,0 +1,32 @@
+[
+  {
+    "filePath": "/Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/articles/new-article.json",
+    "payloadSize": 1868,
+    "payloadSizeMB": 0,
+    "breakdown": {
+      "metadata": 121,
+      "title": 60,
+      "body": 688,
+      "slug": 35,
+      "excerpt": 120,
+      "categories": 40,
+      "imagePrompts": 478
+    },
+    "timestamp": "2025-07-27T04:30:16.197Z"
+  },
+  {
+    "filePath": "/Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/articles/new-article.json",
+    "payloadSize": 11300,
+    "payloadSizeMB": 0.01,
+    "breakdown": {
+      "metadata": 139,
+      "title": 78,
+      "body": 5897,
+      "slug": 39,
+      "excerpt": 240,
+      "categories": 31,
+      "imagePrompts": 4207
+    },
+    "timestamp": "2025-07-27T23:01:45.776Z"
+  }
+]

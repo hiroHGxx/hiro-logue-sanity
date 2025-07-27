@@ -11,16 +11,39 @@ const path = require('path');
 const { uploadFromJson } = require('../upload-from-json');
 
 /**
- * 記事データを受け取ってSanityに投稿
+ * 記事データを受け取ってSanityに投稿（Phase A: 最小限データのみ）
  * @param {string} articleFilePath - 記事JSONファイルのパス
+ * @param {Object} options - 投稿オプション
  * @returns {Promise<Object>} - 投稿結果
  */
-async function uploadArticle(articleFilePath) {
+async function uploadArticle(articleFilePath, options = {}) {
+  const fs = require('fs').promises;
+  
   try {
     console.log('🔄 Sanity記事投稿開始...');
     console.log(`📄 対象ファイル: ${articleFilePath}`);
     
-    // 既存のuploadFromJson関数を呼び出し
+    // Phase A対応: 最小限データモードの場合
+    if (options.phaseA) {
+      console.log('⚡ Phase A モード: 最小限データで投稿');
+      return await uploadMinimalArticle(articleFilePath);
+    }
+    
+    // ペイロードサイズ監視
+    const rawData = await fs.readFile(articleFilePath, 'utf-8');
+    const payloadSize = Buffer.byteLength(rawData, 'utf-8');
+    const payloadSizeMB = (payloadSize / 1024 / 1024).toFixed(2);
+    
+    console.log(`📊 ペイロードサイズ: ${payloadSize} bytes (${payloadSizeMB} MB)`);
+    
+    // サイズ制限チェック
+    if (payloadSize > 2 * 1024 * 1024) { // 2MB
+      console.warn(`⚠️ ペイロードサイズ制限超過: ${payloadSizeMB}MB > 2MB`);
+      console.log('🔄 自動的にPhase Aモードで再試行...');
+      return await uploadMinimalArticle(articleFilePath);
+    }
+    
+    // 通常の投稿処理
     const result = await uploadFromJson(articleFilePath);
     
     console.log('✅ Sanity記事投稿完了');
@@ -28,6 +51,93 @@ async function uploadArticle(articleFilePath) {
     
   } catch (error) {
     console.error(`❌ 記事投稿エラー: ${error.message}`);
+    
+    // エラーがペイロードサイズ関連の場合、Phase Aモードで再試行
+    if (error.message.includes('payload') || error.message.includes('size') || error.message.includes('too large')) {
+      console.log('🔄 ペイロードサイズエラー検出 - Phase Aモードで再試行...');
+      try {
+        return await uploadMinimalArticle(articleFilePath);
+      } catch (retryError) {
+        console.error(`❌ Phase A再試行も失敗: ${retryError.message}`);
+        throw retryError;
+      }
+    }
+    
+    throw error;
+  }
+}
+
+/**
+ * 最小限データでの記事投稿（Phase A）
+ * @param {string} articleFilePath - 記事JSONファイルのパス
+ * @returns {Promise<Object>} - 投稿結果
+ */
+async function uploadMinimalArticle(articleFilePath) {
+  const fs = require('fs').promises;
+  const path = require('path');
+  
+  try {
+    console.log('⚡ Phase A: 最小限データ投稿開始...');
+    
+    // 元データ読み込み
+    const rawData = await fs.readFile(articleFilePath, 'utf-8');
+    const fullData = JSON.parse(rawData);
+    
+    // 最小限データのみ抽出
+    const minimalData = {
+      metadata: {
+        sessionId: fullData.metadata?.sessionId || 'phase-a',
+        createdAt: fullData.metadata?.createdAt || new Date().toISOString(),
+        version: '2.0-phase-a'
+      },
+      article: {
+        title: fullData.article.title,
+        body: fullData.article.body,
+        slug: fullData.article.slug,
+        categories: fullData.article.categories || [],
+        excerpt: fullData.article.excerpt || ''
+      }
+      // imagePromptsは除外してペイロードサイズを削減
+    };
+    
+    // 一時ファイル作成
+    const timestamp = Date.now();
+    const tempDir = path.dirname(articleFilePath);
+    const tempFilePath = path.join(tempDir, `temp-minimal-${timestamp}.json`);
+    
+    await fs.writeFile(tempFilePath, JSON.stringify(minimalData, null, 2), 'utf-8');
+    
+    const minimalSize = Buffer.byteLength(JSON.stringify(minimalData), 'utf-8');
+    const minimalSizeMB = (minimalSize / 1024 / 1024).toFixed(2);
+    console.log(`📊 Phase A ペイロードサイズ: ${minimalSize} bytes (${minimalSizeMB} MB)`);
+    
+    // 投稿実行
+    const result = await uploadFromJson(tempFilePath);
+    
+    // 一時ファイル削除
+    try {
+      await fs.unlink(tempFilePath);
+    } catch (unlinkError) {
+      console.warn(`⚠️ 一時ファイル削除失敗: ${unlinkError.message}`);
+    }
+    
+    console.log('✅ Phase A 投稿完了（画像プロンプトは別途処理）');
+    
+    // 画像プロンプトをローカル保存
+    if (fullData.imagePrompts && fullData.imagePrompts.length > 0) {
+      const imagePromptsFile = path.join(tempDir, `image-prompts-${fullData.metadata?.sessionId || timestamp}.json`);
+      await fs.writeFile(imagePromptsFile, JSON.stringify({
+        sessionId: fullData.metadata?.sessionId,
+        documentId: result.documentId,
+        imagePrompts: fullData.imagePrompts
+      }, null, 2), 'utf-8');
+      console.log(`💾 画像プロンプト保存: ${path.basename(imagePromptsFile)}`);
+    }
+    
+    return result;
+    
+  } catch (error) {
+    console.error(`❌ Phase A 投稿エラー: ${error.message}`);
     throw error;
   }
 }
@@ -142,6 +252,7 @@ if (require.main === module) {
 
 module.exports = { 
   uploadArticle, 
+  uploadMinimalArticle,
   uploadArticleFromData, 
   checkEnvironment 
 };

@@ -273,14 +273,26 @@ class FullWorkflowOrchestrator {
   }
 
   /**
-   * Sanity記事先行投稿
+   * Sanity記事先行投稿（ペイロードサイズ監視付き）
    */
   async uploadArticleToSanity(filePath) {
     try {
       console.log('\n🔄 Sanity記事先行投稿開始...');
       
+      // 事前ペイロードサイズ監視
+      await this.monitorPayloadSize(filePath);
+      
       const command = `cd "${PROJECT_ROOT}" && node "${UPLOAD_SCRIPT}" "${filePath}"`;
-      const { stdout, stderr } = await execAsync(command);
+      
+      // タイムアウト付き実行
+      const executionStartTime = Date.now();
+      const { stdout, stderr } = await execAsync(command, {
+        timeout: 180000, // 3分タイムアウト
+        maxBuffer: 1024 * 1024 * 10 // 10MBバッファ
+      });
+      const executionTime = Date.now() - executionStartTime;
+      
+      console.log(`⏱️ 実行時間: ${executionTime}ms`);
       
       if (stderr && !stderr.includes('warning')) {
         throw new Error(`Upload script error: ${stderr}`);
@@ -297,17 +309,162 @@ class FullWorkflowOrchestrator {
       const result = {
         documentId: documentIdMatch[1],
         slug: slugMatch[1],
-        publishedUrl: `https://hiro-logue.vercel.app/blog/${slugMatch[1]}`
+        publishedUrl: `https://hiro-logue.vercel.app/blog/${slugMatch[1]}`,
+        executionTime: executionTime
       };
 
       console.log(`✅ Sanity投稿完了`);
       console.log(`📄 Document ID: ${result.documentId}`);
       console.log(`🌐 公開URL: ${result.publishedUrl}`);
+      console.log(`⚡ 投稿処理時間: ${executionTime}ms`);
       
       return result;
 
     } catch (error) {
+      // タイムアウトエラーの詳細処理
+      if (error.code === 'ETIMEDOUT') {
+        throw new Error(`Sanity投稿タイムアウト: 3分以内に完了しませんでした。ペイロードサイズを確認してください。`);
+      }
+      
       throw new Error(`Sanity投稿エラー: ${error.message}`);
+    }
+  }
+
+  /**
+   * ペイロードサイズ監視機能
+   */
+  async monitorPayloadSize(filePath) {
+    try {
+      console.log('\n📊 ペイロードサイズ監視実行中...');
+      
+      const rawData = await fs.readFile(filePath, 'utf-8');
+      const payloadSize = Buffer.byteLength(rawData, 'utf-8');
+      const payloadSizeMB = (payloadSize / 1024 / 1024).toFixed(2);
+      const payloadSizeKB = (payloadSize / 1024).toFixed(1);
+      
+      console.log(`📏 ファイルサイズ: ${payloadSizeKB} KB (${payloadSizeMB} MB)`);
+      
+      // データ構造分析
+      const articleData = JSON.parse(rawData);
+      const breakdown = this.analyzePayloadBreakdown(articleData);
+      
+      console.log('📋 ペイロード構成:');
+      Object.entries(breakdown).forEach(([section, size]) => {
+        const sizeKB = (size / 1024).toFixed(1);
+        const percentage = ((size / payloadSize) * 100).toFixed(1);
+        console.log(`  - ${section}: ${sizeKB} KB (${percentage}%)`);
+      });
+      
+      // 制限チェック
+      const limits = {
+        warning: 1 * 1024 * 1024,  // 1MB
+        error: 2 * 1024 * 1024     // 2MB
+      };
+      
+      if (payloadSize > limits.error) {
+        console.error(`🚨 ペイロードサイズ制限超過: ${payloadSizeMB}MB > 2MB`);
+        console.error('💡 推奨対策: Phase Aモード（最小限データ）での投稿');
+        console.error('   - 画像プロンプトの分離保存');
+        console.error('   - メタデータの簡素化');
+      } else if (payloadSize > limits.warning) {
+        console.warn(`⚠️ ペイロードサイズ警告: ${payloadSizeMB}MB > 1MB`);
+        console.warn('💡 注意: API応答時間が延長される可能性があります');
+      } else {
+        console.log(`✅ ペイロードサイズ正常: ${payloadSizeMB}MB < 1MB`);
+      }
+      
+      // 監視結果をログに記録
+      await this.logPayloadMetrics({
+        filePath,
+        payloadSize,
+        payloadSizeMB: parseFloat(payloadSizeMB),
+        breakdown,
+        timestamp: new Date().toISOString()
+      });
+      
+      return {
+        size: payloadSize,
+        sizeMB: parseFloat(payloadSizeMB),
+        breakdown,
+        status: payloadSize > limits.error ? 'error' : 
+                payloadSize > limits.warning ? 'warning' : 'ok'
+      };
+      
+    } catch (error) {
+      console.error(`❌ ペイロードサイズ監視エラー: ${error.message}`);
+      return { size: 0, sizeMB: 0, breakdown: {}, status: 'error' };
+    }
+  }
+
+  /**
+   * ペイロード構成分析
+   */
+  analyzePayloadBreakdown(articleData) {
+    const breakdown = {};
+    
+    try {
+      if (articleData.metadata) {
+        breakdown.metadata = Buffer.byteLength(JSON.stringify(articleData.metadata), 'utf-8');
+      }
+      
+      if (articleData.article) {
+        breakdown.title = Buffer.byteLength(articleData.article.title || '', 'utf-8');
+        breakdown.body = Buffer.byteLength(articleData.article.body || '', 'utf-8');
+        breakdown.slug = Buffer.byteLength(articleData.article.slug || '', 'utf-8');
+        breakdown.excerpt = Buffer.byteLength(articleData.article.excerpt || '', 'utf-8');
+        breakdown.categories = Buffer.byteLength(JSON.stringify(articleData.article.categories || []), 'utf-8');
+      }
+      
+      if (articleData.imagePrompts) {
+        breakdown.imagePrompts = Buffer.byteLength(JSON.stringify(articleData.imagePrompts), 'utf-8');
+      }
+      
+      // その他のフィールド
+      const otherFields = { ...articleData };
+      delete otherFields.metadata;
+      delete otherFields.article;
+      delete otherFields.imagePrompts;
+      
+      if (Object.keys(otherFields).length > 0) {
+        breakdown.other = Buffer.byteLength(JSON.stringify(otherFields), 'utf-8');
+      }
+      
+    } catch (error) {
+      console.warn(`⚠️ ペイロード分析エラー: ${error.message}`);
+      breakdown.error = Buffer.byteLength(JSON.stringify(articleData), 'utf-8');
+    }
+    
+    return breakdown;
+  }
+
+  /**
+   * ペイロードメトリクスログ記録
+   */
+  async logPayloadMetrics(metrics) {
+    try {
+      const logFile = path.join(PROJECT_ROOT, 'logs', 'payload-metrics.json');
+      await fs.mkdir(path.dirname(logFile), { recursive: true });
+      
+      let existingLogs = [];
+      try {
+        const existingData = await fs.readFile(logFile, 'utf-8');
+        existingLogs = JSON.parse(existingData);
+      } catch {
+        // ファイルが存在しない場合は新規作成
+      }
+      
+      existingLogs.push(metrics);
+      
+      // 最新100件のみ保持
+      if (existingLogs.length > 100) {
+        existingLogs = existingLogs.slice(-100);
+      }
+      
+      await fs.writeFile(logFile, JSON.stringify(existingLogs, null, 2));
+      console.log(`📝 ペイロードメトリクス記録: logs/payload-metrics.json`);
+      
+    } catch (error) {
+      console.warn(`⚠️ メトリクスログ記録失敗: ${error.message}`);
     }
   }
 
@@ -436,25 +593,212 @@ class FullWorkflowOrchestrator {
   }
 
   /**
-   * エラーハンドリング
+   * エラーハンドリング（詳細ログ強化）
    */
   async handleWorkflowError(error) {
     console.error('\n🚨 ワークフロー実行エラー');
-    console.error('='.repeat(40));
+    console.error('='.repeat(60));
     console.error(`エラー: ${error.message}`);
+    console.error(`エラータイプ: ${error.constructor.name}`);
+    console.error(`発生時刻: ${new Date().toLocaleString()}`);
     
+    // スタックトレースの詳細表示
+    if (error.stack) {
+      console.error(`\n📋 スタックトレース:`);
+      console.error(error.stack);
+    }
+    
+    // エラーカテゴリ別の詳細診断
     if (error.message.includes('記事JSONファイルが見つかりません')) {
+      console.error('\n🔍 【ファイル検索エラー】詳細診断:');
+      await this.diagnoseFileSearchError();
+    } else if (error.message.includes('Sanity投稿エラー')) {
+      console.error('\n🔍 【Sanity APIエラー】詳細診断:');
+      await this.diagnoseSanityError(error);
+    } else if (error.message.includes('記事データ検証エラー')) {
+      console.error('\n🔍 【データ検証エラー】詳細診断:');
+      await this.diagnoseDataValidationError(error);
+    } else if (error.message.includes('バックグラウンド生成')) {
+      console.error('\n🔍 【画像生成エラー】詳細診断:');
+      await this.diagnoseImageGenerationError(error);
+    } else {
+      console.error('\n🔍 【未分類エラー】詳細診断:');
+      await this.diagnoseGenericError(error);
+    }
+    
+    // システム状態の記録
+    await this.logSystemState(error);
+    
+    console.error('='.repeat(60));
+  }
+
+  /**
+   * ファイル検索エラー診断
+   */
+  async diagnoseFileSearchError() {
+    try {
+      console.error('📁 articlesディレクトリ確認:');
+      const files = await fs.readdir(ARTICLES_DIR).catch(() => []);
+      console.error(`  - ファイル数: ${files.length}`);
+      console.error(`  - ファイル一覧: ${files.slice(0, 10).join(', ')}${files.length > 10 ? '...' : ''}`);
+      
       console.error('\n💡 解決方法:');
       console.error('1. マスタープロンプトを使って記事を生成してください');
-      console.error('2. articles/article-YYYYMMDD-HHMMSS.json が作成されていることを確認');
-    } else if (error.message.includes('Sanity投稿エラー')) {
+      console.error('2. articles/new-article.json または articles/article-*.json が存在することを確認');
+      console.error('3. ファイル権限を確認: ls -la articles/');
+    } catch (diagError) {
+      console.error(`診断エラー: ${diagError.message}`);
+    }
+  }
+
+  /**
+   * Sanity APIエラー診断
+   */
+  async diagnoseSanityError(error) {
+    try {
+      console.error('🌐 Sanity API接続診断:');
+      console.error(`  - エラー詳細: ${error.message}`);
+      
+      // 環境変数確認
+      const hasToken = !!process.env.SANITY_API_TOKEN;
+      const hasProjectId = !!process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
+      const hasDataset = !!process.env.NEXT_PUBLIC_SANITY_DATASET;
+      
+      console.error(`  - SANITY_API_TOKEN: ${hasToken ? '✅ 設定済み' : '❌ 未設定'}`);
+      console.error(`  - PROJECT_ID: ${hasProjectId ? '✅ 設定済み' : '❌ 未設定'}`);
+      console.error(`  - DATASET: ${hasDataset ? '✅ 設定済み' : '❌ 未設定'}`);
+      
+      // ペイロードサイズ確認
+      if (this.articleData) {
+        const payloadSize = JSON.stringify(this.articleData).length;
+        const payloadSizeMB = (payloadSize / 1024 / 1024).toFixed(2);
+        console.error(`  - ペイロードサイズ: ${payloadSize} bytes (${payloadSizeMB} MB)`);
+        console.error(`  - Sanity制限: 2MB ${payloadSizeMB > 2 ? '❌ 超過' : '✅ 以内'}`);
+      }
+      
       console.error('\n💡 解決方法:');
       console.error('1. .env.local ファイルのSANITY_API_TOKENを確認');
       console.error('2. ネットワーク接続を確認');
-      console.error('3. 手動投稿: node upload-from-json.js articles/最新ファイル.json');
+      console.error('3. ペイロードサイズを削減（画像プロンプト分離など）');
+      console.error('4. 手動投稿テスト: node scripts/upload-article.js articles/new-article.json');
+    } catch (diagError) {
+      console.error(`Sanity診断エラー: ${diagError.message}`);
     }
-    
-    console.error('='.repeat(40));
+  }
+
+  /**
+   * データ検証エラー診断
+   */
+  async diagnoseDataValidationError(error) {
+    try {
+      console.error('📋 データ構造診断:');
+      if (this.articleData) {
+        console.error(`  - metadata存在: ${!!this.articleData.metadata}`);
+        console.error(`  - article存在: ${!!this.articleData.article}`);
+        console.error(`  - imagePrompts存在: ${!!this.articleData.imagePrompts}`);
+        console.error(`  - タイトル: ${this.articleData.article?.title || '❌ なし'}`);
+        console.error(`  - 本文文字数: ${this.articleData.article?.body?.length || 0}`);
+        console.error(`  - スラッグ: ${this.articleData.article?.slug || '❌ なし'}`);
+      }
+      
+      console.error('\n💡 解決方法:');
+      console.error('1. 記事JSONファイルの構造を確認');
+      console.error('2. 必須フィールド（title, body, slug）の存在確認');
+      console.error('3. マスタープロンプトで新しい記事を生成');
+    } catch (diagError) {
+      console.error(`データ診断エラー: ${diagError.message}`);
+    }
+  }
+
+  /**
+   * 画像生成エラー診断
+   */
+  async diagnoseImageGenerationError(error) {
+    try {
+      console.error('🎨 画像生成環境診断:');
+      console.error(`  - Python実行パス: ${PYTHON_PATH}`);
+      console.error(`  - バックグラウンドスクリプト: ${BACKGROUND_GENERATOR}`);
+      
+      // Python環境確認
+      try {
+        const { stdout } = await execAsync(`${PYTHON_PATH} --version`);
+        console.error(`  - Python版: ${stdout.trim()} ✅`);
+      } catch {
+        console.error(`  - Python版: ❌ 実行不可`);
+      }
+      
+      // ファイル存在確認
+      try {
+        await fs.access(BACKGROUND_GENERATOR);
+        console.error(`  - 生成スクリプト: ✅ 存在`);
+      } catch {
+        console.error(`  - 生成スクリプト: ❌ 不存在`);
+      }
+      
+      console.error('\n💡 解決方法:');
+      console.error('1. Python仮想環境をアクティベート');
+      console.error('2. 必要ライブラリのインストール確認');
+      console.error('3. 画像生成は手動実行可能（記事投稿は完了）');
+    } catch (diagError) {
+      console.error(`画像診断エラー: ${diagError.message}`);
+    }
+  }
+
+  /**
+   * 汎用エラー診断
+   */
+  async diagnoseGenericError(error) {
+    try {
+      console.error('🔧 システム環境診断:');
+      console.error(`  - Node.js版: ${process.version}`);
+      console.error(`  - 作業ディレクトリ: ${process.cwd()}`);
+      console.error(`  - プロセスID: ${process.pid}`);
+      console.error(`  - メモリ使用量: ${Math.round(process.memoryUsage().heapUsed / 1024 / 1024)}MB`);
+      
+      console.error('\n💡 一般的解決方法:');
+      console.error('1. Node.jsプロセスを再起動');
+      console.error('2. 依存関係の再インストール: npm install');
+      console.error('3. ディスク容量・メモリ確認');
+      console.error('4. 権限確認: プロジェクトディレクトリへのアクセス権');
+    } catch (diagError) {
+      console.error(`汎用診断エラー: ${diagError.message}`);
+    }
+  }
+
+  /**
+   * システム状態ログ記録
+   */
+  async logSystemState(error) {
+    try {
+      const logData = {
+        timestamp: new Date().toISOString(),
+        error: {
+          message: error.message,
+          type: error.constructor.name,
+          stack: error.stack
+        },
+        system: {
+          nodeVersion: process.version,
+          platform: process.platform,
+          arch: process.arch,
+          cwd: process.cwd(),
+          memoryUsage: process.memoryUsage()
+        },
+        workflow: {
+          sessionId: this.sessionId,
+          articleData: !!this.articleData,
+          sanityResult: !!this.sanityResult
+        }
+      };
+      
+      const logFile = path.join(PROJECT_ROOT, 'logs', 'error-log.json');
+      await fs.mkdir(path.dirname(logFile), { recursive: true });
+      await fs.writeFile(logFile, JSON.stringify(logData, null, 2));
+      
+      console.error(`\n📝 詳細ログ記録: logs/error-log.json`);
+    } catch (logError) {
+      console.error(`ログ記録失敗: ${logError.message}`);
+    }
   }
 
   /**
