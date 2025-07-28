@@ -1,53 +1,53 @@
 {
-  "sessionId": "article-250728-080145",
+  "sessionId": "article-250729-065050",
   "status": "completed",
   "imageGeneration": {
-    "startedAt": "2025-07-28T08:02:14.432829",
+    "startedAt": "2025-07-29T06:51:21.009987",
     "total": 4,
     "completed": 4,
     "failed": 0,
     "results": [
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-250728-080145/header-20250728_080501.png",
-        "filename": "header-20250728_080501.png",
-        "generation_time": 166.64423179626465,
+        "output_path": "public/images/blog/auto-generated/article-250729-065050/header-20250729_065404.png",
+        "filename": "header-20250729_065404.png",
+        "generation_time": 163.40486907958984,
         "position": "header",
-        "description": "記事全体のメインビジュアルとして、人と自然の調和を表現する小さな庭の俯瞰風景。記事のテーマである共生と心地よい距離感を視覚的に表現。"
+        "description": "記事全体のテーマである「三日間の継続」を表現する温かく希望的な室内風景"
       },
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-250728-080145/section1-20250728_080818.png",
-        "filename": "section1-20250728_080818.png",
-        "generation_time": 197.37994766235352,
+        "output_path": "public/images/blog/auto-generated/article-250729-065050/section1-20250729_065724.png",
+        "filename": "section1-20250729_065724.png",
+        "generation_time": 199.4283173084259,
         "position": "section1",
-        "description": "第1セクション「小さな庭から見えてきたこと」に対応。庭での日々の変化と発見をクローズアップで表現した水彩画風イラスト。"
+        "description": "三日間の重みと価値を表現する机上の学習環境のクローズアップ"
       },
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-250728-080145/section2-20250728_081124.png",
-        "filename": "section2-20250728_081124.png",
-        "generation_time": 185.66510224342346,
+        "output_path": "public/images/blog/auto-generated/article-250729-065050/section2-20250729_070043.png",
+        "filename": "section2-20250729_070043.png",
+        "generation_time": 199.27115297317505,
         "position": "section2",
-        "description": "第2セクション「技術と自然のバランスを考えてみる」に対応。技術と自然の調和を窓越しの風景で表現したクリーンでモダンな技術系ビジュアル。"
+        "description": "継続の新しい概念を抽象的に表現する循環的なパターン"
       },
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-250728-080145/section3-20250728_081521.png",
-        "filename": "section3-20250728_081521.png",
-        "generation_time": 236.92838788032532,
+        "output_path": "public/images/blog/auto-generated/article-250729-065050/section3-20250729_070416.png",
+        "filename": "section3-20250729_070416.png",
+        "generation_time": 212.77117824554443,
         "position": "section3",
-        "description": "第3セクション「共生の小さなヒント」に対応。共生と心地よい距離感を抽象的な形と色で表現したコンセプチュアルアート。"
+        "description": "三日の積み重ねがもたらす段階的な成長を象徴する自然な進歩のイメージ"
       }
     ],
-    "completedAt": "2025-07-28T08:15:21.559889"
+    "completedAt": "2025-07-29T07:04:16.511120"
   },
   "prompts": [
     {
       "position": "header",
-      "prompt": "A peaceful small garden space viewed from above, showing a cozy corner with natural elements like small plants, a wooden deck area, scattered fallen leaves, soft morning sunlight filtering through, creating gentle shadows and warm atmosphere, serene and harmonious outdoor environment, photorealistic, cinematic lighting, warm tones",
-      "description": "記事全体のメインビジュアルとして、人と自然の調和を表現する小さな庭の俯瞰風景。記事のテーマである共生と心地よい距離感を視覚的に表現。",
-      "style": "photorealistic, cinematic lighting, warm and inviting atmosphere, japanese minimalist aesthetic",
+      "prompt": "A cozy study room interior with morning sunlight streaming through a window, showing an organized desk with a simple notebook opened to show '3 days' written in gentle handwriting, soft natural lighting creating a warm atmosphere, empty comfortable chair suggesting the start of a daily routine, minimalist japanese interior design, peaceful and encouraging ambiance",
+      "description": "記事全体のテーマである「三日間の継続」を表現する温かく希望的な室内風景",
+      "style": "photorealistic, cinematic lighting, warm natural tones, japanese minimalist aesthetic",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -58,9 +58,9 @@
     },
     {
       "position": "section1",
-      "prompt": "Close-up view of a small corner in a garden where natural changes occur daily, dewdrops on fresh green leaves, small puddles reflecting sky, newly sprouted plants emerging from soil, intricate details of natural textures and patterns, as a watercolor illustration, artistic style, soft and contemplative",
-      "description": "第1セクション「小さな庭から見えてきたこと」に対応。庭での日々の変化と発見をクローズアップで表現した水彩画風イラスト。",
-      "style": "as a watercolor illustration, artistic style, soft and contemplative, delicate brush strokes",
+      "prompt": "A close-up view of a wooden desk surface with a small calendar showing three consecutive days marked with gentle check marks, surrounded by study materials like pencils and a small potted plant, natural window light casting soft shadows, warm and encouraging composition showing the weight of three days of effort",
+      "description": "三日間の重みと価値を表現する机上の学習環境のクローズアップ",
+      "style": "as a watercolor illustration, artistic style, soft edges, gentle colors",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -71,9 +71,9 @@
     },
     {
       "position": "section2",
-      "prompt": "A modern tech workspace viewed through a window overlooking natural scenery, laptop screen glowing softly, plants visible outside the window frame, natural light streaming in, representing the balance between technology and nature, clean, modern, tech-focused, professional, dynamic composition",
-      "description": "第2セクション「技術と自然のバランスを考えてみる」に対応。技術と自然の調和を窓越しの風景で表現したクリーンでモダンな技術系ビジュアル。",
-      "style": "clean, modern, tech-focused, professional, dynamic and forward-thinking",
+      "prompt": "An abstract visualization of continuity showing three connected circular elements in a flowing pattern, with gentle curves and rhythmic repetition suggesting cycles and renewal, soft gradient colors flowing from warm to cool tones, conceptual representation of 'continuation' as cycles rather than straight lines",
+      "description": "継続の新しい概念を抽象的に表現する循環的なパターン",
+      "style": "as an abstract art piece, conceptual, flowing organic shapes, contemporary design",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -84,9 +84,9 @@
     },
     {
       "position": "section3",
-      "prompt": "Abstract representation of harmonious coexistence, flowing organic shapes intertwining with geometric elements, representing the balance between natural and artificial, warm earth tones blending with cool modern colors, conceptual art piece expressing unity and peaceful distance, as an abstract art piece, conceptual",
-      "description": "第3セクション「共生の小さなヒント」に対応。共生と心地よい距離感を抽象的な形と色で表現したコンセプチュアルアート。",
-      "style": "as an abstract art piece, conceptual, flowing and harmonious, vibrant and energetic",
+      "prompt": "A bird's eye view of stepping stones across a peaceful stream, showing three distinct stones in a natural progression, surrounded by gentle flowing water and soft vegetation, representing gradual progress and the accumulation of small achievements, serene natural environment with dappled light",
+      "description": "三日の積み重ねがもたらす段階的な成長を象徴する自然な進歩のイメージ",
+      "style": "clean, modern, nature-focused, professional photography style with soft focus",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
