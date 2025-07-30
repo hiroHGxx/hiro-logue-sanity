@@ -1,53 +1,53 @@
 {
-  "sessionId": "article-250729-065050",
+  "sessionId": "article-250731-063153",
   "status": "completed",
   "imageGeneration": {
-    "startedAt": "2025-07-29T06:51:21.009987",
+    "startedAt": "2025-07-31T06:32:24.647487",
     "total": 4,
     "completed": 4,
     "failed": 0,
     "results": [
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-250729-065050/header-20250729_065404.png",
-        "filename": "header-20250729_065404.png",
-        "generation_time": 163.40486907958984,
+        "output_path": "public/images/blog/auto-generated/article-250731-063153/header-20250731_063515.png",
+        "filename": "header-20250731_063515.png",
+        "generation_time": 171.2213819026947,
         "position": "header",
-        "description": "記事全体のテーマである「三日間の継続」を表現する温かく希望的な室内風景"
+        "description": "記事全体のテーマである目標達成をイメージした、希望に満ちた整理されたワークスペース"
       },
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-250729-065050/section1-20250729_065724.png",
-        "filename": "section1-20250729_065724.png",
-        "generation_time": 199.4283173084259,
+        "output_path": "public/images/blog/auto-generated/article-250731-063153/section1-20250731_073129.png",
+        "filename": "section1-20250731_073129.png",
+        "generation_time": 3373.682092189789,
         "position": "section1",
-        "description": "三日間の重みと価値を表現する机上の学習環境のクローズアップ"
+        "description": "第1セクション「明確ななぜを持つこと」の内容を表現した、目的と方向性を見つけることのメタファー"
       },
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-250729-065050/section2-20250729_070043.png",
-        "filename": "section2-20250729_070043.png",
-        "generation_time": 199.27115297317505,
+        "output_path": "public/images/blog/auto-generated/article-250731-063153/section2-20250731_073547.png",
+        "filename": "section2-20250731_073547.png",
+        "generation_time": 257.979346036911,
         "position": "section2",
-        "description": "継続の新しい概念を抽象的に表現する循環的なパターン"
+        "description": "第2セクション「小さな一歩を継続すること」を表現した、継続的な小さな進歩のビジュアル表現"
       },
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-250729-065050/section3-20250729_070416.png",
-        "filename": "section3-20250729_070416.png",
-        "generation_time": 212.77117824554443,
+        "output_path": "public/images/blog/auto-generated/article-250731-063153/section3-20250731_073956.png",
+        "filename": "section3-20250731_073956.png",
+        "generation_time": 248.2343099117279,
         "position": "section3",
-        "description": "三日の積み重ねがもたらす段階的な成長を象徴する自然な進歩のイメージ"
+        "description": "第3セクション「環境と仲間の力を活用すること」を表現した、ネットワークとサポートシステムの概念"
       }
     ],
-    "completedAt": "2025-07-29T07:04:16.511120"
+    "completedAt": "2025-07-31T07:39:56.372385"
   },
   "prompts": [
     {
       "position": "header",
-      "prompt": "A cozy study room interior with morning sunlight streaming through a window, showing an organized desk with a simple notebook opened to show '3 days' written in gentle handwriting, soft natural lighting creating a warm atmosphere, empty comfortable chair suggesting the start of a daily routine, minimalist japanese interior design, peaceful and encouraging ambiance",
-      "description": "記事全体のテーマである「三日間の継続」を表現する温かく希望的な室内風景",
-      "style": "photorealistic, cinematic lighting, warm natural tones, japanese minimalist aesthetic",
+      "prompt": "A peaceful and inspiring workspace with morning light streaming through a window, showing an organized desk with notebook, pen, and small potted plant, clean and minimalist setup suggesting goal-setting and planning atmosphere, warm golden lighting creating motivation and hope",
+      "description": "記事全体のテーマである目標達成をイメージした、希望に満ちた整理されたワークスペース",
+      "style": "photorealistic, cinematic lighting, warm golden tones, inspiring and uplifting mood",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -58,9 +58,9 @@
     },
     {
       "position": "section1",
-      "prompt": "A close-up view of a wooden desk surface with a small calendar showing three consecutive days marked with gentle check marks, surrounded by study materials like pencils and a small potted plant, natural window light casting soft shadows, warm and encouraging composition showing the weight of three days of effort",
-      "description": "三日間の重みと価値を表現する机上の学習環境のクローズアップ",
-      "style": "as a watercolor illustration, artistic style, soft edges, gentle colors",
+      "prompt": "A compass rose surrounded by question marks transforming into clear directional arrows, abstract conceptual art representing finding one's true purpose and motivation, deep blue and gold color scheme suggesting wisdom and clarity",
+      "description": "第1セクション「明確ななぜを持つこと」の内容を表現した、目的と方向性を見つけることのメタファー",
+      "style": "as an abstract art piece, conceptual, symbolic representation with clean geometric forms",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -71,9 +71,9 @@
     },
     {
       "position": "section2",
-      "prompt": "An abstract visualization of continuity showing three connected circular elements in a flowing pattern, with gentle curves and rhythmic repetition suggesting cycles and renewal, soft gradient colors flowing from warm to cool tones, conceptual representation of 'continuation' as cycles rather than straight lines",
-      "description": "継続の新しい概念を抽象的に表現する循環的なパターン",
-      "style": "as an abstract art piece, conceptual, flowing organic shapes, contemporary design",
+      "prompt": "A series of small stepping stones across a gentle stream, each stone slightly higher than the previous one, photographed from a low angle with shallow depth of field, representing gradual progress and continuous small steps forward",
+      "description": "第2セクション「小さな一歩を継続すること」を表現した、継続的な小さな進歩のビジュアル表現",
+      "style": "as a watercolor illustration, artistic style, soft and contemplative mood with natural flowing elements",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -84,9 +84,9 @@
     },
     {
       "position": "section3",
-      "prompt": "A bird's eye view of stepping stones across a peaceful stream, showing three distinct stones in a natural progression, surrounded by gentle flowing water and soft vegetation, representing gradual progress and the accumulation of small achievements, serene natural environment with dappled light",
-      "description": "三日の積み重ねがもたらす段階的な成長を象徴する自然な進歩のイメージ",
-      "style": "clean, modern, nature-focused, professional photography style with soft focus",
+      "prompt": "An aerial view of interconnected paths and bridges forming a network pattern, modern architectural design with multiple routes converging towards a central point, representing collaboration and supportive environment, clean tech-focused aesthetic",
+      "description": "第3セクション「環境と仲間の力を活用すること」を表現した、ネットワークとサポートシステムの概念",
+      "style": "clean, modern, tech-focused, professional design with dynamic and forward-thinking elements",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,

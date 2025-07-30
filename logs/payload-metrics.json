@@ -43,5 +43,35 @@
       "imagePrompts": 3844
     },
     "timestamp": "2025-07-28T21:50:50.420Z"
+  },
+  {
+    "filePath": "/Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/articles/new-article.json",
+    "payloadSize": 13204,
+    "payloadSizeMB": 0.01,
+    "breakdown": {
+      "metadata": 142,
+      "title": 78,
+      "body": 8254,
+      "slug": 29,
+      "excerpt": 216,
+      "categories": 34,
+      "imagePrompts": 3758
+    },
+    "timestamp": "2025-07-30T21:31:53.217Z"
+  },
+  {
+    "filePath": "/Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/articles/new-article.json",
+    "payloadSize": 10094,
+    "payloadSizeMB": 0.01,
+    "breakdown": {
+      "metadata": 142,
+      "title": 102,
+      "body": 5613,
+      "slug": 33,
+      "excerpt": 199,
+      "categories": 28,
+      "imagePrompts": 3300
+    },
+    "timestamp": "2025-07-30T21:37:55.056Z"
   }
 ]
