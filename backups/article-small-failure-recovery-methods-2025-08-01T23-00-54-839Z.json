@@ -1,0 +1,394 @@
+{
+  "_id": "8b98Bdb9hXRIdpgc16OXou",
+  "body": [
+    {
+      "_key": "heading-1754086395916-iij5izzkp",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754086395916-2dh05d985",
+          "_type": "span",
+          "marks": [],
+          "text": "はじめに"
+        }
+      ],
+      "style": "h2"
+    },
+    {
+      "_key": "block-1754086395916-g3y0hxofo",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754086395916-8wap25z3z",
+          "_type": "span",
+          "marks": [],
+          "text": "皆さんも日常の中で、ちょっとした失敗をしてしまうことってありませんか？"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754086395916-r4jmcqncf",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754086395916-zg130fyf0",
+          "_type": "span",
+          "marks": [],
+          "text": "先日、仕事でプログラムのデプロイ作業をしている時に、設定ファイルの一箇所を間違えてしまって、システムが30分ほど止まってしまったんです。幸い大きな影響はなかったのですが、その時の自分の気持ちの落ち込み方を見ていて「あ、これは良くないな」と思ったんですね。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754086395916-oitbqzl8i",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754086395916-zsrkk6t5h",
+          "_type": "span",
+          "marks": [],
+          "text": "家に帰って妻にその話をしたら「ヒロさんって、小さな失敗でもすごく引きずるよね」と言われて、改めて自分の失敗との向き合い方について考えてみることにしました。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754086395916-cscci5l91",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754086395916-bnh0y4wek",
+          "_type": "span",
+          "marks": [],
+          "text": "今回は、私が実際に試してみて効果を感じた「ちょっとした失敗をした時の対処法」を3つご紹介したいと思います。きっと皆さんの日常でも役立つんじゃないかなと思います。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "heading-1754086395916-kmccfa5jg",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754086395916-4evfsxvj6",
+          "_type": "span",
+          "marks": [],
+          "text": "まずは「失敗の大きさ」を冷静に測ってみる"
+        }
+      ],
+      "style": "h2"
+    },
+    {
+      "_key": "block-1754086395916-ytbsx4yq1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754086395916-rvcbnf1l4",
+          "_type": "span",
+          "marks": [],
+          "text": "最初に試してみたのは、失敗が起きた時に「この失敗は実際にどれくらいの影響があるのか」を客観的に考えてみることでした。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754086395916-fd47dnbnh",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754086395916-e2c436oys",
+          "_type": "span",
+          "marks": [],
+          "text": "例えば、先ほどのシステム停止の件ですが、最初は「大変なことをしてしまった」と思っていたんです。でも冷静に考えてみると、影響を受けたのは社内の一部のシステムだけで、お客様への影響はゼロでした。復旧も30分で完了して、データの損失もありませんでした。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754086395916-ph7sva460",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754086395916-i5c5v56m6",
+          "_type": "span",
+          "marks": [],
+          "text": "妻と一緒に夕食を食べながら、この「失敗の測り方」について話していたんです。妻は「私も料理で塩を入れすぎた時、最初は『もうダメだ』って思うけど、実際は調整すれば大丈夫なことが多いよね」と言っていて、なるほどなと思いました。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754086395916-3eovrx8r8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754086395916-49jj55p0a",
+          "_type": "span",
+          "marks": [],
+          "text": "保護犬ちゃんも、散歩コースを間違えても、別の道を通って帰ってくるだけで、結果的には新しい発見があったりするんですよね。そんな風に考えると、失敗って思っていたより小さなことが多いのかもしれません。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754086395916-rchxtlqcg",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754086395916-zcieao107",
+          "_type": "span",
+          "marks": [],
+          "text": "皆さんも、何か失敗をした時に「これは本当に大きな問題なのか？」「1週間後、1ヶ月後にも同じように気にしているだろうか？」と自分に問いかけてみてください。きっと思っていたより小さな出来事だと気づくことが多いんじゃないかなと思います。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "heading-1754086395916-5tay5pn6z",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754086395916-cybqybpvb",
+          "_type": "span",
+          "marks": [],
+          "text": "「次にどうするか」に意識を向ける"
+        }
+      ],
+      "style": "h2"
+    },
+    {
+      "_key": "block-1754086395916-bei5o9vgi",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754086395916-3uuikpaq3",
+          "_type": "span",
+          "marks": [],
+          "text": "2つ目のコツは、失敗が起きた時に「なぜ失敗したのか」を振り返ることも大切なんですが、それ以上に「次にどうするか」に意識を向けることでした。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754086395916-teq0opob2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754086395916-7y2icgasy",
+          "_type": "span",
+          "marks": [],
+          "text": "中学生の子どもがテストで思うような点数が取れなかった時のことなんですが、最初は「なんでこんな間違いをしたんだろう」とずっと考えていたんです。でも私が「じゃあ、次のテストでは何を変えてみる？」と聞いてみたら、急に表情が明るくなって「今度は見直しの時間を長く取ってみる」と前向きな答えが返ってきました。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754086395916-m23l1sdus",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754086395916-4y15519ox",
+          "_type": "span",
+          "marks": [],
+          "text": "仕事でも同じで、あのシステム停止の件では「なぜ設定ファイルを間違えたのか」を考えるのではなく「今度は設定ファイルを変更する前に、必ずチェックリストを使おう」と具体的なアクションを決めました。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754086395916-ck7i6p96m",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754086395916-zqrazt9ad",
+          "_type": "span",
+          "marks": [],
+          "text": "保護猫ちゃんが花瓶を倒してしまった時も、怒るのではなく「今度は花瓶を高い場所に置こう」と対策を考えるようにしています。そうすると、なんだか建設的な気持ちになれるんですね。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754086395916-z35ogu92h",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754086395916-xzo6gud0v",
+          "_type": "span",
+          "marks": [],
+          "text": "失敗から学ぶことは大切ですが、過去を悔やむ時間を「未来をより良くする時間」に変えることで、気持ちも前向きになりますし、実際に同じ失敗を繰り返す可能性も減るんじゃないかなと思います。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "heading-1754086395916-edtjzzy39",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754086395916-shvrfmppj",
+          "_type": "span",
+          "marks": [],
+          "text": "「失敗も含めて自分」だと受け入れる"
+        }
+      ],
+      "style": "h2"
+    },
+    {
+      "_key": "block-1754086395916-gp5xpkmxv",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754086395916-c5bgto1gf",
+          "_type": "span",
+          "marks": [],
+          "text": "3つ目は、これが一番難しかったんですが「失敗も含めて自分だ」と受け入れることでした。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754086395916-lhe0mn8ba",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754086395916-3afzpblxy",
+          "_type": "span",
+          "marks": [],
+          "text": "完璧主義的なところがある私は、失敗をすると「こんなことをする自分はダメだ」と考えがちだったんです。でも妻から「失敗しない人なんていないし、失敗から学んで成長するのが人間でしょ」と言われて、ハッとしました。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754086395916-t8eiksx5o",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754086395916-yxe1zlop4",
+          "_type": "span",
+          "marks": [],
+          "text": "実際、プログラミングの世界では「バグのないプログラムは存在しない」とよく言われます。どんなに優秀なプログラマーでも、必ずどこかでバグを作ってしまいます。でも、それが悪いことかというと、そうではないんですよね。バグを見つけて修正することで、より良いプログラムになっていくんです。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754086395916-emt04did9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754086395916-dzcjcjmq2",
+          "_type": "span",
+          "marks": [],
+          "text": "中学生の子どもにも「失敗は恥ずかしいことじゃないよ。失敗から学べることの方が多いから」と話すようになりました。そうしたら、子どもも失敗を恐れずに新しいことにチャレンジするようになったような気がします。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754086395916-1t05tp496",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754086395916-8zl92au3y",
+          "_type": "span",
+          "marks": [],
+          "text": "保護犬ちゃんも保護猫ちゃんも、毎日小さな「失敗」をしながら、新しい環境に慣れていっています。それを見ていると、失敗って成長の一部なんだなと実感します。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754086395916-tpacdrywf",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754086395916-uyfou9ncl",
+          "_type": "span",
+          "marks": [],
+          "text": "完璧でない自分を受け入れることで、失敗に対する恐怖が減って、むしろ「次はどんなことを学べるだろう」という好奇心に変わっていくような感覚があります。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "heading-1754086395916-qanowdauz",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754086395916-6t7b35y4h",
+          "_type": "span",
+          "marks": [],
+          "text": "おわりに"
+        }
+      ],
+      "style": "h2"
+    },
+    {
+      "_key": "block-1754086395916-5crhavyek",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754086395916-o82av6i18",
+          "_type": "span",
+          "marks": [],
+          "text": "今回は「ちょっとした失敗をした時の対処法」について、私なりに試してみた3つのコツをご紹介しました。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754086395916-wnxdyo9qh",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754086395916-oc9cmw3hm",
+          "_type": "span",
+          "marks": [],
+          "text": "失敗の大きさを客観的に測ること、過去ではなく未来に意識を向けること、そして失敗も含めて自分を受け入れること。どれも簡単ではありませんが、少しずつ実践していくことで、失敗に対する気持ちの持ち方が変わってきたような気がします。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754086395916-sgj73n8le",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754086395916-wy7a0kdto",
+          "_type": "span",
+          "marks": [],
+          "text": "皆さんも、日常の小さな失敗に対して、どのように向き合っていらっしゃいますか？もし良い方法があれば、ぜひコメントで教えていただけると嬉しいです。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754086395916-ea61feub5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754086395916-3jhh9m8w3",
+          "_type": "span",
+          "marks": [],
+          "text": "失敗を恐れずに、今日も一歩ずつ前に進んでいけたらいいですね。"
+        }
+      ],
+      "style": "normal"
+    }
+  ],
+  "headerImage": null,
+  "heroImage": null,
+  "mainImage": null,
+  "section1Image": null,
+  "section2Image": null,
+  "section3Image": null,
+  "sectionImages": null,
+  "slug": {
+    "_type": "slug",
+    "current": "small-failure-recovery-methods"
+  },
+  "title": "ちょっとした失敗の向き合い方――「立ち直り力」を育てる3つのコツ"
+}

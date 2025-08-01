@@ -1,53 +1,53 @@
 {
-  "sessionId": "article-250731-063153",
+  "sessionId": "article-250802-071315",
   "status": "completed",
   "imageGeneration": {
-    "startedAt": "2025-07-31T06:32:24.647487",
+    "startedAt": "2025-08-02T07:13:51.585447",
     "total": 4,
     "completed": 4,
     "failed": 0,
     "results": [
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-250731-063153/header-20250731_063515.png",
-        "filename": "header-20250731_063515.png",
-        "generation_time": 171.2213819026947,
+        "output_path": "public/images/blog/auto-generated/article-250802-071315/header-20250802_071740.png",
+        "filename": "header-20250802_071740.png",
+        "generation_time": 229.12227606773376,
         "position": "header",
-        "description": "記事全体のテーマである目標達成をイメージした、希望に満ちた整理されたワークスペース"
+        "description": "記事全体のテーマである「失敗との向き合い方」を表現する落ち着いた室内全景。反省と学びの時間を象徴する静寂な空間。"
       },
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-250731-063153/section1-20250731_073129.png",
-        "filename": "section1-20250731_073129.png",
-        "generation_time": 3373.682092189789,
+        "output_path": "public/images/blog/auto-generated/article-250802-071315/section1-20250802_072629.png",
+        "filename": "section1-20250802_072629.png",
+        "generation_time": 528.2071537971497,
         "position": "section1",
-        "description": "第1セクション「明確ななぜを持つこと」の内容を表現した、目的と方向性を見つけることのメタファー"
+        "description": "第1セクション「失敗の大きさを冷静に測る」に対応する画像。客観的な判断と冷静な評価を表現する天秤のクローズアップ。"
       },
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-250731-063153/section2-20250731_073547.png",
-        "filename": "section2-20250731_073547.png",
-        "generation_time": 257.979346036911,
+        "output_path": "public/images/blog/auto-generated/article-250802-071315/section2-20250802_074527.png",
+        "filename": "section2-20250802_074527.png",
+        "generation_time": 1137.925833940506,
         "position": "section2",
-        "description": "第2セクション「小さな一歩を継続すること」を表現した、継続的な小さな進歩のビジュアル表現"
+        "description": "第2セクション「次にどうするかに意識を向ける」に対応する画像。未来志向と前進を表現する抽象的な俯瞰構図。"
       },
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-250731-063153/section3-20250731_073956.png",
-        "filename": "section3-20250731_073956.png",
-        "generation_time": 248.2343099117279,
+        "output_path": "public/images/blog/auto-generated/article-250802-071315/section3-20250802_075732.png",
+        "filename": "section3-20250802_075732.png",
+        "generation_time": 725.5274050235748,
         "position": "section3",
-        "description": "第3セクション「環境と仲間の力を活用すること」を表現した、ネットワークとサポートシステムの概念"
+        "description": "第3セクション「失敗も含めて自分だと受け入れる」に対応する画像。不完全さを含めた成長と受容を窓越しの風景で表現。"
       }
     ],
-    "completedAt": "2025-07-31T07:39:56.372385"
+    "completedAt": "2025-08-02T07:57:33.085361"
   },
   "prompts": [
     {
       "position": "header",
-      "prompt": "A peaceful and inspiring workspace with morning light streaming through a window, showing an organized desk with notebook, pen, and small potted plant, clean and minimalist setup suggesting goal-setting and planning atmosphere, warm golden lighting creating motivation and hope",
-      "description": "記事全体のテーマである目標達成をイメージした、希望に満ちた整理されたワークスペース",
-      "style": "photorealistic, cinematic lighting, warm golden tones, inspiring and uplifting mood",
+      "prompt": "A peaceful home office interior with soft natural lighting, featuring a clean wooden desk with a closed laptop, a warm cup of coffee, and gentle shadows from window light, creating a contemplative atmosphere for reflection and learning",
+      "description": "記事全体のテーマである「失敗との向き合い方」を表現する落ち着いた室内全景。反省と学びの時間を象徴する静寂な空間。",
+      "style": "photorealistic, cinematic lighting, warm and contemplative atmosphere, japanese minimalist aesthetic",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -58,9 +58,9 @@
     },
     {
       "position": "section1",
-      "prompt": "A compass rose surrounded by question marks transforming into clear directional arrows, abstract conceptual art representing finding one's true purpose and motivation, deep blue and gold color scheme suggesting wisdom and clarity",
-      "description": "第1セクション「明確ななぜを持つこと」の内容を表現した、目的と方向性を見つけることのメタファー",
-      "style": "as an abstract art piece, conceptual, symbolic representation with clean geometric forms",
+      "prompt": "A close-up view of a balance scale with small stones on both sides, sitting on a minimalist wooden surface with soft natural lighting, symbolizing the objective measurement and evaluation of situations",
+      "description": "第1セクション「失敗の大きさを冷静に測る」に対応する画像。客観的な判断と冷静な評価を表現する天秤のクローズアップ。",
+      "style": "as a watercolor illustration, artistic style, soft and contemplative colors, detailed textures",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -71,9 +71,9 @@
     },
     {
       "position": "section2",
-      "prompt": "A series of small stepping stones across a gentle stream, each stone slightly higher than the previous one, photographed from a low angle with shallow depth of field, representing gradual progress and continuous small steps forward",
-      "description": "第2セクション「小さな一歩を継続すること」を表現した、継続的な小さな進歩のビジュアル表現",
-      "style": "as a watercolor illustration, artistic style, soft and contemplative mood with natural flowing elements",
+      "prompt": "An abstract representation of forward movement and progress, featuring flowing arrows and pathways in warm, encouraging colors, viewed from an elevated perspective, symbolizing focus on future solutions rather than past mistakes",
+      "description": "第2セクション「次にどうするかに意識を向ける」に対応する画像。未来志向と前進を表現する抽象的な俯瞰構図。",
+      "style": "as an abstract art piece, conceptual, dynamic and forward-thinking, vibrant yet harmonious colors",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -84,9 +84,9 @@
     },
     {
       "position": "section3",
-      "prompt": "An aerial view of interconnected paths and bridges forming a network pattern, modern architectural design with multiple routes converging towards a central point, representing collaboration and supportive environment, clean tech-focused aesthetic",
-      "description": "第3セクション「環境と仲間の力を活用すること」を表現した、ネットワークとサポートシステムの概念",
-      "style": "clean, modern, tech-focused, professional design with dynamic and forward-thinking elements",
+      "prompt": "A view through a window showing a garden where plants grow in various stages, some with imperfections yet thriving, with morning light filtering through, representing acceptance and growth through imperfection",
+      "description": "第3セクション「失敗も含めて自分だと受け入れる」に対応する画像。不完全さを含めた成長と受容を窓越しの風景で表現。",
+      "style": "clean, modern, tech-focused, professional lighting with natural elements, serene and hopeful mood",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
