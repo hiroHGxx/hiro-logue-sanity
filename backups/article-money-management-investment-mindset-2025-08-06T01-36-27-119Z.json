@@ -1,0 +1,511 @@
+{
+  "_id": "GOBSY6qrvDx36ZvDxA4hlN",
+  "body": [
+    {
+      "_key": "heading-1754441137159-dv7xml07h",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-2zmg24ix9",
+          "_type": "span",
+          "marks": [],
+          "text": "はじめに"
+        }
+      ],
+      "style": "h2"
+    },
+    {
+      "_key": "block-1754441137159-v3gxhtnht",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-yb3df1tz1",
+          "_type": "span",
+          "marks": [],
+          "text": "最近、家計管理について考える機会が増えました。実はですね、妻から「今月も赤字だよ」と言われて、慌てて家計簿アプリを導入したんです。そこで見えてきたのは、お金の使い方って「種まき」と「水やり」に似ているなということでした。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754441137159-jqgzn6n8l",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-9h4wp28u4",
+          "_type": "span",
+          "marks": [],
+          "text": "皆さんも、お金を使うときに「これは消費？浪費？それとも投資？」って迷うことはありませんか？中学生の子どもからも「お小遣いをどう使ったらいいの？」と相談されて、改めて自分のお金の使い方を見直すきっかけになりました。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754441137159-9j1hqroov",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-8vbp7s7b1",
+          "_type": "span",
+          "marks": [],
+          "text": "今回は、そんな体験から学んだ「自分のためになるお金の使い方」について書いていきます。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "heading-1754441137159-8rzxcshty",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-v579nx8dn",
+          "_type": "span",
+          "marks": [],
+          "text": "家計簿アプリが教えてくれた現実"
+        }
+      ],
+      "style": "h2"
+    },
+    {
+      "_key": "block-1754441137159-uistskmgk",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-mukmiaa2b",
+          "_type": "span",
+          "marks": [],
+          "text": "恥ずかしながら、これまで家計管理は妻にお任せ状態でした。でも家計簿アプリを一緒に見てみると、びっくりしました。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754441137159-xono3bl0n",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-sym54bkqg",
+          "_type": "span",
+          "marks": [],
+          "text": "例えばですね、私が何気なく買っているプログラミング関連の書籍。1冊2,000円程度なので「安いもの」と思っていたんですが、月に5-6冊買っていて月1万円を超えていたんです。一方で、妻が「家族の健康のために」と買っているオーガニック食材は月8,000円程度。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754441137159-yqycisb1g",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-sd0o1i99m",
+          "_type": "span",
+          "marks": [],
+          "text": "「あれ、これって何かおかしくない？」と思ったんです。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754441137159-d9xs3av98",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-3ou22v2cn",
+          "_type": "span",
+          "marks": [],
+          "text": "保護犬ちゃんのドッグフードは月3,000円で、私たちは「高品質だから当然」と思っている。でも自分の本代には無頓着だった。この違いって何だろうって考えてみました。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754441137159-l1wxfghkh",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-j6h23afxa",
+          "_type": "span",
+          "marks": [],
+          "text": "皆さんも、意外と気づかないお金の流れってありませんか？"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "heading-1754441137159-osxe5ip4n",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-lp3m3021x",
+          "_type": "span",
+          "marks": [],
+          "text": "消費・浪費・投資の境界線が曖昧だった理由"
+        }
+      ],
+      "style": "h2"
+    },
+    {
+      "_key": "block-1754441137159-lukkaikvt",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-51rrbs4l6",
+          "_type": "span",
+          "marks": [],
+          "text": "妻と話し合って気づいたのは、私たちが「消費・浪費・投資」の定義を曖昧にしていたことでした。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754441137159-pli6lnrzf",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-yboa3ho64",
+          "_type": "span",
+          "marks": [],
+          "text": "私は書籍代を「投資」だと思っていました。確かに技術書から学んだことで仕事の効率が上がったり、新しいプロジェクトを担当できるようになったりしている。でも、買うだけで満足して読まない本も多かったんです。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754441137159-06ezmqkup",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-snkw50e1f",
+          "_type": "span",
+          "marks": [],
+          "text": "妻に「その本、いつ読むの？」と聞かれて、「時間ができたら...」と答える自分がいました。これって投資というより、ただの「学習欲の浪費」だったのかもしれません。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754441137159-gke0b3ntc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-n7jx68h4q",
+          "_type": "span",
+          "marks": [],
+          "text": "一方で、妻のオーガニック食材への支出。最初は「高い」と思っていましたが、よく考えてみると、中学生の子どもが風邪を引く回数が明らかに減っているんです。医療費も下がっているし、何より家族が元気でいてくれるのは本当にありがたい。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754441137159-rcz7dubl3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-tot08t658",
+          "_type": "span",
+          "marks": [],
+          "text": "これって立派な「健康投資」なんですよね。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754441137159-ye3ny422k",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-lrxr92gvc",
+          "_type": "span",
+          "marks": [],
+          "text": "保護猫ちゃんが病気になったときも、高額な治療費を払いましたが、「家族の一員だから当然」と思いました。でも自分の健康管理にはお金をかけていない矛盾に気づいたんです。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "heading-1754441137159-ok2ftfp2r",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-vf4rlb8rj",
+          "_type": "span",
+          "marks": [],
+          "text": "新しいお金の分類方法を家族で決めてみた"
+        }
+      ],
+      "style": "h2"
+    },
+    {
+      "_key": "block-1754441137159-ku37em9i1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-7qla4dofd",
+          "_type": "span",
+          "marks": [],
+          "text": "そこで家族会議を開いて、新しいお金の分類方法を決めてみました。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754441137159-mpnv7bfq6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-aujtnf504",
+          "_type": "span",
+          "marks": [],
+          "text": "「未来の自分が笑顔になるお金の使い方」という基準です。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754441137159-5p4r00jpd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-vn7yc2gky",
+          "_type": "span",
+          "marks": [],
+          "text": "消費：生活に必要で、使った分だけ価値があるもの"
+        },
+        {
+          "_key": "span-1754441137159-xsv7ko3vi",
+          "_type": "span",
+          "marks": [],
+          "text": "\n- 食費、光熱費、日用品など"
+        },
+        {
+          "_key": "span-1754441137159-5zhpfqolc",
+          "_type": "span",
+          "marks": [],
+          "text": "\n- 保護犬ちゃん・保護猫ちゃんの世話代"
+        },
+        {
+          "_key": "span-1754441137159-401xblqr4",
+          "_type": "span",
+          "marks": [],
+          "text": "\n- 基本的な通信費"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754441137159-iii3zkk2u",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-rln2i5wh0",
+          "_type": "span",
+          "marks": [],
+          "text": "投資：将来の自分や家族がより良くなるもの"
+        },
+        {
+          "_key": "span-1754441137159-pp64qi8p5",
+          "_type": "span",
+          "marks": [],
+          "text": "\n- 実際に読んで活用する本（月3冊まで）"
+        },
+        {
+          "_key": "span-1754441137159-dtjf2wf0x",
+          "_type": "span",
+          "marks": [],
+          "text": "\n- 家族の健康に関わる支出"
+        },
+        {
+          "_key": "span-1754441137159-dvsuwzy6r",
+          "_type": "span",
+          "marks": [],
+          "text": "\n- スキルアップにつながる講座やツール"
+        },
+        {
+          "_key": "span-1754441137159-3hgpm33xy",
+          "_type": "span",
+          "marks": [],
+          "text": "\n- 子どもの教育費"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754441137159-i5s8ngjjg",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-bso23ve81",
+          "_type": "span",
+          "marks": [],
+          "text": "浪費：その場の感情で使って、後悔するもの"
+        },
+        {
+          "_key": "span-1754441137159-5hp3yzttn",
+          "_type": "span",
+          "marks": [],
+          "text": "\n- 積読になっている本"
+        },
+        {
+          "_key": "span-1754441137159-5coyj31jh",
+          "_type": "span",
+          "marks": [],
+          "text": "\n- なんとなく買ったガジェット"
+        },
+        {
+          "_key": "span-1754441137159-fb5rxko6j",
+          "_type": "span",
+          "marks": [],
+          "text": "\n- 安いからと大量買いした結果使わないもの"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754441137159-5jyu6mqky",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-rqmw1nln4",
+          "_type": "span",
+          "marks": [],
+          "text": "貯金：未来の選択肢を増やすためのもの"
+        },
+        {
+          "_key": "span-1754441137159-i9ym8lwi1",
+          "_type": "span",
+          "marks": [],
+          "text": "\n- 緊急時の備え"
+        },
+        {
+          "_key": "span-1754441137159-8xcm823yd",
+          "_type": "span",
+          "marks": [],
+          "text": "\n- 家族旅行の資金"
+        },
+        {
+          "_key": "span-1754441137159-tzq8cr4ll",
+          "_type": "span",
+          "marks": [],
+          "text": "\n- 子どもの将来のサポート資金"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754441137159-o65cklrtt",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-kru856uqb",
+          "_type": "span",
+          "marks": [],
+          "text": "中学生の子どもも「お小遣いで何を買うか迷ったときは、1週間後の自分が嬉しいかどうか考える」と言ってくれて、なるほどと思いました。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754441137159-2bflnj6ek",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-kri39ayji",
+          "_type": "span",
+          "marks": [],
+          "text": "皆さんの家庭では、どのようなお金の分類をしていらっしゃいますか？"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "heading-1754441137159-i81hk0lps",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-80vpar4xv",
+          "_type": "span",
+          "marks": [],
+          "text": "おわりに"
+        }
+      ],
+      "style": "h2"
+    },
+    {
+      "_key": "block-1754441137159-0zhvu3tni",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-y1vb8xp6v",
+          "_type": "span",
+          "marks": [],
+          "text": "今回は「お金の種まきと水やり」について書きました。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754441137159-62a48omfa",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-z9238utkk",
+          "_type": "span",
+          "marks": [],
+          "text": "種まき（投資）は大切だけど、やみくもに種をまいても意味がない。きちんと水やり（継続的な学習や実践）をして、芽が出るまで見守る必要があるんですよね。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754441137159-z7pxp3m0l",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-3sc0awsw8",
+          "_type": "span",
+          "marks": [],
+          "text": "家計簿アプリを導入してから3か月経ちましたが、家族のお金に対する意識が大きく変わりました。何より、お金の使い方について夫婦で話し合う機会が増えたのが一番の収穫かもしれません。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754441137159-3woo1fpun",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-rpvgdgan7",
+          "_type": "span",
+          "marks": [],
+          "text": "皆さんも、もしよろしければ、ご自身のお金の使い方について振り返ってみていかがでしょうか？どんな発見があったか、コメントで教えていただけると嬉しいです。"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "block-1754441137159-9l3n5y95h",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "span-1754441137159-oatt739q0",
+          "_type": "span",
+          "marks": [],
+          "text": "お金は人生を豊かにするための道具。上手に付き合って、家族みんなが笑顔になれる使い方を見つけていきたいですね。"
+        }
+      ],
+      "style": "normal"
+    }
+  ],
+  "headerImage": null,
+  "heroImage": null,
+  "mainImage": null,
+  "section1Image": null,
+  "section2Image": null,
+  "section3Image": null,
+  "sectionImages": null,
+  "slug": {
+    "_type": "slug",
+    "current": "money-management-investment-mindset"
+  },
+  "title": "お金の「種まき」と「水やり」――家計簿アプリで気づいた投資思考の転換点"
+}
