@@ -1,53 +1,53 @@
 {
-  "sessionId": "article-250808-102353",
+  "sessionId": "article-250809-080702",
   "status": "completed",
   "imageGeneration": {
-    "startedAt": "2025-08-08T10:24:30.773456",
+    "startedAt": "2025-08-09T08:07:34.773070",
     "total": 4,
     "completed": 4,
     "failed": 0,
     "results": [
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-250808-102353/header-20250808_102729.png",
-        "filename": "header-20250808_102729.png",
-        "generation_time": 178.4160943031311,
+        "output_path": "public/images/blog/auto-generated/article-250809-080702/header-20250809_081046.png",
+        "filename": "header-20250809_081046.png",
+        "generation_time": 191.5854949951172,
         "position": "header",
-        "description": "記事全体のメインビジュアルとして、家族の温かい時間を表現する居間の風景。トレカが置かれたテーブルと、自然光が差し込む穏やかな空間"
+        "description": "記事全体のメインビジュアルとして、現代的な音楽制作環境とAI技術の融合を表現。バンド時代とAI音楽生成の架け橋となるイメージ"
       },
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-250808-102353/section1-20250808_103049.png",
-        "filename": "section1-20250808_103049.png",
-        "generation_time": 200.4272198677063,
+        "output_path": "public/images/blog/auto-generated/article-250809-080702/section1-20250809_082630.png",
+        "filename": "section1-20250809_082630.png",
+        "generation_time": 944.0616269111633,
         "position": "section1",
-        "description": "第1セクション「子どもとの距離感に悩んだ日々」を表現する、仕事と子育ての間での悩みを象徴する空の作業デスク"
+        "description": "第1セクションの「AI音楽生成ツールに初めて触れた体験」を表現する技術的なクローズアップビュー"
       },
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-250808-102353/section2-20250808_103414.png",
-        "filename": "section2-20250808_103414.png",
-        "generation_time": 204.65706515312195,
+        "output_path": "public/images/blog/auto-generated/article-250809-080702/section2-20250809_083205.png",
+        "filename": "section2-20250809_083205.png",
+        "generation_time": 334.7506868839264,
         "position": "section2",
-        "description": "第2セクション「トレカが架け橋になった瞬間」を表現する、美しく配置されたトレーディングカードの詳細なクローズアップ"
+        "description": "第2セクションの「バンド時代との比較」を抽象的に表現。アナログからデジタルへの変遷をアーティスティックに描写"
       },
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-250808-102353/section3-20250808_103734.png",
-        "filename": "section3-20250808_103734.png",
-        "generation_time": 200.11720514297485,
+        "output_path": "public/images/blog/auto-generated/article-250809-080702/section3-20250809_085312.png",
+        "filename": "section3-20250809_085312.png",
+        "generation_time": 1267.0235950946808,
         "position": "section3",
-        "description": "第3セクション「遊びの奥にある大切なもの」を表現する、つながりと理解の概念を抽象的に表現したアートピース"
+        "description": "第3セクションの「家族との日常とAI音楽生成」を表現。家庭内での技術活用と平和な環境を俯瞰視点で描写"
       }
     ],
-    "completedAt": "2025-08-08T10:37:35.003807"
+    "completedAt": "2025-08-09T08:53:12.807633"
   },
   "prompts": [
     {
       "position": "header",
-      "prompt": "A cozy living room interior with trading cards scattered on a wooden table, warm afternoon sunlight streaming through windows, comfortable seating area with soft lighting, Japanese minimalist home aesthetic, peaceful and inviting atmosphere",
-      "description": "記事全体のメインビジュアルとして、家族の温かい時間を表現する居間の風景。トレカが置かれたテーブルと、自然光が差し込む穏やかな空間",
-      "style": "photorealistic, cinematic lighting, warm and cozy atmosphere, japanese home interior",
+      "prompt": "modern music recording studio with digital equipment, synthesizers, and computer screens showing waveforms, warm ambient lighting, cozy atmosphere with wooden panels, no people, cinematic composition",
+      "description": "記事全体のメインビジュアルとして、現代的な音楽制作環境とAI技術の融合を表現。バンド時代とAI音楽生成の架け橋となるイメージ",
+      "style": "photorealistic, cinematic lighting, warm golden tones, professional photography style",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -58,9 +58,9 @@
     },
     {
       "position": "section1",
-      "prompt": "A solitary workspace desk view from above, organized tech setup with multiple monitors, keyboard, cables neatly arranged, coffee cup, but empty chair suggesting contemplation, modern office environment, birds-eye perspective",
-      "description": "第1セクション「子どもとの距離感に悩んだ日々」を表現する、仕事と子育ての間での悩みを象徴する空の作業デスク",
-      "style": "clean, modern, tech-focused, professional, overhead view",
+      "prompt": "close-up view of a computer screen displaying AI music generation software interface with colorful waveforms and musical notes, modern desktop setup, soft blue and purple lighting, focus on technology details",
+      "description": "第1セクションの「AI音楽生成ツールに初めて触れた体験」を表現する技術的なクローズアップビュー",
+      "style": "clean, modern, tech-focused, professional, detailed macro photography",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -71,9 +71,9 @@
     },
     {
       "position": "section2",
-      "prompt": "Trading cards laid out in an organized pattern on a wooden surface, colorful fantasy artwork visible on cards, soft natural lighting, detailed card textures, strategic arrangement suggesting gameplay, watercolor illustration style",
-      "description": "第2セクション「トレカが架け橋になった瞬間」を表現する、美しく配置されたトレーディングカードの詳細なクローズアップ",
-      "style": "as a watercolor illustration, artistic style, soft colors, detailed textures",
+      "prompt": "abstract artistic representation of musical instruments dissolving into digital particles and code, guitar silhouette transforming into flowing data streams, artistic interpretation in watercolor style",
+      "description": "第2セクションの「バンド時代との比較」を抽象的に表現。アナログからデジタルへの変遷をアーティスティックに描写",
+      "style": "as a watercolor illustration, artistic style, flowing and dynamic, conceptual art",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -84,9 +84,9 @@
     },
     {
       "position": "section3",
-      "prompt": "Abstract concept of connection and understanding, flowing geometric shapes intertwining, warm golden and blue gradients, harmony in motion, conceptual art representing emotional bonds, peaceful and contemplative mood",
-      "description": "第3セクション「遊びの奥にある大切なもの」を表現する、つながりと理解の概念を抽象的に表現したアートピース",
-      "style": "as an abstract art piece, conceptual, flowing forms, warm gradients",
+      "prompt": "aerial view of a cozy living room with a laptop on a coffee table, small speakers, cat sleeping nearby, warm evening lighting from window, peaceful domestic environment showing technology integration in home",
+      "description": "第3セクションの「家族との日常とAI音楽生成」を表現。家庭内での技術活用と平和な環境を俯瞰視点で描写",
+      "style": "soft and contemplative, warm domestic lighting, minimalist japanese aesthetic, peaceful atmosphere",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
