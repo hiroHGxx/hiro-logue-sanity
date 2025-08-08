@@ -103,5 +103,20 @@
       "imagePrompts": 3689
     },
     "timestamp": "2025-08-06T00:45:36.970Z"
+  },
+  {
+    "filePath": "/Users/gotohiro/Documents/user/Products/ContentFlow/sanity-edition/articles/new-article.json",
+    "payloadSize": 10692,
+    "payloadSizeMB": 0.01,
+    "breakdown": {
+      "metadata": 208,
+      "title": 120,
+      "body": 5563,
+      "slug": 33,
+      "excerpt": 324,
+      "categories": 31,
+      "imagePrompts": 3744
+    },
+    "timestamp": "2025-08-08T01:23:53.980Z"
   }
 ]
