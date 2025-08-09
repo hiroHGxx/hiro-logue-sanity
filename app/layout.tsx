@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: "Hiro-Logue",
     images: [
       {
-        url: "/og-image.svg",
+        url: "/og-image2.png",
         width: 1200,
         height: 630,
         alt: "Hiro-Logue - 暮らしの解像度を上げるノート",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Hiro-Logue - 暮らしの解像度を上げるノート",
     description: "テクノロジーと日常の交差点で見つけた、物事をより深く、面白く捉えるためのヒントをお届けします。",
-    images: ["/og-image.svg"],
+    images: ["/og-image2.png"],
   },
   robots: {
     index: true,
