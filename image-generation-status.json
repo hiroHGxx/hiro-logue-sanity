@@ -1,53 +1,53 @@
 {
-  "sessionId": "article-250810-071253",
+  "sessionId": "article-250819-115136",
   "status": "completed",
   "imageGeneration": {
-    "startedAt": "2025-08-10T07:13:23.778431",
+    "startedAt": "2025-08-19T11:52:21.973733",
     "total": 4,
     "completed": 4,
     "failed": 0,
     "results": [
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-250810-071253/header-20250810_071607.png",
-        "filename": "header-20250810_071607.png",
-        "generation_time": 163.49346923828125,
+        "output_path": "public/images/blog/auto-generated/article-250819-115136/header-20250819_115541.png",
+        "filename": "header-20250819_115541.png",
+        "generation_time": 199.83682298660278,
         "position": "header",
-        "description": "記事のメインビジュアルとして、家庭と仕事が調和した温かい空間を表現。仕事の本質を家族に伝えるというテーマを空間的に象徴"
+        "description": "記事全体のテーマである「心の整え方」「新しい始まり」を表現するヘッダー画像。連休明けの新鮮な気持ちと整理された環境を視覚的に表現。"
       },
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-250810-071253/section1-20250810_071934.png",
-        "filename": "section1-20250810_071934.png",
-        "generation_time": 206.5333080291748,
+        "output_path": "public/images/blog/auto-generated/article-250819-115136/section1-20250819_120014.png",
+        "filename": "section1-20250819_120014.png",
+        "generation_time": 272.8210299015045,
         "position": "section1",
-        "description": "第1セクションの「専門用語の落とし穴」に対応。複雑な技術概念がシンプルな概念に変換される様子を抽象的に表現"
+        "description": "第1セクション「システム再起動」のテーマを表現。技術的概念と人間の心の回復プロセスの類似性を視覚化。"
       },
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-250810-071253/section2-20250810_072300.png",
-        "filename": "section2-20250810_072300.png",
-        "generation_time": 206.0474979877472,
+        "output_path": "public/images/blog/auto-generated/article-250819-115136/section2-20250819_121522.png",
+        "filename": "section2-20250819_121522.png",
+        "generation_time": 907.6823170185089,
         "position": "section2",
-        "description": "第2セクションの「日常の言葉で仕事を表現してみる」に対応。複雑なことをシンプルに伝える工夫を俯瞰視点で表現"
+        "description": "第2セクション「最小限の動作確認」のテーマを表現。小さなタスクの完了と段階的な進歩の重要性を視覚化。"
       },
       {
         "success": true,
-        "output_path": "public/images/blog/auto-generated/article-250810-071253/section3-20250810_072617.png",
-        "filename": "section3-20250810_072617.png",
-        "generation_time": 197.07843112945557,
+        "output_path": "public/images/blog/auto-generated/article-250819-115136/section3-20250819_123044.png",
+        "filename": "section3-20250819_123044.png",
+        "generation_time": 922.0027561187744,
         "position": "section3",
-        "description": "第3セクションの「仕事の意味を伝える」に対応。技術が生活とどのようにつながっているかを水彩の流れるような表現で描写"
+        "description": "第3セクション「環境設定の見直し」のテーマを表現。空間の整理と心理的な気分転換の効果を抽象的に視覚化。"
       }
     ],
-    "completedAt": "2025-08-10T07:26:17.534961"
+    "completedAt": "2025-08-19T12:30:44.965657"
   },
   "prompts": [
     {
       "position": "header",
-      "prompt": "A cozy home office interior with natural lighting streaming through windows, featuring a clean wooden desk with computer monitor, scattered papers, and warm ambient lighting creating a peaceful workspace atmosphere",
-      "description": "記事のメインビジュアルとして、家庭と仕事が調和した温かい空間を表現。仕事の本質を家族に伝えるというテーマを空間的に象徴",
-      "style": "photorealistic, cinematic lighting, warm tones, japanese minimalist aesthetic",
+      "prompt": "A peaceful morning scene showing a clean, organized workspace with soft natural lighting streaming through a window, featuring a wooden desk with a simple notebook, pen, and small potted plant. The atmosphere conveys a sense of fresh beginnings and gentle transition back to productivity, with warm earth tones and a minimalist aesthetic that suggests renewal and calm preparation for the day ahead.",
+      "description": "記事全体のテーマである「心の整え方」「新しい始まり」を表現するヘッダー画像。連休明けの新鮮な気持ちと整理された環境を視覚的に表現。",
+      "style": "photorealistic, cinematic lighting, warm earth tones, japanese minimalist aesthetic",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -58,9 +58,9 @@
     },
     {
       "position": "section1",
-      "prompt": "Abstract visualization of technical terminology floating in space, with geometric shapes representing code blocks and APIs dissolving into simple, everyday objects like building blocks and puzzle pieces",
-      "description": "第1セクションの「専門用語の落とし穴」に対応。複雑な技術概念がシンプルな概念に変換される様子を抽象的に表現",
-      "style": "as an abstract art piece, conceptual, geometric forms, soft gradients",
+      "prompt": "A conceptual illustration showing computer screens displaying system restart symbols and loading bars, alongside natural elements like sprouting plants and gears gradually coming to life. The image represents the idea of gradual reactivation and system recovery, rendered in a clean technical style with soft greens and blues to convey both technology and growth.",
+      "description": "第1セクション「システム再起動」のテーマを表現。技術的概念と人間の心の回復プロセスの類似性を視覚化。",
+      "style": "as a watercolor illustration, artistic style, soft technical aesthetic",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -71,9 +71,9 @@
     },
     {
       "position": "section2",
-      "prompt": "A bird's eye view of an organized workspace with notebooks, pens, and simple drawings that illustrate complex concepts through basic shapes and diagrams, bathed in soft natural light",
-      "description": "第2セクションの「日常の言葉で仕事を表現してみる」に対応。複雑なことをシンプルに伝える工夫を俯瞰視点で表現",
-      "style": "in a flat design style, minimalist, clean composition, soft colors",
+      "prompt": "An overhead view of a simple daily checklist with small, completed checkmarks next to basic tasks, surrounded by everyday objects like a coffee cup, reading glasses, and small houseplants. The composition emphasizes the beauty of small accomplishments and gradual progress, with a flat design aesthetic using calming pastel colors.",
+      "description": "第2セクション「最小限の動作確認」のテーマを表現。小さなタスクの完了と段階的な進歩の重要性を視覚化。",
+      "style": "in a flat design style, minimalist, calming pastel colors",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
@@ -84,9 +84,9 @@
     },
     {
       "position": "section3",
-      "prompt": "A watercolor illustration of interconnected elements showing technology bridging and connecting different aspects of daily life, with flowing organic lines and gentle color transitions",
-      "description": "第3セクションの「仕事の意味を伝える」に対応。技術が生活とどのようにつながっているかを水彩の流れるような表現で描写",
-      "style": "as a watercolor illustration, artistic style, flowing lines, gentle transparency",
+      "prompt": "An abstract art piece representing environmental renewal and space reorganization, featuring flowing geometric shapes that transform from scattered, chaotic forms into organized, harmonious patterns. The composition uses dynamic gradients from cool to warm colors, symbolizing the transition from rest to active productivity and the power of environmental change.",
+      "description": "第3セクション「環境設定の見直し」のテーマを表現。空間の整理と心理的な気分転換の効果を抽象的に視覚化。",
+      "style": "as an abstract art piece, conceptual, dynamic gradients and flowing shapes",
       "negativePrompt": "person, people, human, man, woman, face, realistic human features, portrait, character, figure, text, watermark, blurry, lowres, bad anatomy, bad hands, missing fingers, extra digits, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, username, artist name",
       "parameters": {
         "width": 1600,
